@@ -30,8 +30,17 @@
         }
     );
     var sphere = new THREE.Mesh( geometry, material);
+    var a = new THREE.Vector3( 0, -1, 0 );
+    sphere.translateOnAxis(a, 15);
     scene.add(sphere);
 
+    window.addEventListener('resize', function() {
+      WIDTH = window.innerWidth, HEIGHT = window.innerHeight;
+      renderer.setSize(WIDTH, HEIGHT);
+      camera.aspect = WIDTH / HEIGHT;
+      camera.updateProjectionMatrix();
+      renderer.render(scene,camera);
+    });
 
     // create a point light
     var pointLight = new THREE.PointLight(0xFFFFFF);
@@ -60,7 +69,7 @@
     var y = [0,0.1,-0.8,-0.4];
     var current=0;
     
-    function animate(a,b){
+    function animateSphere(a,b){
         console.log(a + " " + b);
         var count = 50;
         var xdist = x[b] - x[a], ydist = y[b] - y[a];
@@ -80,19 +89,19 @@
     }
     
     $('#p0').click(function(){
-       animate(current,0); 
+       animateSphere(current,0); 
     });
 
     $('#p1').click(function(){
-       animate(current,1); 
+       animateSphere(current,1); 
     });
 
     $('#p2').click(function(){
-       animate(current,2); 
+       animateSphere(current,2); 
     });
 
     $('#p3').click(function(){
-       animate(current,3); 
+       animateSphere(current,3); 
     });
 
 //});
