@@ -60,7 +60,7 @@ canvas{
 }
 
 .over-image object{
-    position: absolute;
+    position: relative;
 }
 
 #i1{
@@ -82,8 +82,8 @@ canvas{
 
 #i4{
     height: 20vh;
-    top: -23vh;
-    left: -22vh;
+    top: -25vh;
+    left: -19vh;
 }
 
 #i5{
@@ -288,3 +288,7 @@ canvas{
     }
 }
 */
+
+.afterLoad{
+    display: none;
+}
