@@ -18,7 +18,7 @@
     var geometry = new THREE.SphereGeometry(radius,segments,rings);
     var material = new THREE.MeshPhongMaterial();
     var loader = new THREE.TextureLoader();
-    loader.load('1.jpg',
+    loader.load('assets/1.jpg',
         function ( texture ) {
             material.map = texture;
         },
