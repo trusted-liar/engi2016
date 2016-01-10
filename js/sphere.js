@@ -1,4 +1,4 @@
-//$(document).ready( function(){
+$(document).ready( function(){
     
     //creating sphere
     
@@ -51,14 +51,6 @@
     // add to the scene
     scene.add(pointLight);
 
-/*    var render = function () {
-
-        sphere.rotation.x += 0.1;
-        sphere.rotation.y += 0.1;
-
-        renderer.render(scene, camera);
-    };
-  */  
     $(window).load(function(){
         renderer.render(scene, camera);
 
@@ -70,7 +62,6 @@
     var current=0;
     
     function animateSphere(a,b){
-        console.log(a + " " + b);
         var count = 50;
         var xdist = x[b] - x[a], ydist = y[b] - y[a];
         var xdiff=xdist/count, ydiff=ydist/count;
@@ -89,19 +80,34 @@
     }
     
     $('#p0').click(function(){
-       animateSphere(current,0); 
+        animateSphere(current,0); 
     });
 
     $('#p1').click(function(){
-       animateSphere(current,1); 
+        animateSphere(current,1);
+        setTimeout(function(){
+            $("#event-list-overlay").fadeIn();
+            $("#timeline-1").show();
+            eventAnimate($("#timeline-1")[0]);
+        }, 1000);
     });
 
     $('#p2').click(function(){
-       animateSphere(current,2); 
+        animateSphere(current,2); 
+        setTimeout(function(){
+            $("#event-list-overlay").fadeIn();
+            $("#timeline-1").show();
+            eventAnimate($("#timeline-1")[0]);
+        }, 1000);
     });
 
     $('#p3').click(function(){
-       animateSphere(current,3); 
+        animateSphere(current,3); 
+        setTimeout(function(){
+            $("#event-list-overlay").fadeIn();
+            $("#timeline-1").show();
+            eventAnimate($("#timeline-1")[0]);
+        }, 1000);
     });
 
-//});
+});
