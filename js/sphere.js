@@ -5,7 +5,7 @@ $(document).ready( function(){
     var HEIGHT = window.innerHeight, WIDTH = window.innerWidth;
     var ASPECT = WIDTH/HEIGHT, NEAR = 0.1, FAR =1000, VIEW_ANGLE = 45;
     var $container = $('#container');
-    var renderer = new THREE.WebGLRenderer();
+    var renderer = new THREE.WebGLRenderer({alpha: true});
     var camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
     var scene = new THREE.Scene();
 
@@ -14,11 +14,11 @@ $(document).ready( function(){
     renderer.setSize(WIDTH, HEIGHT);
     $container.append(renderer.domElement);
 
-    var radius = 40, segments = 50, rings = 50;
+    var radius = 75, segments = 50, rings = 50;
     var geometry = new THREE.SphereGeometry(radius,segments,rings);
     var material = new THREE.MeshPhongMaterial();
     var loader = new THREE.TextureLoader();
-    loader.load('assets/1.jpg',
+    loader.load('assets/mappp.png',
         function ( texture ) {
             material.map = texture;
         },
@@ -55,14 +55,21 @@ $(document).ready( function(){
         renderer.render(scene, camera);
 
     });
+
+    function CB(t){
+        return Math.pow(1-t, 3) + Math.pow(1-t, 2)*t + (1-t)*Math.pow(t, 2) + Math.pow(t, 3);
+    }
     
     //managing animations
-    var x = [0,0.5,1,-0.3];
-    var y = [0,0.1,-0.8,-0.4];
+    var x = [0,1.8,1,-0.3];
+    var y = [0,1.0,-0.8,-0.4];
     var current=0;
+    var time = 20;
     
     function animateSphere(a,b){
-        var count = 50;
+        //console.log(a + " " + b);
+        var t = 0.025;
+        var count = 40;
         var xdist = x[b] - x[a], ydist = y[b] - y[a];
         var xdiff=xdist/count, ydiff=ydist/count;
         
@@ -70,10 +77,13 @@ $(document).ready( function(){
             count--;
             sphere.rotation.x += xdiff;
             sphere.rotation.y += ydiff;
-            renderer.render(scene, camera);
-            if(count!=0){
-                requestAnimationFrame(rotation);   
-            }
+            setTimeout(function(){
+                renderer.render(scene, camera);
+                if(count!=0){
+                    requestAnimationFrame(rotation);
+                t += 0.025;   
+                }
+            }, CB(t)*time);
         })();
         
         current = b;
@@ -88,6 +98,7 @@ $(document).ready( function(){
         setTimeout(function(){
             $("#event-list-overlay").fadeIn();
             $("#timeline-1").show();
+            $(".timeline .bg").addClass("timeline-popin");
             eventAnimate($("#timeline-1")[0]);
         }, 1000);
     });
@@ -97,6 +108,7 @@ $(document).ready( function(){
         setTimeout(function(){
             $("#event-list-overlay").fadeIn();
             $("#timeline-1").show();
+            $(".timeline .bg").addClass("timeline-popin");
             eventAnimate($("#timeline-1")[0]);
         }, 1000);
     });
@@ -106,6 +118,7 @@ $(document).ready( function(){
         setTimeout(function(){
             $("#event-list-overlay").fadeIn();
             $("#timeline-1").show();
+            $(".timeline .bg").addClass("timeline-popin");
             eventAnimate($("#timeline-1")[0]);
         }, 1000);
     });

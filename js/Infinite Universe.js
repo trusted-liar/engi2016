@@ -48,6 +48,7 @@ var rightMid = {
 var cardObjects = $(myimage).find(".card");
 for(var i=0; i<cardObjects.length; i++){
     $(cardObjects[i]).css("display","none");
+    $(cardObjects[i]).attr("popout", "false");
 }
 var cardPos = [];
 //initializing the first cards
@@ -168,22 +169,42 @@ function MouseWheelHandler(e) {
 	// cross-browser wheel delta
 	var e = window.event || e; // old IE support
 	var delta = (e.wheelDelta || -e.detail);
-    timelineAnimation(delta);
+    timelineAnimation(delta*1.5);
 	return false;
 }
 
 $(function(){
+    $(document).click(function(e){
+        var clik = e.target;
+        if($(clik).attr('popout') == 'true'){
+            $("html").off("keydown");
+            // IE9, Chrome, Safari, Opera
+            myimage.removeEventListener("mousewheel", MouseWheelHandler, false);
+            // Firefox
+            myimage.removeEventListener("DOMMouseScroll", MouseWheelHandler, false);
+            $(".timeline .bg").addClass("timeline-popout");
+            $(myimage.parentElement).fadeOut(500);
+            setTimeout(function(){
+                $(myimage).fadeOut();
+                $(".timeline .bg").removeClass("timeline-popout timeline-popin");
+            },500);
+        }
+    });
     $('html').keydown(function(e){
-        if(e.which === 38) timelineAnimation(5);
-        if(e.which === 40) timelineAnimation(-5);
+        if(e.which === 38) timelineAnimation(15);
+        if(e.which === 40) timelineAnimation(-15);
         if(e.which === 27){
             $("html").off("keydown");
             // IE9, Chrome, Safari, Opera
             myimage.removeEventListener("mousewheel", MouseWheelHandler, false);
             // Firefox
             myimage.removeEventListener("DOMMouseScroll", MouseWheelHandler, false);
-            $(myimage).fadeOut();
-            $(myimage.parentElement).fadeOut();
+            $(".timeline .bg").addClass("timeline-popout");
+            $(myimage.parentElement).fadeOut(500);
+            setTimeout(function(){
+                $(myimage).fadeOut();
+                $(".timeline .bg").removeClass("timeline-popout timeline-popin");
+            },500);
         }
     });
 });

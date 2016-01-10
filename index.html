@@ -13,8 +13,8 @@
         <script src="js/preloader2.js"></script>
 	</head>
 	<body>
-        <div id="container" style="position:absolute;z-index:500;" class="afterLoad">
-        </div>
+        <div id="background" class="afterLoad2" style="display: none"></div>
+        <div id="container" style="position:absolute;z-index:500;" class="afterLoad"></div>
         <div class="over-image">
             <img src="assets/main/gate.svg" class="overlay" id="i1">
             <img src="assets/images/0/2.png" class="overlay" id="i2">
@@ -31,17 +31,18 @@
             <span id="p3">3</span><br>
         </div>
         <div id="event-list-overlay">
-            <div class="timeline" id="timeline-1">
-                <div class="bg" id="bg">
+            <div class="timeline" id="timeline-1" popout="true">
+                <div class="bg" id="bg" popout="true">
                 </div>
-                <div class="animate">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
+                <div class="animate" popout="true">
+                    <a href="#"><div class="card"></div></a>
+                    <a href="#"><div class="card" ></div></a>
+                    <a href="#"><div class="card"></div></a>
+                    <a href="#"><div class="card"></div></a>
+                    <a href="#"><div class="card"></div></a>
+                    <a href="#"><div class="card"></div></a>
+                    <a href="#"><div class="card"></div></a>
+                    <a href="#"><div class="card"></div></a>
                 </div>
             </div>
         </div>
@@ -60,16 +61,20 @@
           svgDoc = oat.getSVGDocument();
           $(oat).css('visibility', 'visible');
           svg_loader(svgDoc);
-          imageSrcs = ["assets/main/gate.svg"];
+          imageSrcs = ["assets/1.jpg", "assets/images/0/1.png", "assets/images/0/2.png", "assets/images/0/3.png", "assets/images/0/4.png", "assets/images/0/5.png"];
           preloadImages(imageSrcs, showPlanet);
         }
 
         function showPlanet(){
-          $('.afterLoad').fadeIn(1000);
+          $('.afterLoad').fadeIn(500);
           setTimeout(function(){
-            $('#container').zoomTo({targetsize:1.0, duration:600});
+            $('#container').zoomTo({targetsize:1.0, duration:800, easing: "ease-out"});
+          }, 500);
+          setTimeout(function(){
+            $('.afterLoad2').fadeIn(400);
           }, 1000);
         }
+
         </script>
 	</body>
 </html>

@@ -1,3 +1,19 @@
+body, #container{
+    -webkit-backface-visibility: hidden;
+}
+
+#background{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-image: url('../assets/bg.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
 #container{
     position: absolute;
     z-index: 500;
@@ -46,6 +62,13 @@ canvas{
     }
 }
 
+.pop-out{
+    animation-name: example;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+}
+
 .over-image{
     position: absolute;
     z-index: 501;
@@ -60,7 +83,11 @@ canvas{
 }
 
 .over-image object{
-    position: relative;
+    position: fixed;
+}
+
+object::hover{
+    cursor: pointer;
 }
 
 #i1{
@@ -81,9 +108,9 @@ canvas{
 }
 
 #i4{
-    height: 20vh;
-    top: -25vh;
-    left: -19vh;
+    height: 27vh;
+    top: -40vh;
+    left: -26vh;
 }
 
 #i5{
@@ -106,7 +133,7 @@ canvas{
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(249, 249, 249, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
 /*    margin: 10vh 0 0 10vw; */
     z-index: 510;
 }
@@ -145,4 +172,36 @@ canvas{
 
 .afterLoad{
     display: none;
+}
+
+@keyframes timeline-popin{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 180%;
+    }
+}
+
+@keyframes timeline-popout{
+    0%{
+        width: 180%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+
+.timeline-popin{
+    animation-name: timeline-popin;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+}
+
+.timeline-popout{
+    animation-name: timeline-popout;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
 }
