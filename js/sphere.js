@@ -14,11 +14,11 @@ $(document).ready( function(){
     renderer.setSize(WIDTH, HEIGHT);
     $container.append(renderer.domElement);
 
-    var radius = 75, segments = 50, rings = 50;
+    var radius = 60, segments = 100, rings = 100;
     var geometry = new THREE.SphereGeometry(radius,segments,rings);
     var material = new THREE.MeshPhongMaterial();
     var loader = new THREE.TextureLoader();
-    loader.load('assets/mappp.png',
+    loader.load('assets/1.jpg',
         function ( texture ) {
             material.map = texture;
         },
@@ -55,16 +55,16 @@ $(document).ready( function(){
         renderer.render(scene, camera);
 
     });
+    
+    //managing animations
+    var x = [0,0.5,1,-0.3];
+    var y = [0,0.1,-0.8,-0.4];
+    var current=0;
+    var time = 20;
 
     function CB(t){
         return Math.pow(1-t, 3) + Math.pow(1-t, 2)*t + (1-t)*Math.pow(t, 2) + Math.pow(t, 3);
     }
-    
-    //managing animations
-    var x = [0,1.8,1,-0.3];
-    var y = [0,1.0,-0.8,-0.4];
-    var current=0;
-    var time = 20;
     
     function animateSphere(a,b){
         //console.log(a + " " + b);
@@ -89,21 +89,47 @@ $(document).ready( function(){
         current = b;
     }
     
+    function removeImages(){
+        var x = $('img.overlay');
+        for(var i=0; i<x.length; i++){
+                if($(x[i]).css("display")==="block"){
+                $(x[i]).css("animation-duration", "0.5s");
+                $(x[i]).css("animation-name", "popin");
+                $(x[i]).fadeOut();
+            }
+        }
+    }
+    
     $('#p0').click(function(){
-        animateSphere(current,0); 
+        removeImages();
+        animateSphere(current,0);
+        setTimeout(function(){
+            $('#i5').css("animation-duration","1.5s");
+            $('#i5').css("animation-name","popout-1");
+            $('#i5').fadeIn();
+        },1000);
     });
 
     $('#p1').click(function(){
-        animateSphere(current,1);
+        removeImages();
         setTimeout(function(){
-            $("#event-list-overlay").fadeIn();
-            $("#timeline-1").show();
-            $(".timeline .bg").addClass("timeline-popin");
-            eventAnimate($("#timeline-1")[0]);
-        }, 1000);
+            animateSphere(current,1);
+            setTimeout(function(){
+                $('#i5').css("animation-duration","1.5s");
+                $('#i5').css("animation-name","popout-1");
+                $('#i5').fadeIn();
+                setTimeout(function(){
+                    $("#event-list-overlay").fadeIn();
+                    $("#timeline-1").show();
+                    $(".timeline .bg").addClass("timeline-popin");
+                    eventAnimate($("#timeline-1")[0]);
+                }, 1500);
+            },1000);
+        },500);
     });
 
     $('#p2').click(function(){
+        removeImages();
         animateSphere(current,2); 
         setTimeout(function(){
             $("#event-list-overlay").fadeIn();
@@ -114,6 +140,7 @@ $(document).ready( function(){
     });
 
     $('#p3').click(function(){
+        removeImages();
         animateSphere(current,3); 
         setTimeout(function(){
             $("#event-list-overlay").fadeIn();

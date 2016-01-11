@@ -20,13 +20,13 @@ function svg_loader(svg_to_load){
         path.style.stroke = path.style.fill;
         if(path.style.strokeWidth > 0) path.style.strokeWidth = path.style.strokeWidth;
         else path.style.strokeWidth = '2px';
-        if(path.style.fillOpacity > 0) path.style.fillOpacity = '0';
+        path.style.fillOpacity = '0';
         length = path.getTotalLength();
         path.style.transition = path.style.WebkitTransition = 'none';
         path.style.strokeDasharray = length + ' ' + length;
         path.style.strokeDashoffset = length;
         path.getBoundingClientRect();
-        path.style.transition = path.style.WebkitTransition = 'all 3.5s linear';
+        path.style.transition = path.style.WebkitTransition = 'all 4.5s linear';
       });
       ele = [group, final_fill];
       groups.push(ele);
@@ -48,7 +48,7 @@ function drawPath(paths){
     });
     if($(group).attr('fill') && $(group).attr('fill')!='none'){
       group.style.transition = group.style.WebkitTransition = 'none';
-      group.style.transition = group.style.WebkitTransition = 'fill 4s linear';
+      group.style.transition = group.style.WebkitTransition = 'fill 4.5s linear';
       group.style.fill = final_fill;
     }
   }
@@ -69,9 +69,8 @@ function preloadImages(srcs, callback) {
             drawPath(pathPerLoad);
             if (remaining <= 0) {
                 drawPath(toDraw);
-                setTimeout(callback, 4000);
+                setTimeout(callback, 5000);
             }
-
         };
         img.onerror = function() {
           location.reload();
