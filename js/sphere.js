@@ -18,7 +18,7 @@ $(document).ready( function(){
     var geometry = new THREE.SphereGeometry(radius,segments,rings);
     var material = new THREE.MeshPhongMaterial();
     var loader = new THREE.TextureLoader();
-    loader.load('assets/1.jpg',
+    loader.load('assets/main/map.png',
         function ( texture ) {
             material.map = texture;
         },
@@ -31,7 +31,7 @@ $(document).ready( function(){
     );
     var sphere = new THREE.Mesh( geometry, material);
     var a = new THREE.Vector3( 0, -1, 0 );
-    sphere.translateOnAxis(a, 15);
+    //sphere.translateOnAxis(a, 15);
     scene.add(sphere);
 
     window.addEventListener('resize', function() {

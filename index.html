@@ -20,7 +20,7 @@
             <img src="assets/main/gate.svg" class="overlay" id="i1">
             <img src="assets/images/0/2.png" class="overlay" id="i2">
             <a href="/#"><img src="assets/images/0/3.png" class="overlay afterload" id="i3"></a>
-            <a href="#"><object id="i4" data="assets/main/gate.svg" type="image/svg+xml" onload="set_preloader()" style="opacity: 0;"></object></a>
+            <a href="#"><object id="i4" data="assets/main/gate_2.svg" type="image/svg+xml" style="opacity: 0;"></object></a>
             <img src="assets/images/0/5.png" class="overlay" id="i5">
             <img src="assets/images/0/6.png" class="overlay" id="i6">
             <img src="assets/images/0/7.png" class="overlay" id="i7">
@@ -33,24 +33,33 @@
         </div>
         <div id="event-list-overlay">
             <div class="timeline" id="timeline-1" popout="true">
-                <div class="bg" id="bg" popout="true">
-                </div>
-                <div class="animate" popout="true">
-                    <a href="#"><div class="card"></div></a>
-                    <a href="#"><div class="card" ></div></a>
-                    <a href="#"><div class="card"></div></a>
-                    <a href="#"><div class="card"></div></a>
-                    <a href="#"><div class="card"></div></a>
-                    <a href="#"><div class="card"></div></a>
-                    <a href="#"><div class="card"></div></a>
-                    <a href="#"><div class="card"></div></a>
+                <div class="bg bg_D1" id="bg" popout="true"></div>
+                <div class="day day_D1" id="day1" popout="true">DAY 1</div>
+                <div class="day day_D2" id="day2" popout="true" style="display:none;">DAY 2</div>
+                <div class="day day_D3" id="day3" popout="true" style="display:none;">DAY 3</div>
+                <div class="animate animate_D1" id="animate" popout="true">
+                    <a href="#"><div class="card">
+                        <h3>Event Name</h3>
+                    </div></a>
+                    <a href="#"><div class="card" day="1"></div></a>
+                    <a href="#"><div class="card" day="1"></div></a>
+                    <a href="#"><div class="card" day="2"></div></a>
+                    <a href="#"><div class="card" day="2"></div></a>
+                    <a href="#"><div class="card" day="2"></div></a>
+                    <a href="#"><div class="card" day="3"></div></a>
+                    <a href="#"><div class="card" day="3"></div></a>
                 </div>
             </div>
         </div>
 		<script src="js/three.min.js"></script>
         <script src="js/sphere.js"></script>
         <script src="js/Infinite%20Universe.js"></script>
+        <script src="js/timeline.js"></script>
         <script>
+        baseLoceT = 'assets/event_thumbs/';
+        event_thumbs = ["anushthaan", "spandan", "shakedown"];
+        gate = document.getElementById('i4');
+        gate.onload = function(){set_preloader();};
         function set_preloader(){
             $("#i4").zoomTo({targetsize:1, duration:0});
             setTimeout(preloader, 500);
@@ -61,7 +70,7 @@
           svgDoc = oat.getSVGDocument();
           $(oat).css('visibility', 'visible');
           svg_loader(svgDoc);
-          imageSrcs = ["assets/1.jpg", "assets/images/0/1.png", "assets/images/0/2.png", "assets/images/0/3.png", "assets/images/0/4.png", "assets/images/0/5.png"];
+          imageSrcs = ["assets/main/map.png", "assets/main/bg.jpg"];
           preloadImages(imageSrcs, showPlanet);
         }
 
@@ -73,6 +82,13 @@
           setTimeout(function(){
             $('.afterLoad2').fadeIn(400);
           }, 1000);
+          loadimages();
+        }
+
+        function loadimages(){
+            for(var i=0; i<event_thumbs.length; i++){
+                $(document).find(event_thumbs[i]).attr("src", baseLoceT+event_thumbs[i]+'.jpg');
+            }
         }
 
         </script>
