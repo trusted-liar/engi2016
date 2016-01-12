@@ -223,6 +223,18 @@ canvas{
     transition: all 0.8s;
 }
 
+.timeline .time{
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    top: 25vh;
+    width: 100%;
+    font-size: 50px; 
+    text-align: center;
+    -webkit-transition: all 0.8s; /* Safari */
+    transition: all 0.8s;
+}
+
 .day_D1{
     color: #DADADA;
     text-shadow: #4DD6E4 0 0 10px, #4DD6E4 0px 0px 5px;
@@ -248,7 +260,7 @@ canvas{
     width: 50vw;
     border-radius: 35px;
     text-align: center;
-    padding-top: 10vh;
+    padding-top: 5vh;
 /*    transition: all 100s linear; */
 }
 

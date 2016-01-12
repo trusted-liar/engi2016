@@ -14,7 +14,7 @@
         <script src="js/preloader2.js"></script>
 	</head>
 	<body>
-        <div id="background" class="afterLoad2" style="display: none"></div>
+        <div id="background" class="afterLoad" style="display: none"></div>
         <div id="container" style="position:absolute;z-index:500;" class="afterLoad"></div>
         <div class="over-image">
             <img src="assets/main/gate.svg" class="overlay" id="i1">
@@ -34,23 +34,23 @@
         <div id="event-list-overlay">
             <div class="timeline" id="timeline-1" popout="true">
                 <div class="bg bg_D1" id="bg" popout="true"></div>
-                <div class="day day_D1" id="day1" popout="true">DAY 1</div>
-                <div class="day day_D2" id="day2" popout="true" style="display:none;">DAY 2</div>
-                <div class="day day_D3" id="day3" popout="true" style="display:none;">DAY 3</div>
+                <div class="day day_D1" id="day" popout="true">DAY 1</div>
+                <div class="time day_D1" style="display: inline;" popout="true"><p id="hrs" style="display: inline;">00</p>:<p id="min" style="display: inline;">00</p> HRS</div>
                 <div class="animate animate_D1" id="animate" popout="true">
-                    <a href="#"><div class="card">
+                    <a href="#"><div class="card" day="1" hrs="10" min="00">
+                        <h1>Event Name</h1>
+                        <h2>Sub Description</h2>
+                        <h2>Venue: OAT</h2>
+                    </div></a>
+                    <a href="#"><div class="card" day="1" hrs="12" min="00">
                         <h1>Event Name</h1>
                         <h2>Sub Description</h2>
                     </div></a>
-                    <a href="#"><div class="card" day="1">
+                    <a href="#"><div class="card" day="1" hrs="14" min="30">
                         <h1>Event Name</h1>
                         <h2>Sub Description</h2>
                     </div></a>
-                    <a href="#"><div class="card" day="1">
-                        <h1>Event Name</h1>
-                        <h2>Sub Description</h2>
-                    </div></a>
-                    <a href="#"><div class="card" day="2">
+                    <a href="#"><div class="card" day="2" hrs="16" min="00">
                         <h1>Event Name</h1>
                         <h2>Sub Description</h2>
                     </div></a>
