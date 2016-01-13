@@ -1,4 +1,3 @@
-
 <html>
 	<head>
 		<title>Engifest 2016</title>
@@ -17,20 +16,31 @@
         <div id="background" class="afterLoad" style="display: none"></div>
         <div id="container" style="position:absolute;z-index:500;" class="afterLoad"></div>
         <div class="over-image">
-            <img src="assets/main/gate.svg" class="overlay" id="i1">
-            <img src="assets/images/0/2.png" class="overlay" id="i2">
-            <a href="/#"><img src="assets/images/0/3.png" class="overlay afterload" id="i3"></a>
-            <a href="#"><object id="i4" data="assets/main/gate_2.svg" type="image/svg+xml" style="opacity: 0;"></object></a>
-            <img src="assets/images/0/5.png" class="overlay" id="i5">
-            <img src="assets/images/0/6.png" class="overlay" id="i6">
-            <img src="assets/images/0/7.png" class="overlay" id="i7">
+            <a href="#"><object id="i4" class="overlay" data="assets/main/gate_2.svg" type="image/svg+xml" style="opacity: 0;"></object></a>
+            <img src="assets/main/gate.svg" class="overlay stage" id="stage-i1">
+            <img src="assets/images/Sports/audisidefinal.png" class="overlay stage" id="stage-i2">
+            <img src="assets/images/Sports/mechCsideview.png" class="overlay stage" id="stage-i3">
+            <img src="assets/images/Sports/drawing5.png" class="overlay stage" id="stage-i4">
+            
+            <img src="assets/main/gate.svg" class="overlay landing" id="landing-i1">
+            
+            <img src="assets/images/OAT/oatcentre.png" class="overlay oat" id="oat-i1">
+            <img src="assets/images/OAT/oatside1.png" class="overlay oat" id="oat-i2">
+            <img src="assets/images/OAT/oatside2.png" class="overlay oat" id="oat-i3">
+            <img src="assets/images/OAT/oatside3.png" class="overlay oat" id="oat-i4">
+            
+            <img src="assets/images/Audi/audifrontfinal1.png" class="overlay audi" id="audi-i1">
+            <img src="assets/images/Audi/mexyfrnt%20copy.png" class="overlay audi" id="audi-i2">
+            <img src="assets/images/Audi/oatside.png" class="overlay audi" id="audi-i3">
+            <img src="assets/images/Audi/sidegate.png" class="overlay audi" id="audi-i4">
         </div>
         <div style="color:white;position:absolute;left:0%;top:0%;z-index:501;" class="afterLoad">
-            <span id="p0">0</span><br>
-            <span id="p1">1</span><br>
-            <span id="p2">2</span><br>
-            <span id="p3">3</span><br>
+            <span id="landing">landing</span><br>
+            <span id="stage">stage</span><br>
+            <span id="oat">oat</span><br>
+            <span id="audi">audi</span><br>
         </div>
+
         <div id="event-list-overlay">
             <div class="timeline" id="timeline-1" popout="true">
                 <div class="bg bg_D1" id="bg" popout="true"></div>
@@ -116,3 +126,97 @@
         </script>
 	</body>
 </html>
+
+<!--
+<html>
+	<head>
+		<title>Engifest 2016</title>
+		<style>
+			body { margin: 0; }
+		</style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/three.css">
+        <script src="js/jquery-2.0.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.zoomooz.js"></script>
+        <script src="js/preloader2.js"></script>
+	</head>
+	<body>
+        <div id="background" class="afterLoad2" style="display: block"></div>
+        <div id="container" style="position:absolute;z-index:500;" class="afterLoad"></div>
+        <div class="over-image">
+            <a href="#"><object id="gate" class="overlay" data="assets/main/gate.svg" type="image/svg+xml" onload="set_preloader" style="opacity: 0;"></object></a>
+            
+            <img src="assets/main/gate.svg" class="overlay stage" id="stage-i1">
+            <img src="assets/images/Sports/audisidefinal.png" class="overlay stage" id="stage-i2">
+            <img src="assets/images/Sports/mechCsideview.png" class="overlay stage" id="stage-i3">
+            <img src="assets/images/Sports/drawing5.png" class="overlay stage" id="stage-i4">
+            
+            <img src="assets/main/gate.svg" class="overlay landing" id="landing-i1">
+            
+            <img src="assets/images/OAT/oatcentre.png" class="overlay oat" id="oat-i1">
+            <img src="assets/images/OAT/oatside1.png" class="overlay oat" id="oat-i2">
+            <img src="assets/images/OAT/oatside2.png" class="overlay oat" id="oat-i3">
+            <img src="assets/images/OAT/oatside3.png" class="overlay oat" id="oat-i4">
+            
+            <img src="assets/images/Audi/audifrontfinal1.png" class="overlay audi" id="audi-i1">
+            <img src="assets/images/Audi/mexyfrnt%20copy.png" class="overlay audi" id="audi-i2">
+            <img src="assets/images/Audi/oatside.png" class="overlay audi" id="audi-i3">
+            <img src="assets/images/Audi/sidegate.png" class="overlay audi" id="audi-i4">
+        </div>
+        <div style="color:white;position:absolute;left:0%;top:0%;z-index:501;" class="afterLoad">
+            <span id="landing">landing</span><br>
+            <span id="stage">stage</span><br>
+            <span id="oat">oat</span><br>
+            <span id="audi">audi</span><br>
+        </div>
+        <div id="event-list-overlay">
+            <div class="timeline" id="timeline-1" popout="true">
+                <div class="bg" id="bg" popout="true">
+                    <div class="scroll-up"></div>
+                </div>
+                <div class="animate" popout="true">
+                    <a href="#"><div class="card"></div></a>
+                    <a href="#"><div class="card" ></div></a>
+                    <a href="#"><div class="card"></div></a>
+                    <a href="#"><div class="card"></div></a>
+                    <a href="#"><div class="card"></div></a>
+                    <a href="#"><div class="card"></div></a>
+                    <a href="#"><div class="card"></div></a>
+                    <a href="#"><div class="card"></div></a>
+                </div>
+            </div>
+        </div>
+		<script src="js/three.min.js"></script>
+        <script src="js/sphere.js"></script>
+        <script src="js/Infinite%20Universe.js"></script>
+        <script>
+        function set_preloader(){
+            $("#gate").zoomTo({targetsize:1, duration:0});
+            setTimeout(preloader, 500);
+        }
+        function preloader(){
+          $("#gate").css('opacity', '1');
+          oat = document.getElementById('gate');
+          svgDoc = oat.getSVGDocument();
+          $(oat).css('visibility', 'visible');
+          svg_loader(svgDoc);
+          imageSrcs = ["assets/1.jpg", "assets/images/0/1.png", "assets/images/0/2.png", "assets/images/0/3.png", "assets/images/0/4.png", "assets/images/0/5.png"];
+          preloadImages(imageSrcs, showPlanet);
+        }
+
+        function showPlanet(){
+          $('.afterLoad').fadeIn(500);
+          setTimeout(function(){
+            $('#container').zoomTo({targetsize:1.0, duration:800, easing: "ease-out"});
+          }, 500);
+          setTimeout(function(){
+            $('.afterLoad2').fadeIn(400);
+          }, 1000);
+        }
+
+        </script>
+	</body>
+</html>
+-->

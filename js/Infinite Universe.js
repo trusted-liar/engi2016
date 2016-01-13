@@ -53,19 +53,20 @@ var cardPos = [];
 //initializing the first cards
 (function setFirstScreen(){
     var temp;
-//    temp = cloneObject(leftEnd);
-//    cardPos.push(temp);
     temp = cloneObject(rightMid);
     cardPos.push(temp);
-/*    temp = cloneObject(leftStart);
-    cardPos.push(temp);
-  */  setPos(cardPos[0],cardObjects[0]);
-//    setPos(cardPos[1],cardObjects[1]);
-//    setPos(cardPos[2],cardObjects[2]);
-    setTimeout(function(){$(cardObjects[0]).fadeIn();}, 500);
-//    setTimeout(function(){$(cardObjects[1]).fadeIn();}, 700);
-//    setTimeout(function(){$(cardObjects[2]).fadeIn();}, 900);
+    setPos(cardPos[0],cardObjects[0]);
+    setTimeout(function(){$(cardObjects[0]).fadeIn();}, 1000);
 })();
+    
+//handling window resize
+window.addEventListener('resize', function() {
+    ht = window.innerHeight;
+    wd = window.innerWidth;
+    for(var i = 0; i<cardPos.length; i++){
+        setPos(cardPos[i],cardObjects[i]);
+    }
+});
 
 //to know which side the respective card would be
 for(var i=0; i<cardObjects.length; i++){
@@ -190,8 +191,20 @@ $(function(){
         }
     });
     $('html').keydown(function(e){
-        if(e.which === 38) timelineAnimation(5);
-        if(e.which === 40) timelineAnimation(-5);
+        if(e.which === 38) {
+            timelineAnimation(5);
+            setTimeout(function(){timelineAnimation(5);},50);
+            setTimeout(function(){timelineAnimation(5);},100);
+            setTimeout(function(){timelineAnimation(5);},150);
+            setTimeout(function(){timelineAnimation(5);},200);
+        }
+        if(e.which === 40) {
+            timelineAnimation(-5);
+            setTimeout(function(){timelineAnimation(-5);},50);
+            setTimeout(function(){timelineAnimation(-5);},100);
+            setTimeout(function(){timelineAnimation(-5);},150);
+            setTimeout(function(){timelineAnimation(-5);},200);
+        }
         if(e.which === 27){
             $("html").off("keydown");
             // IE9, Chrome, Safari, Opera

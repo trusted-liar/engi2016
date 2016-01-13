@@ -31,7 +31,7 @@ $(document).ready( function(){
     );
     var sphere = new THREE.Mesh( geometry, material);
     var a = new THREE.Vector3( 0, -1, 0 );
-    //sphere.translateOnAxis(a, 15);
+//    sphere.translateOnAxis(a, 15);
     scene.add(sphere);
 
     window.addEventListener('resize', function() {
@@ -90,34 +90,24 @@ $(document).ready( function(){
     }
     
     function removeImages(){
-        var x = $('img.overlay');
+        var x = $('.over-image .overlay');
         for(var i=0; i<x.length; i++){
                 if($(x[i]).css("display")==="block"){
                 $(x[i]).css("animation-duration", "0.5s");
-                $(x[i]).css("animation-name", "popin");
+                $(x[i]).css("animation-name", "popin-building");
                 $(x[i]).fadeOut();
             }
         }
     }
     
-    $('#p0').click(function(){
-        removeImages();
-        animateSphere(current,0);
-        setTimeout(function(){
-            $('#i5').css("animation-duration","1.5s");
-            $('#i5').css("animation-name","popout-1");
-            $('#i5').fadeIn();
-        },1000);
-    });
-
-    $('#p1').click(function(){
+    $('#landing').click(function(){
         removeImages();
         setTimeout(function(){
-            animateSphere(current,1);
+            animateSphere(current,0);
             setTimeout(function(){
-                $('#i5').css("animation-duration","1.5s");
-                $('#i5').css("animation-name","popout-1");
-                $('#i5').fadeIn();
+                $('.overlay.landing').css("animation-duration","1s");
+                $('#landing-i1').css("animation-name","popout-landing-1");
+                $('.overlay.landing').fadeIn();
                 setTimeout(function(){
                     $("#event-list-overlay").fadeIn();
                     $("#timeline-1").show();
@@ -128,26 +118,61 @@ $(document).ready( function(){
         },500);
     });
 
-    $('#p2').click(function(){
+    $('#stage').click(function(){
         removeImages();
-        animateSphere(current,2); 
         setTimeout(function(){
-            $("#event-list-overlay").fadeIn();
-            $("#timeline-1").show();
-            $(".timeline .bg").addClass("timeline-popin");
-            eventAnimate($("#timeline-1")[0]);
-        }, 1000);
+            animateSphere(current,1);
+            setTimeout(function(){
+                $('.overlay.stage').css("animation-duration","1s");
+                $('#stage-i1').css("animation-name","popout-stage-1");
+                $('#stage-i2').css("animation-name","popout-stage-2");
+                $('#stage-i3').css("animation-name","popout-stage-3");
+                $('#stage-i4').css("animation-name");
+                $('.overlay.stage').fadeIn();
+                setTimeout(function(){
+                    $("#event-list-overlay").fadeIn();
+                    $("#timeline-1").show();
+                    $(".timeline .bg").addClass("timeline-popin");
+                    eventAnimate($("#timeline-1")[0]);
+                }, 1500);
+            },1000);
+        },500);
     });
 
-    $('#p3').click(function(){
+    $('#oat').click(function(){
         removeImages();
-        animateSphere(current,3); 
         setTimeout(function(){
-            $("#event-list-overlay").fadeIn();
-            $("#timeline-1").show();
-            $(".timeline .bg").addClass("timeline-popin");
-            eventAnimate($("#timeline-1")[0]);
-        }, 1000);
+            animateSphere(current,2);
+            setTimeout(function(){
+                $('.overlay.oat').css("animation-duration","1.5s");
+                $('#oat-i1').css("animation-name","popou");
+                $('.overlay.oat').fadeIn();
+                setTimeout(function(){
+                    $("#event-list-overlay").fadeIn();
+                    $("#timeline-1").show();
+                    $(".timeline .bg").addClass("timeline-popin");
+                    eventAnimate($("#timeline-1")[0]);
+                }, 1500);
+            },1000);
+        },500);
+    });
+
+    $('#audi').click(function(){
+        removeImages();
+        setTimeout(function(){
+            animateSphere(current,3);
+            setTimeout(function(){
+                $('.overlay.audi').css("animation-duration","1.5s");
+                $('#audi-i1').css("animation-name","popou");
+                $('.overlay.audi').fadeIn();
+                setTimeout(function(){
+                    $("#event-list-overlay").fadeIn();
+                    $("#timeline-1").show();
+                    $(".timeline .bg").addClass("timeline-popin");
+                    eventAnimate($("#timeline-1")[0]);
+                }, 1500);
+            },1000);
+        },500);
     });
 
 });

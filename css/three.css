@@ -326,3 +326,229 @@ canvas{
     animation-timing-function: ease-out;
     animation-delay: 0s;
 }
+
+body, #container{
+    -webkit-backface-visibility: hidden;
+}
+
+@keyframes popin-building{
+    100%{
+        left: 0;
+        top: 0;
+        height: 0;
+    }
+}
+
+.pop-out{
+    animation-name: example;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+}
+
+#stage-i1{
+    display: none;
+    top: 40vh;
+    left: -19vh;
+    height: 20vh;
+    transform: rotateX(180deg);
+}
+
+@keyframes popout-stage-1{
+    0%{
+        height: 0vh;
+        left: 0;
+        top: 0;
+    }
+    20%{
+        height: 4vh;
+        top: -9vh;
+        left: -1.9vh;
+    }
+    50%{
+        top: 44vh;
+        left: -25vh;
+        height: 26vh;
+    }
+    75%{
+        top: 34vh;
+        left: -16vh;
+        height: 17vh;
+    }
+    100%{
+        height: 20vh;
+        top: 40vh;
+        left: -19vh;
+    }
+}
+
+#stage-i2{
+    display: none;
+    transform: rotateZ(-90deg);
+    left: -42vh;
+    top: 26vh;
+    height: 31vh;
+}
+
+@keyframes popout-stage-2{
+    0%{
+        height: 0;
+        left: 0;
+        top: 0;
+    }
+    35%{
+        height: 31vh;
+        top: 27vh;
+        left: -42vh;
+    }
+    50%{
+    left: -32vh;
+    top: 20vh;
+    height: 25vh;
+    }
+    75%{
+        left: -47vh;
+        top: 30vh;
+        height: 36vh;
+    }
+    100%{
+        height: 31vh;
+        top: 26vh;
+        left: -42vh;
+    }
+}
+
+#stage-i3{
+    display: none;
+    height: 33vh;
+    top: -22vh;
+    left: 46vh;
+    transform: rotateZ(90deg);
+}
+
+@keyframes popout-stage-3{
+    0%{
+        height: 0;
+        top: 0;
+        left: 0;
+    }
+    15%{
+        height: 6vh;
+        top: -8vh;
+        left: 0vh;
+    }
+    50%{
+        height: 29vh;
+        top: -22vh;
+        left: 36vh;
+    }
+    72%{
+        height: 24vh;
+        top: -19vh;
+        left: 30vh;
+    }
+    100%{
+        height: 33vh;
+        top: -22vh;
+        left: 46vh;
+    }
+}
+
+#stage-i4{
+    height: 53vh;
+    display: none;
+    left: -20vh;
+    top: -38vh;
+}
+
+#landing-i1{
+    display: none;
+    height: 25vh;
+    top: -43vh;
+    left: -24vh;
+}
+
+@keyframes popout-landing-1{
+    0%{
+    height: 0vh;
+    top: 10vh;
+    left: 0vh;
+    }
+    68%{
+    height: 30vh;
+    top: -44vh;
+    left: -29vh;
+    }
+    100%{
+        height: 25vh;
+        top: -43vh;
+        left: -24vh;
+    }
+}
+
+#oat-i1{
+    display: none;
+    height: 36vh;
+    top: -18vh;
+    left: -18vh;
+}
+
+#oat-i2{
+    display: none;
+    top: -23vh;
+    left: 13vh;
+    height: 50vh;
+}
+
+#oat-i3{
+    display: none;
+    left: -38vh;
+    top: 2vh;
+    transform: rotateZ(11deg);
+    height: 25vh;
+}
+
+#oat-i4{
+    display: none;
+    top: -42vh;
+    left: -35vh;
+    height: 42vh;
+}
+
+#audi-i1{
+    display: none;
+    height: 20vh;
+    transform: rotateZ(3deg);
+    left: -20vh;
+    top: -35vh;
+}
+
+#audi-i2{
+    display: none;
+    height: 33vh;
+    left: -46vh;
+    top: 20vh;
+    transform: rotateZ(-82deg);
+}
+
+#audi-i3{
+    display: none;
+    left: 50vh;
+    top: -4vh;
+    transform: rotateZ(129deg);
+    height: 38vh;
+}
+
+#audi-i4{
+    display: none;
+    top: 43vh;
+    left: 22vh;
+    height: 31vh;
+    transform: rotateZ(171deg);
+}
+
+#gate{
+    height: 25vh;
+    top: -43vh;
+    left: -24vh;
+}
