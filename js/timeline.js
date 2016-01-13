@@ -1,11 +1,25 @@
-curr_hrs = null, curr_min =null;
+curr_hrs = '10', curr_min = '00', next_hrs = '00', next_min = '00', counter = 0;
+var refresher;
 
 function getRandom(min, max) {
     res = Math.floor(Math.random() * (max - min + 1)) + min;
-    if(res<10)
-    	return '0'+res;
-    else
-    	return res;
+    if(res<10)	return '0'+res;
+    else return res;
+}
+
+function resetCounter(){ counter=0; }
+
+function timeRefresh(){
+	counter++;
+	$("#hrs").html(getRandom(0, 23));
+	$("#min").html(getRandom(0, 59));
+	console.log(getRandom(0, 23));
+	if(counter > 15){
+		resetCounter();
+		$("#hrs").html(curr_hrs);
+		$("#min").html(curr_min);
+		clearInterval(refresher);
+	}
 }
 
 function toDay1(){
@@ -34,7 +48,9 @@ function toDay3(){
 	$("#day3").show();
 }
 
-function updateTimeline(){
+function updateTimeline(e){
+	var e = window.event || e; // old IE support
+	var delta = (e.wheelDelta || -e.detail);
 	Zoom = 0;
 	c = null;
 	$('.card').each(function(){
@@ -54,12 +70,12 @@ function updateTimeline(){
 				  break;
 		case '3': toDay3();
 	}
-	if(curr_hrs != $(c).attr('hrs') || curr_min != $(c).attr('min')){
-		$('#hrs').html($(c).attr('hrs'));
-		$('#min').html($(c).attr('min'));
+
+	if($(c).attr('hrs') != curr_hrs || $(c).attr('min') != curr_min){
+		curr_hrs = $(c).attr('hrs');
+		curr_min = $(c).attr('min');
+		refresher = setInterval(timeRefresh, 20);
 	}
-	curr_hrs = $(c).attr('hrs')
-	curr_min = $(c).attr('min');
 }
 
 if (document.addEventListener) {
