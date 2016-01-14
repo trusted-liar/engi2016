@@ -164,7 +164,10 @@
             animateSphere(current,3);
             setTimeout(function(){
                 $('.overlay.audi').css("animation-duration","1.5s");
-                $('#audi-i1').css("animation-name","popou");
+                $('#audi-i1').css("animation-name","popout-audi-1");
+                $('#audi-i2').css("animation-name","popout-audi-2");
+                $('#audi-i3').css("animation-name","popout-audi-3");
+                $('#audi-i4').css("animation-name","popout-audi-4");
                 $('.overlay.audi').fadeIn();
 /*                setTimeout(function(){
                     $("#event-list-overlay").fadeIn();

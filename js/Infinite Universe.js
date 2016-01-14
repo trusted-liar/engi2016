@@ -180,7 +180,7 @@ function MouseWheelHandler(e) {
         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
             if(direction === "up"){
                 for(var i=0; i<75; i++){
-                    setTimeout(function(){timelineAnimation(5);},35*i);
+                    setTimeout(function(){timelineAnimation(5);},25*i);
                 }
             }
             else if(direction === "down"){
@@ -188,7 +188,6 @@ function MouseWheelHandler(e) {
                     setTimeout(function(){timelineAnimation(-5);},35*i);
                 }
             }
-          console.log(direction ); 
         }
       });
     });
