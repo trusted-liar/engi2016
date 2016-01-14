@@ -168,7 +168,11 @@
                 $('.overlay.audi').fadeIn();
 /*                setTimeout(function(){
                     $("#event-list-overlay").fadeIn();
+<<<<<<< Updated upstream
                     $("#timeline-audi").show();
+=======
+                    $("#timeline-3").show();
+>>>>>>> Stashed changes
                     $(".timeline .bg").addClass("timeline-popin");
                     eventAnimate($("#timeline-audi")[0]);
                 }, 1500);*/

@@ -84,8 +84,21 @@ canvas{
     position: fixed;
 }
 
-.oat_event, .audi_event, .sc_event{
+
+#i1{
     display: none;
+    height: 20vh;    
+}
+
+#i2{
+    display: none;
+    height: 20vh;
+}
+
+#i3{
+    height: 20vh;
+    top: 7vh;
+    left: -22vh;
 }
 
 #i4{
@@ -175,7 +188,7 @@ canvas{
 }
 
 
-.timeline .day{
+.day{
     margin: 0px;
     padding: 0px;
     position: fixed;
@@ -187,7 +200,7 @@ canvas{
     transition: all 0.8s;
 }
 
-.timeline .time{
+.time{
     margin: 0px;
     padding: 0px;
     position: fixed;

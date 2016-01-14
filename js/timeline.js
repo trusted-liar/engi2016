@@ -22,10 +22,10 @@ function timeRefresh(){
 }
 
 function toDay1(){
-	$(".bg").removeClass('bg_D2').addClass('bg_D1');
-	$(".animate").removeClass('animate_D2').addClass('animate_D1');
-	$(".day").removeClass('day_D2').addClass('day_D1').html('DAY 1');
-	$(".time").removeClass('day_D2').addClass('day_D1');
+	$(".bg").removeClass('bg_D2 bg_D3').addClass('bg_D1');
+	$(".animate").removeClass('animate_D2 animate_D3').addClass('animate_D1');
+	$(".day").removeClass('day_D2 day_D3').addClass('day_D1').html('DAY 1');
+	$(".time").removeClass('day_D2 day_D3').addClass('day_D1');
 }
 
 function toDay2(){
@@ -39,10 +39,10 @@ function toDay2(){
 }
 
 function toDay3(){
-	$(".bg").removeClass('bg_D2').addClass('bg_D3');
-	$(".animate").removeClass('animate_D2').addClass('animate_D3');
-	$(".day").removeClass('day_D2').addClass('day_D3').html('DAY 3');
-	$(".time").removeClass('day_D2').addClass('day_D3');
+	$(".bg").removeClass('bg_D1 bg_D2').addClass('bg_D3');
+	$(".animate").removeClass('animate_D1 animate_D2').addClass('animate_D3');
+	$(".day").removeClass('day_D1 day_D2').addClass('day_D3').html('DAY 3');
+	$(".time").removeClass('day_D1 day_D2').addClass('day_D3');
 	$("#day2").hide();
 	$("#day3").show();
 }
@@ -98,44 +98,17 @@ $('.venue').click(function(){
 		case 'landing':
 			break;
 		case 'oat':
-			$('.oat_event').each(function(){
-				$(this).css('display', 'block');
-			});
-			$('.audi_event').each(function(){
-				$(this).css('display', 'none');
-			});
-			$('.sc_event').each(function(){
-				$(this).css('display', 'none');
-			});
 			first_card = $(document).find('.oat_event')[0];
 			curr_hrs = $(first_card).attr('hrs');
 			curr_min = $(first_card).attr('hrs');
 			break;
 		case 'audi':
-			$('.oat_event').each(function(){
-				$(this).css('display', 'none');
-			});
-			$('.audi_event').each(function(){
-				$(this).css('display', 'block');
-			});
-			$('.sc_event').each(function(){
-				$(this).css('display', 'none');
-			});
 			first_card = $(document).find('.audi_event')[0];
 			curr_hrs = $(first_card).attr('hrs');
 			curr_min = $(first_card).attr('hrs');
 			break;
 		case 'stage':
-			$('.oat_event').each(function(){
-				$(this).css('display', 'none');
-			});
-			$('.audi_event').each(function(){
-				$(this).css('display', 'none');
-			});
-			$('.sc_event').each(function(){
-				$(this).css('display', 'block');
-			});
-			first_card = $(document).find('.sc_event')[0];
+			first_card = $(document).find('.stage_event')[0];
 			curr_hrs = $(first_card).attr('hrs');
 			curr_min = $(first_card).attr('hrs');
 	}
