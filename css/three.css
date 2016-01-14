@@ -615,12 +615,53 @@ body, #container{
     z-index: 5;
 }
 
+@keyframes popout-audi-1{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 #audi-i2{
     display: none;
     height: 33vh;
     left: -46vh;
     top: 20vh;
     transform: rotateZ(-82deg);
+}
+
+@keyframes popout-audi-2{
+    0%{
+        height: 0;
+        left: 0;
+        top: 0;
+    }
+    30%{
+    height: 15vh;
+    left: -17vh;
+    top: 18vh;
+    transform: rotateZ(-99deg);
+    }
+    60%{
+    height: 24vh;
+    left: -32vh;
+    top: 0vh;
+    transform: rotateZ(-57deg);
+    }
+    87%{
+    height: 28vh;
+    left: -34vh;
+    top: 23vh;
+    transform: rotateZ(-89deg);
+    }
+    100%{
+        height: 33vh;
+        left: -46vh;
+        top: 20vh;
+        transform: rotateZ(-82deg);
+    }
 }
 
 #audi-i3{
@@ -631,12 +672,72 @@ body, #container{
     height: 38vh;
 }
 
+@keyframes popout-audi-3{
+    0%{
+        height: 0vh;
+        left: 0vh;
+        top: 0vh;
+    }
+    30%{
+        left: 24vh;
+    top: 21vh;
+    transform: rotateZ(188deg);
+    height: 19vh;
+    }
+    60%{
+    left: 39vh;
+    top: -9vh;
+    transform: rotateZ(134deg);
+    height: 28vh;
+    }
+    87%{
+    left: 38vh;
+    top: 29vh;
+    transform: rotateZ(186deg);
+    height: 34vh;
+    }
+    100%{
+    left: 49vh;
+    top: 10vh;
+    transform: rotateZ(159deg);
+    height: 38vh;        
+    }
+}
+
 #audi-i4{
     display: none;
     top: 44vh;
     left: 23vh;
     height: 31vh;
     transform: rotateZ(168deg);
+}
+
+@keyframes popout-audi-4{
+    0%{
+        height: 0vh;
+        left: 0vh;
+        top: 0vh;
+    }
+    30%{
+        top: 11vh;
+        left: 7vh;
+        height: 10vh;
+    }
+    60%{
+    top: 27vh;
+    left: 16.5vh;
+    height: 23vh;
+    }
+    87%{
+    top: 31vh;
+    left: 20.5vh;
+    height: 27vh;
+    }
+    100%{
+    top: 44vh;
+    left: 23vh;
+    height: 31vh;
+    }
 }
 
 #gate{
