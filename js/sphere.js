@@ -109,7 +109,7 @@
         setTimeout(function(){
             animateSphere(current,0);
             setTimeout(function(){
-                $('.overlay.landing').css("animation-duration","1s");
+                $('.overlay.landing').css("animation-duration","0.8s");
                 $('#landing-i1').css("animation-name","popout-landing-1");
                 $('.overlay.landing').fadeIn();
             },1000);
@@ -121,7 +121,7 @@
         setTimeout(function(){
             animateSphere(current,1);
             setTimeout(function(){
-                $('.overlay.stage').css("animation-duration","1s");
+                $('.overlay.stage').css("animation-duration","1.5s");
                 $('#stage-i1').css("animation-name","popout-stage-1");
                 $('#stage-i2').css("animation-name","popout-stage-2");
                 $('#stage-i3').css("animation-name","popout-stage-3");
@@ -129,9 +129,9 @@
                 $('.overlay.stage').fadeIn();
                 setTimeout(function(){
                     $("#event-list-overlay").fadeIn();
-                    $("#timeline-1").show();
+                    $("#timeline-stage").show();
                     $(".timeline .bg").addClass("timeline-popin");
-                    eventAnimate($("#timeline-1")[0]);
+                    eventAnimate($("#timeline-stage")[0]);
                 }, 1500);
             },1000);
         },500);
@@ -142,14 +142,17 @@
         setTimeout(function(){
             animateSphere(current,2);
             setTimeout(function(){
-                $('.overlay.oat').css("animation-duration","1.5s");
-                $('#oat-i1').css("animation-name","popou");
+                $('.overlay.oat').css("animation-duration","1s");
+                $('#oat-i1').css("animation-name","popout-oat-1");
+                $('#oat-i2').css("animation-name","popout-oat-2");
+                $('#oat-i3').css("animation-name","popout-oat-3");
+                $('#oat-i4').css("animation-name","popout-oat-4");
                 $('.overlay.oat').fadeIn();
                 setTimeout(function(){
                     $("#event-list-overlay").fadeIn();
-                    $("#timeline-2").show();
+                    $("#timeline-oat").show();
                     $(".timeline .bg").addClass("timeline-popin");
-                    eventAnimate($("#timeline-2")[0]);
+                    eventAnimate($("#timeline-oat")[0]);
                 }, 1500);
             },1000);
         },500);
@@ -163,12 +166,12 @@
                 $('.overlay.audi').css("animation-duration","1.5s");
                 $('#audi-i1').css("animation-name","popou");
                 $('.overlay.audi').fadeIn();
-                setTimeout(function(){
+/*                setTimeout(function(){
                     $("#event-list-overlay").fadeIn();
-                    $("#timeline-1").show();
+                    $("#timeline-audi").show();
                     $(".timeline .bg").addClass("timeline-popin");
-                    eventAnimate($("#timeline-1")[0]);
-                }, 1500);
+                    eventAnimate($("#timeline-audi")[0]);
+                }, 1500);*/
             },1000);
         },500);
     });

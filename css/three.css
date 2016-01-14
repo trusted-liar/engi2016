@@ -18,7 +18,7 @@ body{
     position: absolute;
     top: 0px;
     left: 0px;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     z-index: 100;
     background-image: url('../assets/main/bg.jpg');
@@ -60,51 +60,6 @@ canvas{
     width: 800px;
 }
 
-@keyframes popout-1{
-    0%{
-        height: 0px;
-        width: 0px;
-        left: 50%;
-        top: 50%;
-    }
-    10%{
-        height: 24px;
-        width: 24px;
-        top: 55%;
-        left: 50%;
-    }
-    40%{
-        height: 96px;
-        width: 96px;
-        top: 24%;
-        left: 24%;
-    }
-    60%{
-        height: 110px;
-        width: 110px;
-        top: 30%;
-        left: 30%;
-    }
-    80%{
-        height: 120px;
-        width: 130px;
-        top: 24%;
-        left: 24%;
-    }
-    100%{
-        top: 25%;
-        width: 160px;
-        left: 25%;
-    }
-}
-
-.pop-out{
-    animation-name: example;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-}
-
 .over-image{
     position: absolute;
     z-index: 501;
@@ -133,42 +88,10 @@ canvas{
     display: none;
 }
 
-#i1{
-    display: none;
-    height: 20vh;
-    
-}
-
-#i2{
-    display: none;
-    height: 20vh;
-}
-
-#i3{
-    height: 20vh;
-    top: 7vh;
-    left: -22vh;
-}
-
 #i4{
     height: 27vh;
     top: -40vh;
     left: -26vh;
-}
-
-#i5{
-    display: none;
-    height: 20vh;
-}
-
-#i6{
-    display: none;
-    height: 20vh;
-}
-
-#i7{
-    display: none;
-    height: 20vh;
 }
 
 #event-list-overlay{
@@ -441,18 +364,18 @@ body, #container{
         top: 0;
     }
     35%{
-    left: -35vh;
-    top: 16vh;
+    left: -37vh;
+    top: 13vh;
     height: 30vh;
     }
     50%{
-    left: -26vh;
-    top: 11vh;
+    left: -31vh;
+    top: 10vh;
     height: 22vh;
     }
     75%{
-    left: -58vh;
-    top: 20vh;
+    left: -54vh;
+    top: 19vh;
     height: 42vh;
     }
     100%{
@@ -499,8 +422,8 @@ body, #container{
 }
 
 #stage-i4{
-    height: 55vh;
     display: none;
+    height: 55vh;
     left: -16vh;
     top: -36vh;
 }
@@ -511,9 +434,14 @@ body, #container{
         left: 0;
         top: 0;
     }
+    75%{
+    height: 69vh;
+    left: -19vh;
+    top: -42vh;
+    }
     100%{
     height: 55vh;
-    left: -17vh;
+    left: -16vh;
     top: -36vh;        
     }
 }
@@ -550,6 +478,15 @@ body, #container{
     left: -18vh;
 }
 
+@keyframes popout-oat-1{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 #oat-i2{
     display: none;
     top: -23vh;
@@ -557,12 +494,68 @@ body, #container{
     height: 50vh;
 }
 
+@keyframes popout-oat-2{
+    0%{
+        top: 0vh;
+        height: 0vh;
+        left: 0vh;
+    }
+    70%{
+    top: -25vh;
+    left: 14vh;
+    height: 56vh;
+    }
+    85%{
+    top: -21.5vh;
+    left: 12vh;
+    height: 47vh;
+    }
+    98%{
+    top: -24vh;
+    left: 13vh;
+    height: 52vh;
+    }
+    100%{
+        top: -23vh;
+        left: 13vh;
+        height: 50vh;
+    }
+}
+
 #oat-i3{
     display: none;
-    left: -38vh;
+    left: -37vh;
     top: 2vh;
     transform: rotateZ(11deg);
     height: 25vh;
+}
+
+@keyframes popout-oat-3{
+    0%{
+        height: 0vh;
+        left: 0vh;
+        top: 0vh;
+    }
+    70%{
+    left: -41vh;
+    top: 4vh;
+    height: 28vh;
+    }
+    85%{
+    left: -33.5vh;
+    top: 0vh;
+    height: 23vh;        
+    }
+    98%{
+    left: -39vh;
+    top: 3vh;
+    height: 26vh;
+    }
+    100%{
+        height: 25vh;
+        left: -37vh;
+        top: 2vh;
+    }
 }
 
 #oat-i4{
@@ -570,6 +563,34 @@ body, #container{
     top: -42vh;
     left: -35vh;
     height: 42vh;
+}
+
+@keyframes popout-oat-4{
+    0%{
+        height: 0vh;
+        left: 0vh;
+        top: 0vh;
+    }
+    70%{
+    top: -45vh;
+    left: -38vh;
+    height: 46vh;
+    }
+    85%{
+    top: -39vh;
+    left: -33vh;
+    height: 39vh;
+    }
+    98%{
+    top: -43vh;
+    left: -36vh;
+    height: 43vh;
+    }
+    100%{
+        height: 42vh;
+        left: -35vh;
+        top: -42vh;
+    }
 }
 
 #audi-i1{

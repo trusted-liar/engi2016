@@ -179,12 +179,12 @@ function MouseWheelHandler(e) {
         //Generic swipe handler for all directions
         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
             if(direction === "up"){
-                for(var i=0; i<80; i++){
+                for(var i=0; i<75; i++){
                     setTimeout(function(){timelineAnimation(5);},35*i);
                 }
             }
             else if(direction === "down"){
-                for(var i=0; i<80; i++){
+                for(var i=0; i<75; i++){
                     setTimeout(function(){timelineAnimation(-5);},35*i);
                 }
             }
@@ -192,7 +192,6 @@ function MouseWheelHandler(e) {
         }
       });
     });
-    
     
 $(function(){
         $(document).click(function(e){
