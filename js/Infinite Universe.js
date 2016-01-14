@@ -172,7 +172,28 @@ function MouseWheelHandler(e) {
     timelineAnimation(delta);
 	return false;
 }
-
+    
+    //for handling touch events
+    $(function() {
+      $("body").swipe( {
+        //Generic swipe handler for all directions
+        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+            if(direction === "up"){
+                for(var i=0; i<80; i++){
+                    setTimeout(function(){timelineAnimation(5);},35*i);
+                }
+            }
+            else if(direction === "down"){
+                for(var i=0; i<80; i++){
+                    setTimeout(function(){timelineAnimation(-5);},35*i);
+                }
+            }
+          console.log(direction ); 
+        }
+      });
+    });
+    
+    
 $(function(){
         $(document).click(function(e){
         var clik = e.target;
@@ -245,7 +266,7 @@ function timelineAnimation(delta){
                 }
             }
             
-            if((cardPos.length === cardObjects.length) && (cardPos[cardPos.length -1].zoom > 0.99)){
+            if((cardPos.length === cardObjects.length) && (cardPos[cardPos.length -1].zoom > 0.75)){
                 up = 0;
             }
         }
@@ -261,7 +282,7 @@ function timelineAnimation(delta){
                     updatePos(cardPos[i],1,0,cardObjects[i]);
                 }
             }
-            if(cardPos[0].zoom < 0.99){
+            if(cardPos[0].zoom < 0.75){
                 down = 0;
             }
         }

@@ -1,5 +1,8 @@
-$(document).ready( function(){
+//$(document).ready( function(){
     
+    //sidebar    
+
+        
     //creating sphere
     
     var HEIGHT = window.innerHeight, WIDTH = window.innerWidth;
@@ -57,8 +60,8 @@ $(document).ready( function(){
     });
     
     //managing animations
-    var x = [0,0.5,1,-0.3];
-    var y = [0,0.1,-0.8,-0.4];
+    var x = [0,0,0.1,-1];
+    var y = [0,-3.1,-1.7,3.6];
     var current=0;
     var time = 20;
 
@@ -90,34 +93,40 @@ $(document).ready( function(){
     }
     
     function removeImages(){
-        var x = $('img.overlay');
+        var x = $('.over-image .overlay');
         for(var i=0; i<x.length; i++){
                 if($(x[i]).css("display")==="block"){
                 $(x[i]).css("animation-duration", "0.5s");
-                $(x[i]).css("animation-name", "popin");
+                $(x[i]).css("animation-name", "popin-building");
                 $(x[i]).fadeOut();
             }
         }
     }
-    
-    $('#p0').click(function(){
+
+
+    $('#landing').click(function(){
         removeImages();
-        animateSphere(current,0);
         setTimeout(function(){
-            $('#i5').css("animation-duration","1.5s");
-            $('#i5').css("animation-name","popout-1");
-            $('#i5').fadeIn();
-        },1000);
+            animateSphere(current,0);
+            setTimeout(function(){
+                $('.overlay.landing').css("animation-duration","1s");
+                $('#landing-i1').css("animation-name","popout-landing-1");
+                $('.overlay.landing').fadeIn();
+            },1000);
+        },500);
     });
 
-    $('#p1').click(function(){
+    $('#stage').click(function(){
         removeImages();
         setTimeout(function(){
             animateSphere(current,1);
             setTimeout(function(){
-                $('#i5').css("animation-duration","1.5s");
-                $('#i5').css("animation-name","popout-1");
-                $('#i5').fadeIn();
+                $('.overlay.stage').css("animation-duration","1s");
+                $('#stage-i1').css("animation-name","popout-stage-1");
+                $('#stage-i2').css("animation-name","popout-stage-2");
+                $('#stage-i3').css("animation-name","popout-stage-3");
+                $('#stage-i4').css("animation-name","popout-stage-4");
+                $('.overlay.stage').fadeIn();
                 setTimeout(function(){
                     $("#event-list-overlay").fadeIn();
                     $("#timeline-1").show();
@@ -128,26 +137,40 @@ $(document).ready( function(){
         },500);
     });
 
-    $('#p2').click(function(){
+    $('#oat').click(function(){
         removeImages();
-        animateSphere(current,2); 
         setTimeout(function(){
-            $("#event-list-overlay").fadeIn();
-            $("#timeline-1").show();
-            $(".timeline .bg").addClass("timeline-popin");
-            eventAnimate($("#timeline-1")[0]);
-        }, 1000);
+            animateSphere(current,2);
+            setTimeout(function(){
+                $('.overlay.oat').css("animation-duration","1.5s");
+                $('#oat-i1').css("animation-name","popou");
+                $('.overlay.oat').fadeIn();
+                setTimeout(function(){
+                    $("#event-list-overlay").fadeIn();
+                    $("#timeline-2").show();
+                    $(".timeline .bg").addClass("timeline-popin");
+                    eventAnimate($("#timeline-2")[0]);
+                }, 1500);
+            },1000);
+        },500);
     });
 
-    $('#p3').click(function(){
+    $('#audi').click(function(){
         removeImages();
-        animateSphere(current,3); 
         setTimeout(function(){
-            $("#event-list-overlay").fadeIn();
-            $("#timeline-1").show();
-            $(".timeline .bg").addClass("timeline-popin");
-            eventAnimate($("#timeline-1")[0]);
-        }, 1000);
+            animateSphere(current,3);
+            setTimeout(function(){
+                $('.overlay.audi').css("animation-duration","1.5s");
+                $('#audi-i1').css("animation-name","popou");
+                $('.overlay.audi').fadeIn();
+                setTimeout(function(){
+                    $("#event-list-overlay").fadeIn();
+                    $("#timeline-1").show();
+                    $(".timeline .bg").addClass("timeline-popin");
+                    eventAnimate($("#timeline-1")[0]);
+                }, 1500);
+            },1000);
+        },500);
     });
 
-});
+//});

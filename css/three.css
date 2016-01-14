@@ -428,10 +428,10 @@ body, #container{
 
 #stage-i2{
     display: none;
-    transform: rotateZ(-90deg);
-    left: -42vh;
-    top: 26vh;
-    height: 31vh;
+    transform: rotateZ(-74deg);
+    left: -51vh;
+    top: 17vh;
+    height: 39vh;
 }
 
 @keyframes popout-stage-2{
@@ -441,24 +441,24 @@ body, #container{
         top: 0;
     }
     35%{
-        height: 31vh;
-        top: 27vh;
-        left: -42vh;
+    left: -35vh;
+    top: 16vh;
+    height: 30vh;
     }
     50%{
-    left: -32vh;
-    top: 20vh;
-    height: 25vh;
+    left: -26vh;
+    top: 11vh;
+    height: 22vh;
     }
     75%{
-        left: -47vh;
-        top: 30vh;
-        height: 36vh;
+    left: -58vh;
+    top: 20vh;
+    height: 42vh;
     }
     100%{
-        height: 31vh;
-        top: 26vh;
-        left: -42vh;
+    left: -51vh;
+    top: 17vh;
+    height: 39vh;
     }
 }
 
@@ -499,10 +499,23 @@ body, #container{
 }
 
 #stage-i4{
-    height: 53vh;
+    height: 55vh;
     display: none;
-    left: -20vh;
-    top: -38vh;
+    left: -16vh;
+    top: -36vh;
+}
+
+@keyframes popout-stage-4{
+    0%{
+        height: 0;
+        left: 0;
+        top: 0;
+    }
+    100%{
+    height: 55vh;
+    left: -17vh;
+    top: -36vh;        
+    }
 }
 
 #landing-i1{
@@ -561,10 +574,11 @@ body, #container{
 
 #audi-i1{
     display: none;
-    height: 20vh;
+    height: 22vh;
     transform: rotateZ(3deg);
-    left: -20vh;
+    left: -21vh;
     top: -35vh;
+    z-index: 5;
 }
 
 #audi-i2{
@@ -577,18 +591,18 @@ body, #container{
 
 #audi-i3{
     display: none;
-    left: 50vh;
-    top: -4vh;
-    transform: rotateZ(129deg);
+    left: 49vh;
+    top: 10vh;
+    transform: rotateZ(159deg);
     height: 38vh;
 }
 
 #audi-i4{
     display: none;
-    top: 43vh;
-    left: 22vh;
+    top: 44vh;
+    left: 23vh;
     height: 31vh;
-    transform: rotateZ(171deg);
+    transform: rotateZ(168deg);
 }
 
 #gate{
