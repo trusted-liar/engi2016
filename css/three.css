@@ -11,6 +11,7 @@ body, #container{
 
 body{
     font-family: 'Space Age';
+    margin: 0;
 }
 
 #background{
@@ -20,7 +21,7 @@ body{
     height: 100%;
     width: 100%;
     z-index: 100;
-    /*background-image: url('../assets/main/bg.jpg');*/
+    background-image: url('../assets/main/bg.jpg');
     background-color: black;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -29,6 +30,29 @@ body{
 #container{
     position: absolute;
     z-index: 500;
+}
+
+#engifest16{
+    position: absolute;
+    top: 45vh;
+    z-index: 600;
+    text-align: center;
+    width: 100%;
+    font-size: 60px;
+    background-color: rgba(0,0,0,0.5);
+    border-top: 15px solid #DADADA;
+    border-bottom: 15px solid #DADADA;
+    -moz-box-shadow:    inset 0px 30px 25px -25px #4DD6E4, inset 0px -30px 25px -25px #4DD6E4, 0px -10px 25px 0px #4DD6E4, 0px 10px 25px 0px #4DD6E4;
+    -webkit-box-shadow: inset 0px 30px 25px -25px #4DD6E4, inset 0px -30px 25px -25px #4DD6E4, 0px -10px 25px 0px #4DD6E4, 0px 10px 25px 0px #4DD6E4;
+    box-shadow:         inset 0px 30px 25px -25px #4DD6E4, inset 0px -30px 25px -25px #4DD6E4, 0px -10px 25px 0px #4DD6E4, 0px 10px 25px 0px #4DD6E4;
+    color: #DADADA;
+    text-shadow: #4DD6E4 0 0 10px, #4DD6E4 0px 0px 5px;
+    transition: all 1s ease-out;
+    overflow: hidden;
+}
+
+.bring-in{
+    height: 0px;
 }
 
 canvas{
@@ -105,6 +129,10 @@ canvas{
     position: fixed;
 }
 
+.oat_event, .audi_event, .sc_event{
+    display: none;
+}
+
 #i1{
     display: none;
     height: 20vh;
@@ -169,6 +197,10 @@ canvas{
     position: relative;
     transform: rotateX(50deg) translateX(-50%);
     transform-origin: bottom left;
+    border-left: 80px solid;
+    border-right: 80px solid;
+    border-top: 0px;
+    border-bottom: 0px;
     -webkit-transition: all 0.8s; /* Safari */
     transition: all 0.8s;
     /*background: rgba(104, 164, 189, 0.3);*/
@@ -179,11 +211,14 @@ canvas{
     background: -o-linear-gradient(transparent, rgba(104, 164, 189, 0.3)); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(transparent, rgba(104, 164, 189, 0.3)); /* For Firefox 3.6 to 15 */
     background: linear-gradient(transparent, rgba(104, 164, 189, 0.3)); /* Standard syntax */
-    border-left: 80px solid #DADADA;
-    border-right: 80px solid #DADADA;
-    -moz-box-shadow:    inset 0 0 60px #4DD6E4;
-    -webkit-box-shadow: inset 0 0 60px #4DD6E4;
-    box-shadow:         inset 0 0 60px #4DD6E4;
+    -webkit-border-image: -webkit-gradient(linear, 0 100%, 0 0, from(#DADADA), to(rgba(0,0,0,0))) 1 100%;
+    -webkit-border-image: -webkit-linear-gradient(bottom, #DADADA, rgba(0,0,0,0)) 1 100%;
+    -moz-border-image: -moz-linear-gradient(bottom, #DADADA, rgba(0,0,0,0)) 1 100%;
+    -o-border-image: -o-linear-gradient(bottom, #DADADA, rgba(0,0,0,0)) 1 100%;
+    border-image: linear-gradient(to top, #DADADA, rgba(0,0,0,0)) 1 100%;
+    -moz-box-shadow:    inset 0px -30px 25px -25px #4DD6E4, inset 30px 0px 25px -20px #4DD6E4, inset -30px 0px 25px -20px #4DD6E4, -30px 0px 25px -25px #4DD6E4, 30px 0px 25px -25px #4DD6E4;
+    -webkit-box-shadow: inset 0px -30px 25px -25px #4DD6E4, inset 30px 0px 25px -20px #4DD6E4, inset -30px 0px 25px -20px #4DD6E4, -30px 0px 25px -25px #4DD6E4, 30px 0px 25px -25px #4DD6E4;
+    box-shadow:         inset 0px -30px 25px -25px #4DD6E4, inset 30px 0px 25px -20px #4DD6E4, inset -30px 0px 25px -20px #4DD6E4, -30px 0px 25px -25px #4DD6E4, 30px 0px 25px -25px #4DD6E4;
 }
 
 .bg_D2{
@@ -191,11 +226,14 @@ canvas{
     background: -o-linear-gradient(transparent, rgba(104, 164, 189, 0.3)); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(transparent, rgba(104, 164, 189, 0.3)); /* For Firefox 3.6 to 15 */
     background: linear-gradient(transparent, rgba(104, 164, 189, 0.3)); /* Standard syntax */
-    border-left: 80px solid #2ECE23;
-    border-right: 80px solid #2ECE23;
-    -moz-box-shadow:    inset 0 0 60px #41E823;
-    -webkit-box-shadow: inset 0 0 60px #41E823;
-    box-shadow:         inset 0 0 60px #41E823;
+    -webkit-border-image: -webkit-gradient(linear, 0 100%, 0 0, from(#2ECE23), to(rgba(0,0,0,0))) 1 100%;
+    -webkit-border-image: -webkit-linear-gradient(bottom, #2ECE23, rgba(0,0,0,0)) 1 100%;
+    -moz-border-image: -moz-linear-gradient(bottom, #2ECE23, rgba(0,0,0,0)) 1 100%;
+    -o-border-image: -o-linear-gradient(bottom, #2ECE23, rgba(0,0,0,0)) 1 100%;
+    border-image: linear-gradient(to top, #2ECE23, rgba(0,0,0,0)) 1 100%;
+    -moz-box-shadow:    inset 0px -30px 25px -25px #41E823, inset 30px 0px 25px -20px #41E823, inset -30px 0px 25px -20px #41E823, -30px 0px 25px -25px #41E823, 30px 0px 25px -25px #41E823;
+    -webkit-box-shadow: inset 0px -30px 25px -25px #41E823, inset 30px 0px 25px -20px #41E823, inset -30px 0px 25px -20px #41E823, -30px 0px 25px -25px #41E823, 30px 0px 25px -25px #41E823;
+    box-shadow:         inset 0px -30px 25px -25px #41E823, inset 30px 0px 25px -20px #41E823, inset -30px 0px 25px -20px #41E823, -30px 0px 25px -25px #41E823, 30px 0px 25px -25px #41E823;
 }
 
 .bg_D3{
@@ -203,11 +241,14 @@ canvas{
     background: -o-linear-gradient(transparent, rgba(104, 164, 189, 0.3)); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(transparent, rgba(104, 164, 189, 0.3)); /* For Firefox 3.6 to 15 */
     background: linear-gradient(transparent, rgba(104, 164, 189, 0.3)); /* Standard syntax */
-    border-left: 80px solid #ECA522;
-    border-right: 80px solid #ECA522;
-    -moz-box-shadow:    inset 0 0 60px #E6E017;
-    -webkit-box-shadow: inset 0 0 60px #E6E017;
-    box-shadow:         inset 0 0 60px #E6E017;
+    -webkit-border-image: -webkit-gradient(linear, 0 100%, 0 0, from(#ECA522), to(rgba(0,0,0,0))) 1 100%;
+    -webkit-border-image: -webkit-linear-gradient(bottom, #ECA522, rgba(0,0,0,0)) 1 100%;
+    -moz-border-image: -moz-linear-gradient(bottom, #ECA522, rgba(0,0,0,0)) 1 100%;
+    -o-border-image: -o-linear-gradient(bottom, #ECA522, rgba(0,0,0,0)) 1 100%;
+    border-image: linear-gradient(to top, #ECA522, rgba(0,0,0,0)) 1 100%;
+    -moz-box-shadow:    inset 0px -30px 25px -25px #E6E017, inset 30px 0px 25px -20px #E6E017, inset -30px 0px 25px -20px #E6E017, -30px 0px 25px -25px #E6E017, 30px 0px 25px -25px #E6E017;
+    -webkit-box-shadow: inset 0px -30px 25px -25px #E6E017, inset 30px 0px 25px -20px #E6E017, inset -30px 0px 25px -20px #E6E017, -30px 0px 25px -25px #E6E017, 30px 0px 25px -25px #E6E017;
+    box-shadow:         inset 0px -30px 25px -25px #E6E017, inset 30px 0px 25px -20px #E6E017, inset -30px 0px 25px -20px #E6E017, -30px 0px 25px -25px #E6E017, 30px 0px 25px -25px #E6E017;
 }
 
 
@@ -260,8 +301,11 @@ canvas{
     width: 50vw;
     border-radius: 35px;
     text-align: center;
-    padding-top: 5vh;
 /*    transition: all 100s linear; */
+}
+
+.timeline .card h1{
+    font-size: 50px;
 }
 
 

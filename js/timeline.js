@@ -1,4 +1,4 @@
-curr_hrs = '10', curr_min = '00', next_hrs = '00', next_min = '00', counter = 0;
+curr_hrs = '00', curr_min = '00', counter = 0;
 var refresher;
 
 function getRandom(min, max) {
@@ -13,7 +13,6 @@ function timeRefresh(){
 	counter++;
 	$("#hrs").html(getRandom(0, 23));
 	$("#min").html(getRandom(0, 59));
-	console.log(getRandom(0, 23));
 	if(counter > 15){
 		resetCounter();
 		$("#hrs").html(curr_hrs);
@@ -91,5 +90,54 @@ $(function(){
     $('html').keydown(function(e){
     	updateTimeline();
     });
+});
+
+$('.venue').click(function(){
+	id = $(this).attr('id');
+	switch(id){
+		case 'landing':
+			break;
+		case 'oat':
+			$('.oat_event').each(function(){
+				$(this).css('display', 'block');
+			});
+			$('.audi_event').each(function(){
+				$(this).css('display', 'none');
+			});
+			$('.sc_event').each(function(){
+				$(this).css('display', 'none');
+			});
+			first_card = $(document).find('.oat_event')[0];
+			curr_hrs = $(first_card).attr('hrs');
+			curr_min = $(first_card).attr('hrs');
+			break;
+		case 'audi':
+			$('.oat_event').each(function(){
+				$(this).css('display', 'none');
+			});
+			$('.audi_event').each(function(){
+				$(this).css('display', 'block');
+			});
+			$('.sc_event').each(function(){
+				$(this).css('display', 'none');
+			});
+			first_card = $(document).find('.audi_event')[0];
+			curr_hrs = $(first_card).attr('hrs');
+			curr_min = $(first_card).attr('hrs');
+			break;
+		case 'stage':
+			$('.oat_event').each(function(){
+				$(this).css('display', 'none');
+			});
+			$('.audi_event').each(function(){
+				$(this).css('display', 'none');
+			});
+			$('.sc_event').each(function(){
+				$(this).css('display', 'block');
+			});
+			first_card = $(document).find('.sc_event')[0];
+			curr_hrs = $(first_card).attr('hrs');
+			curr_min = $(first_card).attr('hrs');
+	}
 });
 
