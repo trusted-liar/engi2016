@@ -130,7 +130,7 @@
                 setTimeout(function(){
                     $("#event-list-overlay").fadeIn();
                     $("#timeline-stage").show();
-                    $(".timeline .bg").addClass("timeline-popin");
+                    $("#timeline-stage").find(".timeline .bg").addClass("timeline-popin");
                     eventAnimate($("#timeline-stage")[0]);
                 }, 1500);
             },1000);
@@ -151,7 +151,7 @@
                 setTimeout(function(){
                     $("#event-list-overlay").fadeIn();
                     $("#timeline-oat").show();
-                    $(".timeline .bg").addClass("timeline-popin");
+                    $("#timeline-oat").find(".timeline .bg").addClass("timeline-popin");
                     eventAnimate($("#timeline-oat")[0]);
                 }, 1500);
             },1000);
@@ -169,16 +169,12 @@
                 $('#audi-i3').css("animation-name","popout-audi-3");
                 $('#audi-i4').css("animation-name","popout-audi-4");
                 $('.overlay.audi').fadeIn();
-/*                setTimeout(function(){
+                setTimeout(function(){
                     $("#event-list-overlay").fadeIn();
-<<<<<<< Updated upstream
                     $("#timeline-audi").show();
-=======
-                    $("#timeline-3").show();
->>>>>>> Stashed changes
-                    $(".timeline .bg").addClass("timeline-popin");
+                    $("#timeline-audi").find(".timeline .bg").addClass("timeline-popin");
                     eventAnimate($("#timeline-audi")[0]);
-                }, 1500);*/
+                }, 1500);
             },1000);
         },500);
     });

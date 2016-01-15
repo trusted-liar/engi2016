@@ -13,7 +13,7 @@ function timeRefresh(){
 	counter++;
 	$("#hrs").html(getRandom(0, 23));
 	$("#min").html(getRandom(0, 59));
-	if(counter > 15){
+	if(counter > 10){
 		resetCounter();
 		$("#hrs").html(curr_hrs);
 		$("#min").html(curr_min);
@@ -99,18 +99,19 @@ $('.venue').click(function(){
 			break;
 		case 'oat':
 			first_card = $(document).find('.oat_event')[0];
-			curr_hrs = $(first_card).attr('hrs');
-			curr_min = $(first_card).attr('hrs');
 			break;
 		case 'audi':
 			first_card = $(document).find('.audi_event')[0];
-			curr_hrs = $(first_card).attr('hrs');
-			curr_min = $(first_card).attr('hrs');
 			break;
 		case 'stage':
 			first_card = $(document).find('.stage_event')[0];
-			curr_hrs = $(first_card).attr('hrs');
-			curr_min = $(first_card).attr('hrs');
 	}
+	curr_hrs = $(first_card).attr('hrs');
+	curr_min = $(first_card).attr('min');
+	$("#hrs").html(curr_hrs);
+	$("#min").html(curr_min);
+	resetCounter();
+	clearInterval(refresher);
+	toDay1();
 });
 
