@@ -104,11 +104,13 @@
     }
 
 
-    $('#landing').click(function(){
+    $('#pin-landing').click(function(){
+        updatePins("landing");
         removeImages();
         setTimeout(function(){
             animateSphere(current,0);
             setTimeout(function(){
+                //handling images
                 $('.overlay.landing').css("animation-duration","0.8s");
                 $('#landing-i1').css("animation-name","popout-landing-1");
                 $('.overlay.landing').fadeIn();
@@ -116,7 +118,8 @@
         },500);
     });
 
-    $('#stage').click(function(){
+    $('#pin-stage').click(function(){
+        updatePins("stage");
         removeImages();
         setTimeout(function(){
             animateSphere(current,1);
@@ -137,8 +140,9 @@
         },500);
     });
 
-    $('#oat').click(function(){
+    $('#pin-oat').click(function(){
         removeImages();
+        updatePins("oat");
         setTimeout(function(){
             animateSphere(current,2);
             setTimeout(function(){
@@ -158,11 +162,13 @@
         },500);
     });
 
-    $('#audi').click(function(){
+    $('#pin-audi').click(function(){
         removeImages();
+        updatePins("audi");
         setTimeout(function(){
             animateSphere(current,3);
             setTimeout(function(){
+                //handling the buildings
                 $('.overlay.audi').css("animation-duration","1.5s");
                 $('#audi-i1').css("animation-name","popout-audi-1");
                 $('#audi-i2').css("animation-name","popout-audi-2");
@@ -178,5 +184,94 @@
             },1000);
         },500);
     });
+
+var pinCurrent = "landing";
+function updatePins(pinNext){
+    if(pinCurrent === "landing"){
+        $("#pin-oat").addClass("zoomout-landing-oat");
+        $("#pin-stage").addClass("zoomout-landing-stage");
+        $("#pin-audi").addClass("zoomout-landing-audi");
+    }
+    else if(pinCurrent === "oat"){
+        $("#pin-landing").addClass("zoomout-oat-landing");
+        $("#pin-stage").addClass("zoomout-oat-stage");
+        $("#pin-audi").addClass("zoomout-oat-audi");        
+    }
+    else if(pinCurrent === "stage"){
+        $("#pin-oat").addClass("zoomout-stage-oat");
+        $("#pin-landing").addClass("zoomout-stage-landing");
+        $("#pin-audi").addClass("zoomout-stage-audi");
+    }
+    else{
+        $("#pin-oat").addClass("zoomout-audi-oat");
+        $("#pin-stage").addClass("zoomout-audi-stage");
+        $("#pin-landing").addClass("zoomout-audi-landing");
+    }
+    
+    
+    setTimeout(function(){
+        
+        $(".pinup").css("transition-duration","0s");    
+
+        if(pinNext === "landing"){
+            document.getElementById("pin-landing").className = "pinup out-of-box";
+            document.getElementById("pin-oat").className = "pinup zoomout-landing-oat";
+            document.getElementById("pin-audi").className = "pinup zoomout-landing-audi";
+            document.getElementById("pin-stage").className = "pinup zoomout-landing-stage";
+
+            setTimeout(function(){
+                $(".pinup").css("transition-duration","0.5s");
+
+                document.getElementById("pin-oat").className = "pinup pin-landing-oat";
+                document.getElementById("pin-audi").className = "pinup pin-landing-audi";
+                document.getElementById("pin-stage").className = "pinup pin-landing-stage";
+            },500);
+        }
+        else if(pinNext === "oat"){
+            document.getElementById("pin-stage").className = "pinup zoomout-oat-stage";
+            document.getElementById("pin-audi").className = "pinup zoomout-oat-audi";
+            document.getElementById("pin-landing").className = "pinup zoomout-oat-landing";
+            document.getElementById("pin-oat").className = "pinup out-of-box";
+
+            setTimeout(function(){
+                $(".pinup").css("transition-duration","0.5s");
+
+                document.getElementById("pin-stage").className = "pinup pin-oat-stage";
+                document.getElementById("pin-audi").className = "pinup pin-oat-audi";
+                document.getElementById("pin-landing").className = "pinup pin-oat-landing";
+            },500);
+        }
+        else if(pinNext === "stage"){
+            document.getElementById("pin-oat").className = "pinup zoomout-stage-oat";
+            document.getElementById("pin-audi").className = "pinup zoomout-stage-audi";
+            document.getElementById("pin-landing").className = "pinup zoomout-stage-landing";
+            document.getElementById("pin-stage").className = "pinup out-of-box";
+
+            setTimeout(function(){
+                $(".pinup").css("transition-duration","0.5s");
+
+                document.getElementById("pin-oat").className = "pinup pin-stage-oat";
+                document.getElementById("pin-audi").className = "pinup pin-stage-audi";
+                document.getElementById("pin-landing").className = "pinup pin-stage-landing";
+            },500);
+        }
+        else{
+            document.getElementById("pin-oat").className = "pinup zoomout-audi-oat";
+            document.getElementById("pin-stage").className = "pinup zoomout-audi-stage";
+            document.getElementById("pin-landing").className = "pinup zoomout-audi-landing";
+            document.getElementById("pin-audi").className = "pinup out-of-box";
+
+            setTimeout(function(){
+                $(".pinup").css("transition-duration","0.5s");
+
+                document.getElementById("pin-oat").className = "pinup pin-audi-oat";
+                document.getElementById("pin-stage").className = "pinup pin-audi-stage";
+                document.getElementById("pin-landing").className = "pinup pin-audi-landing";
+            },500);
+        }
+
+        pinCurrent = pinNext;
+    }, 1000);
+}
 
 //});

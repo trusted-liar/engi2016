@@ -1,5 +1,4 @@
 var eventAnimate = function(myimage){
-
 if (myimage.addEventListener) {
 	// IE9, Chrome, Safari, Opera
 	myimage.addEventListener("mousewheel", MouseWheelHandler, false);
@@ -9,7 +8,8 @@ if (myimage.addEventListener) {
 // IE 6/7/8
 else myimage.attachEvent("onmousewheel", MouseWheelHandler);
 
-
+$(myimage).css("display","block");    
+    
 //parameters
 var ht = window.innerHeight;
 var wd = window.innerWidth;
@@ -58,7 +58,6 @@ var cardPos = [];
     setPos(cardPos[0],cardObjects[0]);
     setTimeout(function(){$(cardObjects[0]).fadeIn();}, 1000);
 })();
-    
 //handling window resize
 window.addEventListener('resize', function() {
     ht = window.innerHeight;

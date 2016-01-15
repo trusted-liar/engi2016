@@ -127,6 +127,7 @@ canvas{
     overflow: hidden;
     perspective: 40px;
     position: relative;
+    display: none;
 }
 
 .timeline .bg{
@@ -748,4 +749,175 @@ body, #container{
     height: 25vh;
     top: -43vh;
     left: -24vh;
+}
+
+.pinup{
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    animation: wiggle 1.2s infinite;
+}
+
+.out-of-box{
+    left: -100vw;
+    top: -100vh;
+}
+
+/*landing*/
+.pin-landing-audi{
+    left: -36vh;
+    transform: rotateZ(-110deg);
+    top: -7vh;    
+}
+
+.zoomout-landing-audi{
+    left: -75vh;
+    top: -19vh;
+    transform: rotateZ(-110deg);
+}
+
+.pin-landing-stage{
+    left: 14vh;
+    transform: rotateZ(109deg);
+    top: 32vh;
+}
+
+.zoomout-landing-stage{
+    transform: rotateZ(109deg);
+    left: 28vh;
+    top: 64vh;
+}
+
+.pin-landing-oat{
+    left: 35vh;
+    transform: rotateZ(27deg);
+    top: -10vh;
+}
+
+.zoomout-landing-oat{
+    transform: rotateZ(27deg);
+    left: 70vh;
+    top: -20vh;
+}
+
+/*stage*/
+.pin-stage-oat{
+    left: 42vh;
+    top: -18vh;
+    transform: rotateZ(21deg);
+}
+
+.zoomout-stage-oat{
+    left: 84vh;
+    top: -36vh;
+    transform: rotateZ(21deg);
+}
+
+.pin-stage-landing{
+    left: 21vh;
+    transform: rotateZ(109deg);
+    top: 43vh;
+}
+
+.zoomout-stage-landing{
+    left: 42vh;
+    transform: rotateZ(109deg);
+    top: 86vh;
+}
+
+.pin-stage-audi{
+    left: -43vh;
+    transform: rotateZ(-151deg);
+    top: 15vh;
+}
+
+.zoomout-stage-audi{
+    left: -86vh;
+    transform: rotateZ(-151deg);
+    top: 30vh;
+}
+
+/*audi*/
+.pin-audi-stage{
+    left: -36vh;
+    transform: rotateZ(-93deg);
+    top: -27vh;
+}
+
+.zoomout-audi-stage{
+    left: -72vh;
+    transform: rotateZ(-93deg);
+    top: -54vh;
+}
+
+.pin-audi-oat{
+    left: 47vh;
+    transform: rotateZ(43deg);
+    top: -6vh;
+}
+
+.zoomout-audi-oat{
+    left: 94vh;
+    transform: rotateZ(43deg);
+    top: -12vh;
+}
+
+.pin-audi-landing{
+    left: -7vh;
+    transform: rotateZ(151deg);
+    top: 43vh;
+}
+
+.zoomout-audi-landing{
+    left: -14vh;
+    transform: rotateZ(151deg);
+    top: 86vh;
+}
+
+/*oat*/
+.pin-oat-landing{
+    left: -3vh;
+    transform: rotateZ(145deg);
+    top: 39vh;
+}
+
+.zoomout-oat-landing{
+    left: -6vh;
+    transform: rotateZ(145deg);
+    top: 78vh;
+}
+
+.pin-oat-audi{
+    left: -40vh;
+    transform: rotateZ(246deg);
+    top: -10vh;
+}
+
+.zoomout-oat-audi{
+    left: -80vh;
+    transform: rotateZ(246deg);
+    top: -20vh;
+}
+
+.pin-oat-stage{
+    left: 33vh;
+    transform: rotateZ(75deg);
+    top: 14vh;
+}
+
+.zoomout-oat-stage{
+    left: 66vh;
+    transform: rotateZ(75deg);
+    top: 28vh;
+}
+
+@keyframes wiggle{
+    0%,100%{
+        height: 32px;
+        width: 32px;
+    }
+    50%{
+        height: 36px;
+        width: 36px;
+    }
 }
