@@ -181,6 +181,8 @@ function removeListen(){
 
 $('.t-open').click(function(){
 	toDay1();
+	$("#hrs").html('--');
+	$("#min").html('--');
 });
 
 
