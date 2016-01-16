@@ -138,33 +138,47 @@ function updateTimeline_stage(e){
 }
 
 function addListener(listen){
-	if (document.addEventListener) {
-		// IE9, Chrome, Safari, Opera
-		document.addEventListener("mousewheel", listen, false);
-		// Firefox
-		document.addEventListener("DOMMouseScroll", listen, false);
-	}
-	// IE 6/7/8
-	else document.attachEvent("onmousewheel", listen);
-
-	$(function(){
-		switch(listen){
-			case 'updateTimeline_oat':
-				$('html').keydown(function(e){
-			    	updateTimeline_oat();
-			    });
-			    break;
-			case 'updateTimeline_audi':
-				$('html').keydown(function(e){
-				    	updateTimeline_audi();
-				    });
-				    break;
-			case 'updateTimeline_stage':
-				$('html').keydown(function(e){
-			    	updateTimeline_stage();
-			    });
-		}
-	});
+	console.log(listen);
+	switch(listen){
+		case '_oat':
+			$('html').keydown(function(e){
+		    	updateTimeline_oat();
+		    });
+		    if (document.addEventListener) {
+				// IE9, Chrome, Safari, Opera
+				document.addEventListener("mousewheel", updateTimeline_oat, false);
+				// Firefox
+				document.addEventListener("DOMMouseScroll", updateTimeline_oat, false);
+			}
+			// IE 6/7/8
+			else document.attachEvent("onmousewheel", updateTimeline_oat);
+		    break;
+		case '_audi':
+			$('html').keydown(function(e){
+		    	updateTimeline_audi();
+		    });
+		    if (document.addEventListener) {
+				// IE9, Chrome, Safari, Opera
+				document.addEventListener("mousewheel", updateTimeline_audi, false);
+				// Firefox
+				document.addEventListener("DOMMouseScroll", updateTimeline_audi, false);
+			}
+			// IE 6/7/8
+			else document.attachEvent("onmousewheel", updateTimeline_audi);
+					break;
+		case '_stage':
+			$('html').keydown(function(e){
+		    	updateTimeline_stage();
+		    });
+		    if (document.addEventListener) {
+				// IE9, Chrome, Safari, Opera
+				document.addEventListener("mousewheel", updateTimeline_stage, false);
+				// Firefox
+				document.addEventListener("DOMMouseScroll", updateTimeline_stage, false);
+			}
+			// IE 6/7/8
+			else document.attachEvent("onmousewheel", updateTimeline_stage);
+			}
 }
 
 function removeListen(){
@@ -198,19 +212,19 @@ $('.venue').click(function(){
 			first_card = $(document).find('.oat_event')[0];
 			event_venue = true;
 			removeListen();
-			addListener(updateTimeline_oat);
+			addListener('_oat');
 			break;
 		case 'pin-audi':
 			first_card = $(document).find('.audi_event')[0];
 			event_venue = true;
 			removeListen();
-			addListener(updateTimeline_audi);
+			addListener('_audi');
 			break;
 		case 'pin-stage':
 			first_card = $(document).find('.stage_event')[0];
 			event_venue = true;
 			removeListen();
-			addListener(updateTimeline_stage);
+			addListener('_stage');
 	}
 	if(event_venue){
 			curr_hrs = $(first_card).attr('hrs');
