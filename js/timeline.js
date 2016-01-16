@@ -26,6 +26,7 @@ function toDay1(){
 	$(".animate").removeClass('animate_D2 animate_D3').addClass('animate_D1');
 	$(".day").removeClass('day_D2 day_D3').addClass('day_D1').html('DAY 1');
 	$(".time").removeClass('day_D2 day_D3').addClass('day_D1');
+	$(".location").removeClass('day_D2 day_D3').addClass('day_D1');
 }
 
 function toDay2(){
@@ -33,9 +34,7 @@ function toDay2(){
 	$(".animate").removeClass('animate_D1 animate_D3').addClass('animate_D2');
 	$(".day").removeClass('day_D1 day_D3').addClass('day_D2').html('DAY 2');
 	$(".time").removeClass('day_D1 day_D3').addClass('day_D2');
-	$("#day1").hide();
-	$("#day3").hide();
-	$("#day2").show();
+	$(".location").removeClass('day_D1 day_D3').addClass('day_D2');
 }
 
 function toDay3(){
@@ -43,8 +42,7 @@ function toDay3(){
 	$(".animate").removeClass('animate_D1 animate_D2').addClass('animate_D3');
 	$(".day").removeClass('day_D1 day_D2').addClass('day_D3').html('DAY 3');
 	$(".time").removeClass('day_D1 day_D2').addClass('day_D3');
-	$("#day2").hide();
-	$("#day3").show();
+	$(".location").removeClass('day_D1 day_D2').addClass('day_D3');
 }
 
 function updateTimeline_oat(e){
@@ -138,7 +136,6 @@ function updateTimeline_stage(e){
 }
 
 function addListener(listen){
-	console.log(listen);
 	switch(listen){
 		case '_oat':
 			$('html').keydown(function(e){
@@ -207,24 +204,28 @@ $('.venue').click(function(){
 		case 'pin-landing':
 			event_venue = false;
 			removeListen();
+			$('.location').html('');
 			break;
 		case 'pin-oat':
 			first_card = $(document).find('.oat_event')[0];
 			event_venue = true;
 			removeListen();
 			addListener('_oat');
+			$('.location').html('OAT');
 			break;
 		case 'pin-audi':
 			first_card = $(document).find('.audi_event')[0];
 			event_venue = true;
 			removeListen();
 			addListener('_audi');
+			$('.location').html('Auditorium');
 			break;
 		case 'pin-stage':
 			first_card = $(document).find('.stage_event')[0];
 			event_venue = true;
 			removeListen();
 			addListener('_stage');
+			$('.location').html('Sports Complex');
 	}
 	if(event_venue){
 			curr_hrs = $(first_card).attr('hrs');
