@@ -193,6 +193,12 @@
           //loadimages();
         }
 
+        $(window).load(function(){
+            setTimeout(function(){
+                op = $('#i4').css('opacity');
+                if(op==0)   location.reload();
+            }, 500);
+        })
         /*function loadimages(){
             for(var i=0; i<event_thumbs.length; i++){
                 $(document).find(event_thumbs[i]).attr("src", baseLoceT+event_thumbs[i]+'.jpg');
