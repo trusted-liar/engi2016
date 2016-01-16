@@ -23,7 +23,7 @@
             <img src="assets/images/Sports/mechCsideview.png" class="overlay stage" id="stage-i3">
             <img src="assets/images/Sports/crowdfinal.png" class="overlay stage" id="stage-i4">
             
-            <img src="assets/main/gate.svg" class="overlay landing" id="landing-i1">
+            <img src="assets/main/gate_2.svg" class="overlay landing" id="landing-i1">
             
             <img src="assets/images/OAT/oatcentre.png" class="overlay oat" id="oat-i1">
             <img src="assets/images/OAT/oatside1.png" class="overlay oat" id="oat-i2">
@@ -179,7 +179,21 @@
           svgDoc = oat.getSVGDocument();
           $(oat).css('visibility', 'visible');
           svg_loader(svgDoc);
-          imageSrcs = ["assets/main/map.png", "assets/main/bg.jpg"];
+          imageSrcs = ["assets/main/map.png",
+                        "assets/main/bg.jpg",
+                        "assets/main/gate_2.svg",
+                        "assets/images/Sports/audisidefinal.png",
+                        "assets/images/Sports/mechCsideview.png",
+                        "assets/images/Sports/crowdfinal.png",
+                        "assets/images/OAT/oatcentre.png",
+                        "assets/images/OAT/oatside1.png",
+                        "assets/images/OAT/oatside2.png",
+                        "assets/images/OAT/oatside3.png",
+                        "assets/images/Audi/audifrontfinal1.png",
+                        "assets/images/Audi/mexyfrnt%20copy.png",
+                        "assets/images/Audi/oatside.png",
+                        "assets/images/Audi/sidegate.png",
+                        "assets/main/pin.png"];
           preloadImages(imageSrcs, showPlanet);
         }
 
