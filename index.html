@@ -1,11 +1,13 @@
-<html>
+<html lang="en">
 	<head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>Engifest 2016</title>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/three.css">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <script src="js/jquery-2.0.0.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.zoomooz.js"></script>
@@ -13,6 +15,60 @@
         <script src="js/touchfield.js"></script>
 	</head>
 	<body>
+        <div class="afterLoad" id="sidebar-container">
+            <div class="page-container sidebar-collapsed">
+                <div class="sidebar-menu">
+                <header class="logo"> <a href="javascript:void(0)" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="javascript:void(0);">
+                  <!--<img id="logo" src="" alt="Logo"/>--> 
+                  </a> </header>
+                <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
+                <div class="menu">
+                  <ul id="menu" >
+                    <li id="menu-home" ><a href="javascript:void(0)"><i class="fa fa-home"></i><span>Home</span></a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i><span>Events</span><span class="fa fa-angle-double-left" style="float: right"></span></a>
+                      <ul>
+                        <li style="width: 120px" ><a href="javascript:void(0)">Day 1<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
+                          <ul>
+                            <li><a href="javascript:void(0)">Spandan (Solo)</a></li>
+                            <li><a href="javascript:void(0)">A Flock of Voices</a></li>
+                            <li><a href="javascript:void(0)">Stand Up Comedy</a></li>
+                            <li><a href="javascript:void(0)">Shakedown</a></li>
+                            <li><a href="javascript:void(0)">Battle of Bands</a></li>
+                            <li><a href="javascript:void(0)">Rock Night</a></li>
+                            <li><a href="javascript:void(0)">Cultural Midnight</a></li>
+                          </ul>
+                        </li>
+                        <li style="width: 120px"><a href="javascript:void(0)">Day 2<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
+                          <ul>
+                            <li><a href="javascript:void(0)">Movie Screening</a></li>
+                            <li><a href="javascript:void(0)">Battle of DJ</a></li>
+                            <li><a href="javascript:void(0)">Engi Idol</a></li>
+                            <li><a href="javascript:void(0)">Nukkad</a></li>
+                            <li><a href="javascript:void(0)">Group Dance</a></li>
+                            <li><a href="javascript:void(0)">Paridhaan</a></li>
+                            <li><a href="javascript:void(0)">Femina Miss India</a></li>
+                            <li><a href="javascript:void(0)">EDM Night</a></li>
+                            <li><a href="javascript:void(0)">Cultural Midnight</a></li>
+                          </ul>
+                        </li>
+                        <li style="width: 120px" ><a href="javascript:void(0)">Day 3<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
+                          <ul>
+                            <li><a href="javascript:void(0)">STFU</a></li>
+                            <li><a href="javascript:void(0)">Natya</a></li>
+                            <li><a href="javascript:void(0)">Vocalicious</a></li>
+                            <li><a href="javascript:void(0)">Star Night</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li> 
+                    <li><a href="javascript:void(0)"><i class="fa fa-info-circle"></i><span>About</span></a></li>                   
+                    <li><a href="javascript:void(0)"><i class="fa fa-group"></i><span>Sponsors</span></a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-envelope"></i><span>Contact Us</span></a></li>
+                  </ul>
+                </div>
+            </div>
+            </div>
+        </div>
         <div id="background" class="afterLoad" style="display: none"></div>
         <div id="container" style="position:absolute;z-index:500;" class="afterLoad"></div>
         <div id="engifest16" class="bring-in" style="display: none;"><div id="main-text">ENGIFEST '16</div></div>
@@ -204,7 +260,24 @@
                 $(document).find(event_thumbs[i]).attr("src", baseLoceT+event_thumbs[i]+'.jpg');
             }
         }*/
-
-        </script>
+        var toggle = false;
+                    
+        $(".sidebar-icon").click(function() {                
+          if (toggle)
+          {
+            $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+            $("#menu span").css({"position":"absolute"});
+          }
+          else
+          {
+            $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+            setTimeout(function() {
+              $("#menu span").css({"position":"relative"});
+            }, 400);
+          }
+                        
+            toggle = !toggle;
+        });
+</script>
 	</body>
 </html>
