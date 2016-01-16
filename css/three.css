@@ -220,15 +220,15 @@ canvas{
 
 .day_D1{
     color: #DADADA;
-    text-shadow: #4DD6E4 0 0 10px, #4DD6E4 0px 0px 5px;
+    /*text-shadow: #4DD6E4 0 0 10px, #4DD6E4 0px 0px 5px;*/
 }
 .day_D2{
     color: #2ECE23;
-    text-shadow: #41E823 0 0 10px, #41E823 0px 0px 5px;
+    /*text-shadow: #41E823 0 0 10px, #41E823 0px 0px 5px;*/
 }
 .day_D3{
     color: #ECA522;
-    text-shadow: #E6E017 0 0 10px, #E6E017 0px 0px 5px;
+    /*text-shadow: #E6E017 0 0 10px, #E6E017 0px 0px 5px;*/
 }
 
 .timeline .animate{
@@ -257,7 +257,7 @@ canvas{
     -webkit-box-shadow: inset 0 0 30px #4DD6E4;
     box-shadow:         inset 0 0 30px #4DD6E4;
     color: #DADADA;
-    text-shadow: #4DD6E4 0 0 10px, #4DD6E4 0px 0px 5px;
+    /*text-shadow: #4DD6E4 0 0 10px, #4DD6E4 0px 0px 5px;*/
 }
 .animate_D2 .card{
     border: 10px solid #2ECE23;
@@ -265,7 +265,7 @@ canvas{
     -webkit-box-shadow: inset 0 0 30px #41E823;
     box-shadow:         inset 0 0 30px #41E823;
     color: #2ECE23;
-    text-shadow: #41E823 0 0 10px, #41E823 0px 0px 5px;
+    /*text-shadow: #41E823 0 0 10px, #41E823 0px 0px 5px;*/
 }
 .animate_D3 .card{
     border: 10px solid #ECA522;
@@ -273,7 +273,7 @@ canvas{
     -webkit-box-shadow: inset 0 0 30px #E6E017;
     box-shadow:         inset 0 0 30px #E6E017;
     color: #ECA522;
-    text-shadow: #E6E017 0 0 10px, #E6E017 0px 0px 5px;
+    /*text-shadow: #E6E017 0 0 10px, #E6E017 0px 0px 5px;*/
 }
 
 

@@ -179,6 +179,10 @@ function removeListen(){
     document.removeEventListener("DOMMouseScroll", updateTimeline_oat, false);
 }
 
+$('.t-open').click(function(){
+	toDay1();
+});
+
 
 
 $('.venue').click(function(){
@@ -216,4 +220,6 @@ $('.venue').click(function(){
 		toDay1();
 	}
 });
+
+
 
