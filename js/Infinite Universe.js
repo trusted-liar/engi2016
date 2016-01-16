@@ -56,7 +56,7 @@ var cardPos = [];
     temp = cloneObject(rightMid);
     cardPos.push(temp);
     setPos(cardPos[0],cardObjects[0]);
-    setTimeout(function(){$(cardObjects[0]).fadeIn();}, 1000);
+    setTimeout(function(){$(cardObjects[0]).fadeIn();}, 500);
 })();
 //handling window resize
 window.addEventListener('resize', function() {

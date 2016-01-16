@@ -185,6 +185,25 @@
         },500);
     });
 
+    $("#audi-i1").click(function(){
+                    $("#event-list-overlay").fadeIn();
+                    $("#timeline-audi").show();
+                    $("#timeline-audi").find(".timeline .bg").addClass("timeline-popin");
+                    eventAnimate($("#timeline-audi")[0]);
+    });
+    $("#stage-i4").click(function(){
+                    $("#event-list-overlay").fadeIn();
+                    $("#timeline-stage").show();
+                    $("#timeline-stage").find(".timeline .bg").addClass("timeline-popin");
+                    eventAnimate($("#timeline-stage")[0]);
+    });
+    $("#oat-i1").click(function(){
+                    $("#event-list-overlay").fadeIn();
+                    $("#timeline-oat").show();
+                    $("#timeline-oat").find(".timeline .bg").addClass("timeline-popin");
+                    eventAnimate($("#timeline-oat")[0]);
+    });
+
 var pinCurrent = "landing";
 function updatePins(pinNext){
     if(pinCurrent === "landing"){
