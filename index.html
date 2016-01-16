@@ -168,7 +168,7 @@
         //event_thumbs = ["anushthaan", "spandan", "shakedown"];
         gate = document.getElementById('i4');
         gate.onload = function(){set_preloader();};
-        gate.onerror = function(){location.reload();};
+        gate.onerror = function(){console.log('Loading error! Refreshing...'); location.reload();};
         function set_preloader(){
             $("#i4").zoomTo({targetsize:1, duration:0});
             setTimeout(preloader, 500);

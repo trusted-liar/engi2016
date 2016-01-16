@@ -73,10 +73,11 @@ canvas{
     position: absolute;
 }
 
-#i3:hover{
+#oat-i1:hover, #stage-i4:hover, #audi-i1:hover{
+    cursor: pointer;
     -webkit-filter: drop-shadow(3px 3px 0 white)
                   drop-shadow(-3px -3px 0 white);
-  filter: drop-shadow(3px 3px 0 white) 
+    filter: drop-shadow(3px 3px 0 white) 
           drop-shadow(-3px 3px 0 white);
 }
 
