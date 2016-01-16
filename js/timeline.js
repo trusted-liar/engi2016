@@ -47,12 +47,12 @@ function toDay3(){
 	$("#day3").show();
 }
 
-function updateTimeline(e){
+function updateTimeline_oat(e){
+	Zoom = 0;
 	var e = window.event || e; // old IE support
 	var delta = (e.wheelDelta || -e.detail);
-	Zoom = 0;
 	c = null;
-	$('.card').each(function(){
+	$('.oat_event').each(function(){
 		card = this;
 		if($(card).css('display') != 'none'){
 			if($(card).css('zoom') > Zoom){
@@ -77,41 +77,143 @@ function updateTimeline(e){
 	}
 }
 
-if (document.addEventListener) {
-	// IE9, Chrome, Safari, Opera
-	document.addEventListener("mousewheel", updateTimeline, false);
-	// Firefox
-	document.addEventListener("DOMMouseScroll", updateTimeline, false);
-}
-// IE 6/7/8
-else document.attachEvent("onmousewheel", updateTimeline);
+function updateTimeline_audi(e){
+	Zoom = 0;
+	var e = window.event || e; // old IE support
+	var delta = (e.wheelDelta || -e.detail);
+	c = null;
+	$('.audi_event').each(function(){
+		card = this;
+		if($(card).css('display') != 'none'){
+			if($(card).css('zoom') > Zoom){
+				Zoom = $(card).css('zoom');
+				c = card;
+			}
+		}
+	});
+	day = $(c).attr('day');
+	switch(day){
+		case '1': toDay1();
+				  break;
+		case '2': toDay2();
+				  break;
+		case '3': toDay3();
+	}
 
-$(function(){
-    $('html').keydown(function(e){
-    	updateTimeline();
-    });
-});
+	if($(c).attr('hrs') != curr_hrs || $(c).attr('min') != curr_min){
+		curr_hrs = $(c).attr('hrs');
+		curr_min = $(c).attr('min');
+		refresher = setInterval(timeRefresh, 20);
+	}
+}
+
+function updateTimeline_stage(e){
+	Zoom = 0;
+	var e = window.event || e; // old IE support
+	var delta = (e.wheelDelta || -e.detail);
+	c = null;
+	$('.stage_event').each(function(){
+		card = this;
+		if($(card).css('display') != 'none'){
+			if($(card).css('zoom') > Zoom){
+				Zoom = $(card).css('zoom');
+				c = card;
+			}
+		}
+	});
+	day = $(c).attr('day');
+	switch(day){
+		case '1': toDay1();
+				  break;
+		case '2': toDay2();
+				  break;
+		case '3': toDay3();
+	}
+
+	if($(c).attr('hrs') != curr_hrs || $(c).attr('min') != curr_min){
+		curr_hrs = $(c).attr('hrs');
+		curr_min = $(c).attr('min');
+		refresher = setInterval(timeRefresh, 20);
+	}
+}
+
+function addListener(listen){
+	if (document.addEventListener) {
+		// IE9, Chrome, Safari, Opera
+		document.addEventListener("mousewheel", listen, false);
+		// Firefox
+		document.addEventListener("DOMMouseScroll", listen, false);
+	}
+	// IE 6/7/8
+	else document.attachEvent("onmousewheel", listen);
+
+	$(function(){
+		switch(listen){
+			case 'updateTimeline_oat':
+				$('html').keydown(function(e){
+			    	updateTimeline_oat();
+			    });
+			    break;
+			case 'updateTimeline_audi':
+				$('html').keydown(function(e){
+				    	updateTimeline_audi();
+				    });
+				    break;
+			case 'updateTimeline_stage':
+				$('html').keydown(function(e){
+			    	updateTimeline_stage();
+			    });
+		}
+	});
+}
+
+function removeListen(){
+	$("html").off("keydown");
+    // IE9, Chrome, Safari, Opera
+    document.removeEventListener("mousewheel", updateTimeline_stage, false);
+    document.removeEventListener("mousewheel", updateTimeline_audi, false);
+    document.removeEventListener("mousewheel", updateTimeline_oat, false);
+    // Firefox
+    document.removeEventListener("DOMMouseScroll", updateTimeline_stage, false);
+    document.removeEventListener("DOMMouseScroll", updateTimeline_audi, false);
+    document.removeEventListener("DOMMouseScroll", updateTimeline_oat, false);
+}
+
+
 
 $('.venue').click(function(){
 	id = $(this).attr('id');
 	switch(id){
-		case 'landing':
+		case 'pin-landing':
+			event_venue = false;
+			removeListen();
 			break;
-		case 'oat':
+		case 'pin-oat':
 			first_card = $(document).find('.oat_event')[0];
+			event_venue = true;
+			removeListen();
+			addListener(updateTimeline_oat);
 			break;
-		case 'audi':
+		case 'pin-audi':
 			first_card = $(document).find('.audi_event')[0];
+			event_venue = true;
+			removeListen();
+			addListener(updateTimeline_audi);
 			break;
-		case 'stage':
+		case 'pin-stage':
 			first_card = $(document).find('.stage_event')[0];
+			event_venue = true;
+			removeListen();
+			addListener(updateTimeline_stage);
 	}
-	curr_hrs = $(first_card).attr('hrs');
-	curr_min = $(first_card).attr('min');
-	$("#hrs").html(curr_hrs);
-	$("#min").html(curr_min);
-	resetCounter();
-	clearInterval(refresher);
-	toDay1();
+	if(event_venue){
+			curr_hrs = $(first_card).attr('hrs');
+		curr_min = $(first_card).attr('min');
+		$("#hrs").html(curr_hrs);
+		$("#min").html(curr_min);
+		resetCounter();
+		clearInterval(refresher);
+		toDay1();
+	}
 });
 

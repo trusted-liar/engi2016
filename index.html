@@ -35,10 +35,10 @@
             <img src="assets/images/Audi/oatside.png" class="overlay audi" id="audi-i3">
             <img src="assets/images/Audi/sidegate.png" class="overlay audi" id="audi-i4">
             
-            <img src="assets/main/pin.png" id="pin-audi" class="pinup pin-landing-audi afterload">
-            <img src="assets/main/pin.png" id="pin-oat" class="pinup pin-landing-oat afterload">
-            <img src="assets/main/pin.png" id="pin-landing" class="pinup out-of-box afterload">
-            <img src="assets/main/pin.png" id="pin-stage" class="pinup pin-landing-stage afterload">
+            <img src="assets/main/pin.png" id="pin-audi" class="pinup pin-landing-audi afterload venue">
+            <img src="assets/main/pin.png" id="pin-oat" class="pinup pin-landing-oat afterload venue">
+            <img src="assets/main/pin.png" id="pin-landing" class="pinup out-of-box afterload venue">
+            <img src="assets/main/pin.png" id="pin-stage" class="pinup pin-landing-stage afterload venue">
         </div>
 
         <div id="event-list-overlay" popout="true">
@@ -168,6 +168,7 @@
         //event_thumbs = ["anushthaan", "spandan", "shakedown"];
         gate = document.getElementById('i4');
         gate.onload = function(){set_preloader();};
+        gate.onerror = function(){location.reload();};
         function set_preloader(){
             $("#i4").zoomTo({targetsize:1, duration:0});
             setTimeout(preloader, 500);

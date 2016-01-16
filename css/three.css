@@ -771,8 +771,8 @@ body, #container{
 }
 
 .zoomout-landing-audi{
-    left: -75vh;
-    top: -19vh;
+    left: -144vh;
+    top: -24vh;
     transform: rotateZ(-110deg);
 }
 
@@ -784,8 +784,8 @@ body, #container{
 
 .zoomout-landing-stage{
     transform: rotateZ(109deg);
-    left: 28vh;
-    top: 64vh;
+    left: 42vh;
+    top: 96vh;
 }
 
 .pin-landing-oat{
@@ -796,8 +796,8 @@ body, #container{
 
 .zoomout-landing-oat{
     transform: rotateZ(27deg);
-    left: 70vh;
-    top: -20vh;
+    left: 105vh;
+    top: -30vh;
 }
 
 /*stage*/
@@ -808,8 +808,8 @@ body, #container{
 }
 
 .zoomout-stage-oat{
-    left: 84vh;
-    top: -36vh;
+    left: 126vh;
+    top: -54vh;
     transform: rotateZ(21deg);
 }
 
@@ -820,9 +820,9 @@ body, #container{
 }
 
 .zoomout-stage-landing{
-    left: 42vh;
+    left: 63vh;
     transform: rotateZ(109deg);
-    top: 86vh;
+    top: 129vh;
 }
 
 .pin-stage-audi{
@@ -832,9 +832,9 @@ body, #container{
 }
 
 .zoomout-stage-audi{
-    left: -86vh;
+    left: -129vh;
     transform: rotateZ(-151deg);
-    top: 30vh;
+    top: 45vh;
 }
 
 /*audi*/
@@ -845,9 +845,9 @@ body, #container{
 }
 
 .zoomout-audi-stage{
-    left: -72vh;
+    left: -108vh;
     transform: rotateZ(-93deg);
-    top: -54vh;
+    top: -81vh;
 }
 
 .pin-audi-oat{
@@ -857,9 +857,9 @@ body, #container{
 }
 
 .zoomout-audi-oat{
-    left: 94vh;
+    left: 141vh;
     transform: rotateZ(43deg);
-    top: -12vh;
+    top: -18vh;
 }
 
 .pin-audi-landing{
@@ -869,9 +869,9 @@ body, #container{
 }
 
 .zoomout-audi-landing{
-    left: -14vh;
+    left: -21vh;
     transform: rotateZ(151deg);
-    top: 86vh;
+    top: 129vh;
 }
 
 /*oat*/
@@ -882,9 +882,9 @@ body, #container{
 }
 
 .zoomout-oat-landing{
-    left: -6vh;
+    left: -9vh;
     transform: rotateZ(145deg);
-    top: 78vh;
+    top: 117vh;
 }
 
 .pin-oat-audi{
@@ -894,9 +894,9 @@ body, #container{
 }
 
 .zoomout-oat-audi{
-    left: -80vh;
+    left: -120vh;
     transform: rotateZ(246deg);
-    top: -20vh;
+    top: -30vh;
 }
 
 .pin-oat-stage{
@@ -906,9 +906,9 @@ body, #container{
 }
 
 .zoomout-oat-stage{
-    left: 66vh;
+    left: 115vh;
     transform: rotateZ(75deg);
-    top: 28vh;
+    top: 49vh;
 }
 
 @keyframes wiggle{
