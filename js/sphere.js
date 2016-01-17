@@ -106,8 +106,45 @@
         $(".myTooltip").fadeOut()
     }
 
+    $('#pin-audi').click(function(){getAudi();});
+    $('#pin-oat').click(function(){getOAT();});
+    $('#pin-stage').click(function(){getStage();});
+    $('#pin-landing').click(function(){getLanding();});
 
-    $('#pin-landing').click(function(){
+    $('#tooltip-audi').click(function(){getAudi();});
+    $('#tooltip-oat').click(function(){getOAT();});
+    $('#tooltip-stage').click(function(){getStage();});
+    $('#tooltip-gate').click(function(){getLanding();});
+
+    document.getElementById('pin-audi').addEventListener("mouseenter",function(){
+        $('#tooltip-audi').toggleClass("myTooltip-hover");
+    });
+    document.getElementById('pin-audi').addEventListener("mouseleave",function(){
+        $('#tooltip-audi').toggleClass("myTooltip-hover");
+    });
+
+    document.getElementById('pin-oat').addEventListener("mouseenter",function(){
+        $('#tooltip-oat').toggleClass("myTooltip-hover");
+    });
+    document.getElementById('pin-oat').addEventListener("mouseleave",function(){
+        $('#tooltip-oat').toggleClass("myTooltip-hover");
+    });
+
+    document.getElementById('pin-stage').addEventListener("mouseenter",function(){
+        $('#tooltip-stage').toggleClass("myTooltip-hover");
+    });
+    document.getElementById('pin-stage').addEventListener("mouseleave",function(){
+        $('#tooltip-stage').toggleClass("myTooltip-hover");
+    });
+
+    document.getElementById('pin-landing').addEventListener("mouseenter",function(){
+        $('#tooltip-gate').toggleClass("myTooltip-hover");
+    });
+    document.getElementById('pin-landing').addEventListener("mouseleave",function(){
+        $('#tooltip-gate').toggleClass("myTooltip-hover");
+    });
+
+    function getLanding(){
         updatePins("landing");
         removeImages();
         setTimeout(function(){
@@ -120,9 +157,9 @@
                 $('.overlay.landing').fadeIn();
             },1000);
         },500);
-    });
+    }
 
-    $('#pin-stage').click(function(){
+    function getStage(){
         updatePins("stage");
         removeImages();
         setTimeout(function(){
@@ -141,10 +178,10 @@
                     eventAnimate($("#timeline-stage")[0]);
                 }, 1500);
             },1000);
-        },500);
-    });
+        },500);        
+    }
 
-    $('#pin-oat').click(function(){
+    function getOAT(){
         removeImages();
         updatePins("oat");
         setTimeout(function(){
@@ -163,10 +200,10 @@
                     eventAnimate($("#timeline-oat")[0]);
                 }, 1500);
             },1000);
-        },500);
-    });
+        },500);        
+    }
 
-    $('#pin-audi').click(function(){
+    function getAudi(){
         removeImages();
         updatePins("audi");
         setTimeout(function(){
@@ -186,8 +223,8 @@
                     eventAnimate($("#timeline-audi")[0]);
                 }, 1500);
             },1000);
-        },500);
-    });
+        },500);        
+    }
 
     $("#audi-i1").click(function(){
                     $("#event-list-overlay").fadeIn();
@@ -210,6 +247,7 @@
 
 var pinCurrent = "landing";
 function updatePins(pinNext){
+    $(".pinup").css("transition-duration","0.5s");    
     if(pinCurrent === "landing"){
         $("#pin-oat").addClass("zoomout-landing-oat");
         $("#pin-stage").addClass("zoomout-landing-stage");
@@ -249,6 +287,7 @@ function updatePins(pinNext){
                 document.getElementById("pin-oat").className = "pinup pin-landing-oat";
                 document.getElementById("pin-audi").className = "pinup pin-landing-audi";
                 document.getElementById("pin-stage").className = "pinup pin-landing-stage";
+                setTimeout(function(){$(".pinup").css("transition-duration","0s");},1000);
             },500);
         }
         else if(pinNext === "oat"){
@@ -306,7 +345,7 @@ function positionTooltip(){
         $("#tooltip-audi").css("top",temp+40);
         temp = $("#pin-audi")[0].getBoundingClientRect().left;
         $("#tooltip-audi").css("left",temp-20);
-        if(window.innerHeight - $("#pin-audi")[0].getBoundingClientRect().bottom < 30){
+        if(window.innerHeight - $("#pin-audi")[0].getBoundingClientRect().bottom < 40){
             $("#tooltip-audi").css("top",$("#tooltip-audi")[0].getBoundingClientRect().top-40);
             $("#tooltip-audi").css("left",$("#tooltip-audi")[0].getBoundingClientRect().left+70);
         }
@@ -318,7 +357,7 @@ function positionTooltip(){
         $("#tooltip-oat").css("top",temp+40);
         temp = $("#pin-oat")[0].getBoundingClientRect().left;
         $("#tooltip-oat").css("left",temp-20);
-        if(window.innerHeight - $("#pin-oat")[0].getBoundingClientRect().bottom < 30){
+        if(window.innerHeight - $("#pin-oat")[0].getBoundingClientRect().bottom < 40){
             $("#tooltip-oat").css("top",$("#tooltip-oat")[0].getBoundingClientRect().top-40);
             $("#tooltip-oat").css("left",$("#tooltip-oat")[0].getBoundingClientRect().left+70);
         }
@@ -330,7 +369,7 @@ function positionTooltip(){
         $("#tooltip-stage").css("top",temp+40);
         temp = $("#pin-stage")[0].getBoundingClientRect().left;
         $("#tooltip-stage").css("left",temp-20);
-        if(window.innerHeight - $("#pin-stage")[0].getBoundingClientRect().bottom < 30){
+        if(window.innerHeight - $("#pin-stage")[0].getBoundingClientRect().bottom < 40){
             $("#tooltip-stage").css("top",$("#tooltip-stage")[0].getBoundingClientRect().top-40);
             $("#tooltip-stage").css("left",$("#tooltip-stage")[0].getBoundingClientRect().left+70);
         }
@@ -342,7 +381,7 @@ function positionTooltip(){
         $("#tooltip-gate").css("top",temp+40);
         temp = $("#pin-landing")[0].getBoundingClientRect().left;
         $("#tooltip-gate").css("left",temp-20);
-        if(window.innerHeight - $("#pin-landing")[0].getBoundingClientRect().bottom < 30){
+        if(window.innerHeight - $("#pin-landing")[0].getBoundingClientRect().bottom < 40){
             $("#tooltip-gate").css("top",$("#tooltip-gate")[0].getBoundingClientRect().top-40);
             $("#tooltip-gate").css("left",$("#tooltip-gate")[0].getBoundingClientRect().left+70);
         }
