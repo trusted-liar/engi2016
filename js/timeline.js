@@ -194,6 +194,8 @@ $('.t-open').click(function(){
 	toDay1();
 	$("#hrs").html('--');
 	$("#min").html('--');
+	curr_hrs = '00';
+	curr_min = '00';
 });
 
 
