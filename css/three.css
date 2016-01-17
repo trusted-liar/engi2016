@@ -956,7 +956,7 @@ body, #container{
 .tooltips div{
     position: absolute;
     background: rgba(0,0,0,0.5);
-    z-index: 510;
+    z-index: 504;
     padding: 5px;
     font-size: 2rem;
     border-radius: 5px;
