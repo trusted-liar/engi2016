@@ -1012,10 +1012,16 @@ a:active { text-decoration: none; }
 .page-container.sidebar-collapsed #logo {
   opacity: 0;
   transition: all 200ms ease-in-out;
+  position: absolute;
+  top: -5px;
+  height: 180px;
 }
 
 .page-container.sidebar-collapsed-back #logo {
   opacity: 1;
+  position: absolute;
+  top: -5px;
+  height: 180px;
   transition: all 200ms ease-in-out;
   transition-delay: 300ms;
 }
