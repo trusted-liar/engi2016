@@ -106,6 +106,11 @@
         $(".myTooltip").fadeOut()
     }
 
+    document.getElementById('#home').addEventListener('click',getLanding);
+    document.getElementById('#oat').addEventListener('click',getOAT);
+    document.getElementById('#audi').addEventListener('click',getAudi);
+    document.getElementById('#stage').addEventListener('click',getStage);
+
     $('#pin-audi').click(function(){getAudi();});
     $('#pin-oat').click(function(){getOAT();});
     $('#pin-stage').click(function(){getStage();});
