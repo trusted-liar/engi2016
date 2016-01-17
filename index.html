@@ -15,8 +15,10 @@
         <script src="js/touchfield.js"></script>
 	</head>
 	<body>
+        <div class="main-logo afterLoad">
+            <img src="assets/main/Engi_logo.png">
+        </div>
         <div class="clock-container afterLoad">
-            <h1>Engifest begins in...</h1>
             <div id="clockdiv">
               <div>
                 <span class="days"></span>
@@ -39,8 +41,8 @@
         <div class="afterLoad" id="sidebar-container">
             <div class="page-container sidebar-collapsed">
                 <div class="sidebar-menu">
-                <header class="logo"> <a href="javascript:void(0)" class="sidebar-icon"> <span class="fa fa-bars"></span></a> 
-                  <img id="logo" src="assets/main/Engi_logo.png" alt="Logo"/> 
+                <header class="logo"> <!--<a href="javascript:void(0)" class="sidebar-icon"> <span class="fa fa-bars"></span></a>-->
+                  <img id="logo" src="assets/main/Engi_logo.png" alt="Logo"/>
                   </header>
                 <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
                 <div class="menu">
@@ -265,7 +267,8 @@
                         "assets/images/Audi/mexyfrnt%20copy.png",
                         "assets/images/Audi/oatside.png",
                         "assets/images/Audi/sidegate.png",
-                        "assets/main/pin.png"];
+                        "assets/main/pin.png",
+                        "assets/main/Engi_logo.png"];
           preloadImages(imageSrcs, showPlanet);
         }
 
