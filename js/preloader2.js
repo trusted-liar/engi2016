@@ -73,7 +73,8 @@ function preloadImages(srcs, callback) {
             }
         };
         img.onerror = function() {
-          location.reload();
+          //location.reload();
+          console.log('Loading error!');
         }
         img.src = srcs[i];
     }

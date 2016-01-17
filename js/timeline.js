@@ -217,8 +217,9 @@ $('.t-open').click(function(){
 
 
 
-$('.venue').click(function(){
+$('.pinup').click(function(){
 	id = $(this).attr('id');
+	//console.log(id);
 	switch(id){
 		case 'pin-landing':
 			event_venue = false;
