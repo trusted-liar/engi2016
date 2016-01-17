@@ -26,6 +26,15 @@ body{
     background-repeat: no-repeat;
 }
 
+#pointer{
+    position: absolute;
+    bottom: 50px;
+    left: 43vw;
+    width: 15vw;
+    height: 10vh;
+    display: none;
+}
+
 .main-logo{
     z-index: 501;
     position: absolute;

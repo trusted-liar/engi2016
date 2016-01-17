@@ -300,6 +300,47 @@ $('.myTooltip').click(function(){
 	}
 });
 
+$('.menu-venue').click(function(){
+	id = $(this).attr('id');
+	//console.log(id);
+	switch(id){
+		case '#home':
+			event_venue = false;
+			removeListen();
+			$('.location').html('');
+			break;
+		case '#oat':
+			first_card = $(document).find('.oat_event')[0];
+			event_venue = true;
+			removeListen();
+			addListener('_oat');
+			$('.location').html('OAT');
+			break;
+		case '#audi':
+			first_card = $(document).find('.audi_event')[0];
+			event_venue = true;
+			removeListen();
+			addListener('_audi');
+			$('.location').html('Auditorium');
+			break;
+		case '#stage':
+			first_card = $(document).find('.stage_event')[0];
+			event_venue = true;
+			removeListen();
+			addListener('_stage');
+			$('.location').html('Sports Complex');
+	}
+	if(event_venue){
+			curr_hrs = $(first_card).attr('hrs');
+		curr_min = $(first_card).attr('min');
+		$("#hrs").html(curr_hrs);
+		$("#min").html(curr_min);
+		resetCounter();
+		clearInterval(refresher);
+		toDay1();
+	}
+});
+
 /***************CountDown Clock*************/
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
