@@ -1152,3 +1152,56 @@ a:active { text-decoration: none; }
   text-shadow: 4px 4px 6px rgba(0,0,0,0.4);
 }
 
+/*********CountDown Clock**********/
+.clock-container{
+    z-index: 505;
+    position: absolute;
+    left: 15px;
+    top: 30px;
+    text-shadow: #4DD6E4 0 0 10px, #4DD6E4 0px 0px 5px;
+}
+
+.clock-container h1{  
+    color: #DADADA;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 3vh;
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#clockdiv{
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 3vh;
+    text-align: center;
+}
+
+#clockdiv > div{
+    padding: 0px;
+    border-radius: 3px;
+    /*background: rgba(0, 0, 0, 0.75);*/
+    display: inline-block;
+    text-align: center;
+}
+
+#clockdiv div > span{
+    padding: 0px;
+    border-radius: 3px;
+    /*background: rgba(0, 0, 0, 0.75);*/
+    display: inline-block;
+    text-align: center;
+}
+
+.smalltext{
+    padding-top: 0px;
+    font-size: 2vh;
+    text-align: center;
+}
+
