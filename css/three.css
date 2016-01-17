@@ -1170,7 +1170,6 @@ a:active { text-decoration: none; }
     margin-left: 0px;
     margin-right: 0px;
     margin-bottom: 10px;
-    text-align: center;
 }
 
 #clockdiv{
@@ -1180,7 +1179,6 @@ a:active { text-decoration: none; }
     font-weight: 100;
     text-align: center;
     font-size: 3vh;
-    text-align: center;
 }
 
 #clockdiv > div{
@@ -1188,7 +1186,6 @@ a:active { text-decoration: none; }
     border-radius: 3px;
     /*background: rgba(0, 0, 0, 0.75);*/
     display: inline-block;
-    text-align: center;
 }
 
 #clockdiv div > span{
