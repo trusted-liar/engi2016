@@ -50,9 +50,9 @@
                     <li id="#home" ><a href="javascript:void(0)"><i class="fa fa-home"></i><span>Home</span></a></li>
                     <li><a href="javascript:void(0)"><i class="fa fa-binoculars"></i><span>Venue</span><span class="fa fa-angle-left" style="float: right"></span></a>
                       <ul>
-                        <li><a href="javascript:void(0)" id="#oat">OAT</a></li>
-                        <li><a href="javascript:void(0)" id="#audi">Auditorium</a></li>
-                        <li><a href="javascript:void(0)" id="#stage">Sports Complex</a></li>
+                        <li id="#venue-oat"><a href="javascript:void(0)" id="#oat">OAT</a></li>
+                        <li id="#venue-audi"><a href="javascript:void(0)" id="#audi">Auditorium</a></li>
+                        <li id="#venue-stage"><a href="javascript:void(0)" id="#stage">Sports Complex</a></li>
                       </ul>
                     </li>
                     <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i><span>Events</span><span class="fa fa-angle-double-left" style="float: right"></span></a>
@@ -254,8 +254,7 @@
           $(oat).css('visibility', 'visible');
           svg_loader(svgDoc);
           imageSrcs = ["assets/main/map.png",
-                        "assets/main/qwerty.jpg",
-                        "assets/main/gate_2.svg",
+                        "assets/main/bk.png",
                         "assets/images/Sports/audisidefinal.png",
                         "assets/images/Sports/mechCsideview.png",
                         "assets/images/Sports/crowdfinal.png",
@@ -271,7 +270,7 @@
                         "assets/main/Engi_logo.png"];
           preloadImages(imageSrcs, showPlanet);
         }
-
+        
         function showPlanet(){
           $('.afterLoad').fadeIn(500);
           setTimeout(function(){
@@ -287,12 +286,6 @@
           //loadimages();
         }
 
-        $(window).load(function(){
-            setTimeout(function(){
-                op = $('#i4').css('opacity');
-                if(op==0)   location.reload();
-            }, 1300);
-        })
         /*function loadimages(){
             for(var i=0; i<event_thumbs.length; i++){
                 $(document).find(event_thumbs[i]).attr("src", baseLoceT+event_thumbs[i]+'.jpg');

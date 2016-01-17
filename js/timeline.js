@@ -297,7 +297,7 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = new Date('2/12/2016');
+var deadline = new Date('2/13/2016 9:59:59');
 initializeClock('clockdiv', deadline);
 
 
