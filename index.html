@@ -124,6 +124,12 @@
             <img src="assets/main/pin.png" id="pin-landing" class="pinup out-of-box afterload venue">
             <img src="assets/main/pin.png" id="pin-stage" class="pinup pin-landing-stage afterload venue">
         </div>
+        <div class="tooltips afterload">
+            <div id="tooltip-audi" class="myTooltip"><span class="myVenue">Explore</span>Auditorium</div>
+            <div id="tooltip-gate" class="myTooltip"><span class="myVenue">Explore</span>Gate</div>
+            <div id="tooltip-stage" class="myTooltip"><span class="myVenue">Explore</span>Sports Complex</div>
+            <div id="tooltip-oat" class="myTooltip"><span class="myVenue">Explore</span>OAT</div>
+        </div>
 
         <div id="event-list-overlay" popout="true">
             <div class="location day_D1"></div>
@@ -246,7 +252,7 @@
           $(oat).css('visibility', 'visible');
           svg_loader(svgDoc);
           imageSrcs = ["assets/main/map.png",
-                        "assets/main/bb.png",
+                        "assets/main/bk.png",
                         "assets/main/gate_2.svg",
                         "assets/images/Sports/audisidefinal.png",
                         "assets/images/Sports/mechCsideview.png",
@@ -270,6 +276,7 @@
           }, 500);
           setTimeout(function(){
             $('.afterLoad2').fadeIn(400);
+            setTimeout(function(){positionTooltip();},1000);
           }, 1000);
           setTimeout(function(){
             $("#engifest16").removeClass('bring-in');

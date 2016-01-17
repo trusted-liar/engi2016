@@ -43,6 +43,7 @@
       camera.aspect = WIDTH / HEIGHT;
       camera.updateProjectionMatrix();
       renderer.render(scene,camera);
+      positionTooltip();
     });
 
     // create a point light
@@ -101,6 +102,8 @@
                 $(x[i]).fadeOut();
             }
         }
+        
+        $(".myTooltip").fadeOut()
     }
 
 
@@ -110,6 +113,7 @@
         setTimeout(function(){
             animateSphere(current,0);
             setTimeout(function(){
+                
                 //handling images
                 $('.overlay.landing').css("animation-duration","0.8s");
                 $('#landing-i1').css("animation-name","popout-landing-1");
@@ -229,6 +233,7 @@ function updatePins(pinNext){
     
     
     setTimeout(function(){
+        setTimeout(positionTooltip,1500);
         
         $(".pinup").css("transition-duration","0s");    
 
@@ -291,6 +296,57 @@ function updatePins(pinNext){
 
         pinCurrent = pinNext;
     }, 1000);
+}
+
+function positionTooltip(){
+    var temp;
+    if($("#pin-audi").hasClass("out-of-box") === false){
+        $("#tooltip-audi").fadeIn();
+        temp = $("#pin-audi")[0].getBoundingClientRect().top;
+        $("#tooltip-audi").css("top",temp+40);
+        temp = $("#pin-audi")[0].getBoundingClientRect().left;
+        $("#tooltip-audi").css("left",temp-20);
+        if(window.innerHeight - $("#pin-audi")[0].getBoundingClientRect().bottom < 30){
+            $("#tooltip-audi").css("top",$("#tooltip-audi")[0].getBoundingClientRect().top-40);
+            $("#tooltip-audi").css("left",$("#tooltip-audi")[0].getBoundingClientRect().left+70);
+        }
+    }
+    
+    if($("#pin-oat").hasClass("out-of-box") === false){
+        $("#tooltip-oat").fadeIn();
+        temp = $("#pin-oat")[0].getBoundingClientRect().top;
+        $("#tooltip-oat").css("top",temp+40);
+        temp = $("#pin-oat")[0].getBoundingClientRect().left;
+        $("#tooltip-oat").css("left",temp-20);
+        if(window.innerHeight - $("#pin-oat")[0].getBoundingClientRect().bottom < 30){
+            $("#tooltip-oat").css("top",$("#tooltip-oat")[0].getBoundingClientRect().top-40);
+            $("#tooltip-oat").css("left",$("#tooltip-oat")[0].getBoundingClientRect().left+70);
+        }
+    }
+    
+    if($("#pin-stage").hasClass("out-of-box") === false){
+        $("#tooltip-stage").fadeIn();
+        temp = $("#pin-stage")[0].getBoundingClientRect().top;
+        $("#tooltip-stage").css("top",temp+40);
+        temp = $("#pin-stage")[0].getBoundingClientRect().left;
+        $("#tooltip-stage").css("left",temp-20);
+        if(window.innerHeight - $("#pin-stage")[0].getBoundingClientRect().bottom < 30){
+            $("#tooltip-stage").css("top",$("#tooltip-stage")[0].getBoundingClientRect().top-40);
+            $("#tooltip-stage").css("left",$("#tooltip-stage")[0].getBoundingClientRect().left+70);
+        }
+    }
+
+    if($("#pin-gate").hasClass("out-of-box") === false){
+        $("#tooltip-gate").fadeIn();
+        temp = $("#pin-landing")[0].getBoundingClientRect().top;
+        $("#tooltip-gate").css("top",temp+40);
+        temp = $("#pin-landing")[0].getBoundingClientRect().left;
+        $("#tooltip-gate").css("left",temp-20);
+        if(window.innerHeight - $("#pin-landing")[0].getBoundingClientRect().bottom < 30){
+            $("#tooltip-gate").css("top",$("#tooltip-gate")[0].getBoundingClientRect().top-40);
+            $("#tooltip-gate").css("left",$("#tooltip-gate")[0].getBoundingClientRect().left+70);
+        }
+    }
 }
 
 //});

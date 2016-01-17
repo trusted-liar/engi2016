@@ -21,7 +21,8 @@ body{
     height: 100vh;
     width: 100%;
     z-index: 100;
-    background-image: url('../assets/main/bb.png');
+    background-image: url('../assets/main/bk.png');
+    background-color: black;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -940,12 +941,35 @@ body, #container{
     }
 }
 
+.tooltips div{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    z-index: 510;
+    padding: 5px;
+    font-size: 2rem;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    display: none;
+}
+
+.tooltip-hover{
+    background: rgba(255,255,255,0.5);
+    color: black;
+}
+
+.tooltips span{
+    display: block;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+
 /*************Sidebar***************/
 #sidebar-container{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 505;
+    z-index: 550;
 }
 #sidebar-container a,
 a:hover,
@@ -1207,4 +1231,3 @@ a:active { text-decoration: none; }
     font-size: 2vh;
     text-align: center;
 }
-
