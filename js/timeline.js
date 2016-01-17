@@ -196,6 +196,23 @@ $('.t-open').click(function(){
 	$("#min").html('--');
 	curr_hrs = '00';
 	curr_min = '00';
+	venue_id = $(this).attr('id');
+	switch(venue_id){
+		case 'stage-i4':
+			$('html').keydown(function(e){
+		    	updateTimeline_stage();
+		    });
+		    break;
+		case 'oat-i1':
+			$('html').keydown(function(e){
+			    	updateTimeline_oat();
+			    });
+			break;
+		case 'audi-i1':
+			$('html').keydown(function(e){
+		    	updateTimeline_audi();
+		    });
+	}
 });
 
 

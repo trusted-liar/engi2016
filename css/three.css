@@ -952,7 +952,7 @@ a:hover,
 a:active { text-decoration: none; }
 
 #sidebar-container a {
-  color: #008DE7;
+  color: #31E413;
   font-style: italic;
   font-weight: 700;
 }
@@ -1147,7 +1147,7 @@ a:active { text-decoration: none; }
   font-size: 3vh;
   padding: 6px 8px;
   border-radius: 3px;
-  color: #888;
+  color: #31E413;
   background-clip: padding-box;
   text-shadow: 4px 4px 6px rgba(0,0,0,0.4);
 }
