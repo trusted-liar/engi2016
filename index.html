@@ -218,7 +218,7 @@
           $(oat).css('visibility', 'visible');
           svg_loader(svgDoc);
           imageSrcs = ["assets/main/map.png",
-                        "assets/main/bg.jpg",
+                        "assets/main/bb.png",
                         "assets/main/gate_2.svg",
                         "assets/images/Sports/audisidefinal.png",
                         "assets/images/Sports/mechCsideview.png",
@@ -260,6 +260,22 @@
                 $(document).find(event_thumbs[i]).attr("src", baseLoceT+event_thumbs[i]+'.jpg');
             }
         }*/
+        hover = true;
+        $('.sidebar-menu').hover(function(){
+            if(hover){
+                $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+                setTimeout(function() {
+                  $("#menu span").css({"position":"relative"});
+                }, 400);
+            }
+        },
+        function(){
+            if(hover){
+                $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+                $("#menu span").css({"position":"relative"});
+            }
+        });
+
         var toggle = false;
                     
         $(".sidebar-icon").click(function() {                
@@ -275,7 +291,7 @@
               $("#menu span").css({"position":"relative"});
             }, 400);
           }
-                        
+            hover = !hover;         
             toggle = !toggle;
         });
 </script>
