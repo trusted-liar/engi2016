@@ -16,9 +16,6 @@
         <script src="js/touchfield.js"></script>
 	</head>
 	<body>
-        <audio loop>
-          <source type="audio/mpeg" id="song">
-        </audio>
         <div class="main-logo afterLoad">
             <img src="assets/main/Engi_logo.png">
         </div>
@@ -276,10 +273,6 @@
         }
         
         function showPlanet(){
-          var audio = document.querySelector("audio");
-          audio.src = "assets/COTU.mp3";
-          audio.load();
-          audio.play();
           $('.afterLoad').fadeIn(500);
           setTimeout(function(){
             $('#container').zoomTo({targetsize:1.0, duration:800, easing: "ease-out"});
