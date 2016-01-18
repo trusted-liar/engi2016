@@ -1,4 +1,4 @@
-curr_hrs = '00', curr_min = '00', counter = 0;
+curr_hrs = '00', curr_min = '00', counter = 0, pointer=true;
 var refresher;
 
 function getRandom(min, max) {
@@ -47,6 +47,10 @@ function toDay3(){
 
 function updateTimeline_oat(e){
 	Zoom = 0;
+	if (pointer) {
+		$("#pointer").fadeOut(400);
+		pointer = false;
+	};
 	var e = window.event || e; // old IE support
 	var delta = (e.wheelDelta || -e.detail);
 	c = null;
@@ -77,6 +81,10 @@ function updateTimeline_oat(e){
 
 function updateTimeline_audi(e){
 	Zoom = 0;
+	if (pointer) {
+		$("#pointer").fadeOut(400);
+		pointer = false;
+	};
 	var e = window.event || e; // old IE support
 	var delta = (e.wheelDelta || -e.detail);
 	c = null;
@@ -107,6 +115,10 @@ function updateTimeline_audi(e){
 
 function updateTimeline_stage(e){
 	Zoom = 0;
+	if (pointer) {
+		$("#pointer").fadeOut(400);
+		pointer = false;
+	};
 	var e = window.event || e; // old IE support
 	var delta = (e.wheelDelta || -e.detail);
 	c = null;
@@ -197,6 +209,7 @@ $('.t-open').click(function(){
 	curr_hrs = '00';
 	curr_min = '00';
 	venue_id = $(this).attr('id');
+	pointer = true;
 	switch(venue_id){
 		case 'stage-i4':
 			$('html').keydown(function(e){
@@ -219,6 +232,7 @@ $('.t-open').click(function(){
 
 $('.pinup').click(function(){
 	id = $(this).attr('id');
+	pointer = true;
 	//console.log(id);
 	switch(id){
 		case 'pin-landing':
@@ -261,6 +275,7 @@ $('.pinup').click(function(){
 
 $('.myTooltip').click(function(){
 	id = $(this).attr('id');
+	pointer = true;
 	//console.log(id);
 	switch(id){
 		case 'tooltip-gate':
@@ -302,6 +317,7 @@ $('.myTooltip').click(function(){
 
 $('.menu-venue').click(function(){
 	id = $(this).attr('id');
+	pointer = true;
 	//console.log(id);
 	switch(id){
 		case '#home':
