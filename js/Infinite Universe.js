@@ -192,7 +192,7 @@ function MouseWheelHandler(e) {
     });
     
 $(function(){
-        $(document).click(function(e){
+    $(document).click(function(e){
         var clik = e.target;
         if($(clik).attr('popout') == 'true'){
             $("html").off("keydown");

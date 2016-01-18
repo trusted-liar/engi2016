@@ -347,7 +347,7 @@ $('.menu-venue').click(function(){
 			$('.location').html('Sports Complex');
 	}
 	if(event_venue){
-			curr_hrs = $(first_card).attr('hrs');
+		curr_hrs = $(first_card).attr('hrs');
 		curr_min = $(first_card).attr('min');
 		$("#hrs").html(curr_hrs);
 		$("#min").html(curr_min);
@@ -355,6 +355,16 @@ $('.menu-venue').click(function(){
 		clearInterval(refresher);
 		toDay1();
 	}
+});
+
+$(function(){
+    $(document).click(function(e){
+        var clik = e.target;
+        if($(clik).attr('popout') == 'true'){
+            resetCounter();
+			clearInterval(refresher);
+        }
+    });
 });
 
 /***************CountDown Clock*************/
