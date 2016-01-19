@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>Engifest 2016</title>
-        <link rel="shortcut icon" href="assets/main/logo1.png" />
+        <link rel="shortcut icon" href="assets/main/logoicon.png" />
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/three.css">
@@ -98,7 +98,8 @@
                         </li>
                       </ul>
                     </li> 
-                    <li id="about"><a href="javascript:void(0)"><i class="fa fa-info-circle"></i><span>About</span></a></li>                   
+                    <li id="about"><a href="javascript:void(0)"><i class="fa fa-info-circle"></i><span>About</span></a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-camera"></i><span>Glimpses</span></a></li>                    
                     <li><a href="javascript:void(0)"><i class="fa fa-group"></i><span>Sponsors</span></a></li>
                     <li><a href="javascript:void(0)"><i class="fa fa-envelope"></i><span>Contact Us</span></a></li>
                   </ul>
@@ -111,21 +112,20 @@
             <img class="bg2" src="assets/main/qwerty.jpg">
         </div>
         <div id="container" style="position:absolute;z-index:500;" class="afterLoad"></div>
-        
         <div id="about-engi-back">
             <div id="about-engi"><i id="about-close" class="fa fa-times"></i></div>
         </div>
-        
         <div class="over-image">
             <a href="javascript:void(0)">
-                <object id="i4" class="overlay" data="assets/main/gate_2.svg" type="image/svg+xml" style="opacity: 0;" onload="set_obj_loaded(this)"></object>
+                <object id="i4" class="overlay" data="assets/main/gate_3.svg" type="image/svg+xml" style="opacity: 0;" onload="set_obj_loaded(this)"></object>
             </a>
-            <img src="assets/main/gate_2.svg" class="overlay stage" id="stage-i1">
+            <img src="assets/main/gate_3.svg" class="overlay stage" id="stage-i1">
             <img src="assets/images/Sports/audisidefinal.png" class="overlay stage" id="stage-i2">
             <img src="assets/images/Sports/mechCsideview.png" class="overlay stage" id="stage-i3">
             <img src="assets/images/Sports/crowdfinal.png" class="overlay stage t-open" id="stage-i4">
             
-            <img src="assets/main/gate_2.svg" class="overlay landing" id="landing-i1">
+            <img src="assets/main/gate_3.svg" class="overlay landing" id="landing-i1">
+            <img src="assets/main/logoxx.png" class="overlay landing" id="landing-i2">
             
             <img src="assets/images/OAT/oatcentre.png" class="overlay oat t-open" id="oat-i1">
             <img src="assets/images/OAT/oatside1.png" class="overlay oat" id="oat-i2">
@@ -300,11 +300,7 @@
           setTimeout(function(){
             $('.afterLoad2').fadeIn(400);
             setTimeout(function(){positionTooltip();},1000);
-          }, 1000);
-          setTimeout(function(){
-            $("#engifest16").removeClass('bring-in');
-          }, 2000);
-          
+          }, 1000);          
         }
         
         hover = true;
@@ -343,6 +339,7 @@
             hover = !hover;         
             toggle = !toggle;
         });
+
 </script>
 	</body>
 </html>

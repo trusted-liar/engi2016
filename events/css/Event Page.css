@@ -33,32 +33,64 @@ img#bg2{
 
 .event-card{
     position: absolute;
-    width: 90vw;
-    height: 86vh;
-    margin-left: 5vw;
-    margin-top: 7vh;
+    width: 100vw;
+    height: 100vh;
+    margin-left: 0vw;
+    margin-top: 0vh;
     display: flex;
-    background: blue;
+    background: none;
     overflow: hidden;
     justify-content: space-around;
     align-items: center;
 }
 
 .event-image{
-    width: 35%;
+    width: 30%;
     height: 80%;
-    background: aqua;
+    background: rgba(0,0,0,0.7);
 }
 
 .event-saber{
-    width: 1%;
-    background: aliceblue;
+    width: 0.75%;
+    background: white;
     height: 80%;
 }
 
 .event-details{
-    width: 45%%;
+    width: 60%;
     height: 80%;
-    background: brown;
-    padding: 5rem;
+    background: rgba(0,0,0,0.7);
+    padding: 2rem;
+    color: #fff;
+}
+
+.nav-tabs{
+    border-bottom: 1px solid #E2FF00;
+    font-size: 20px;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+    background-color: rgba(0,0,0,0);
+    color: #E2FF00;
+    border-left: 1px solid #E2FF00;
+    border-right: 1px solid #E2FF00;
+    border-top: 1px solid #E2FF00;
+    border-bottom: transparent;
+    border-radius: 0px;
+}
+
+.nav-tabs>li>a:hover{
+    background-color: rgba(0,0,0,0);
+    color: #E2FF00;
+    border-left: 1px solid #E2FF00;
+    border-right: 1px solid #E2FF00;
+    border-top: 1px solid #E2FF00;
+    border-bottom: transparent;
+    border-radius: 0px;
+}
+
+.nav-tabs a{
+    padding: 5px;
+    background-color: none;
+    color: white;
 }
