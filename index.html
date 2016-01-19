@@ -16,6 +16,12 @@
         <script src="js/touchfield.js"></script>
 	</head>
 	<body>
+        <script type="text/javascript">
+            var GLOBAL_OBJ_LOADED = false;
+            function set_obj_loaded () {
+                GLOBAL_OBJ_LOADED = true;
+            }
+        </script>
         <div class="main-logo afterLoad">
             <img src="assets/main/Engi_logo.png">
         </div>
@@ -107,7 +113,9 @@
         <div id="container" style="position:absolute;z-index:500;" class="afterLoad"></div>
         <div id="engifest16" class="bring-in" style="display: none;"><div id="main-text">ENGIFEST '16</div></div>
         <div class="over-image">
-            <a href="javascript:void(0)"><object id="i4" class="overlay" data="assets/main/gate_2.svg" type="image/svg+xml" style="opacity: 0;"></object></a>
+            <a href="javascript:void(0)">
+                <object id="i4" class="overlay" data="assets/main/gate_2.svg" type="image/svg+xml" style="opacity: 0;" onload="set_obj_loaded(this)"></object>
+            </a>
             <img src="assets/main/gate_2.svg" class="overlay stage" id="stage-i1">
             <img src="assets/images/Sports/audisidefinal.png" class="overlay stage" id="stage-i2">
             <img src="assets/images/Sports/mechCsideview.png" class="overlay stage" id="stage-i3">
@@ -243,15 +251,18 @@
         <script src="js/Infinite%20Universe.js"></script>
         <script src="js/timeline.js"></script>
         <script>
-        //baseLoceT = 'assets/event_thumbs/';
-        //event_thumbs = ["anushthaan", "spandan", "shakedown"];
-        gate = document.getElementById('i4');
-        gate.onload = function(){set_preloader();};
-        gate.onerror = function(){console.log('Loading error! Refreshing...'); location.reload();};
         function set_preloader(){
             $("#i4").zoomTo({targetsize:1, duration:0});
             setTimeout(preloader, 500);
         }
+
+        if (GLOBAL_OBJ_LOADED) set_preloader();
+        else {
+            gate = document.getElementById('i4');
+            gate.onload = set_preloader;
+            gate.onerror = function(){console.log('Loading error! Refreshing...'); location.reload();};
+        }
+                
         function preloader(){
           $("#i4").css('opacity', '1');
           oat = document.getElementById('i4');
@@ -288,13 +299,9 @@
           setTimeout(function(){
             $("#engifest16").removeClass('bring-in');
           }, 2000);
-          //loadimages();
+          
         }
-        /*function loadimages(){
-            for(var i=0; i<event_thumbs.length; i++){
-                $(document).find(event_thumbs[i]).attr("src", baseLoceT+event_thumbs[i]+'.jpg');
-            }
-        }*/
+        
         hover = true;
         $('.sidebar-menu').hover(function(){
             if(hover){
