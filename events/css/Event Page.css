@@ -38,32 +38,27 @@ img#bg2{
     margin-left: 5vw;
     margin-top: 7vh;
     display: flex;
+    background: blue;
     overflow: hidden;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .event-image{
-    width: 47%;
-    height: 100%;
+    width: 35%;
+    height: 80%;
     background: aqua;
 }
 
-.event-details{
-    width: 53%;
-    height: 100%;
-    background: brown;
-    padding: 5rem;
+.event-saber{
+    width: 1%;
+    background: aliceblue;
+    height: 80%;
 }
 
-.event-details:before{
-    content: '';
-    left: 39%;
-    width: 0;
-    position: absolute;
-    border-bottom: 500px solid brown;
-    border-right: 50px solid brown;
-    border-top: 500px solid transparent;
-    border-left: 50px solid transparent;
-    box-sizing: border-box;
-    top: -13%;
-    z-index: 23;
+.event-details{
+    width: 45%%;
+    height: 80%;
+    background: brown;
+    padding: 5rem;
 }
