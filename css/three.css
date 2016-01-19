@@ -59,6 +59,16 @@ img.bg2{
     display: none;
 }
 
+#pointer-text{
+    position: absolute;
+    bottom: 10px;
+    color: #DADADA;
+    text-shadow: #4DD6E4 0 0 10px, #4DD6E4 0px 0px 5px;
+    font-size: 2.5vw;
+    left: 44vw;
+    display: none;
+}
+
 .main-logo{
     z-index: 501;
     position: absolute;

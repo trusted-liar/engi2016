@@ -178,7 +178,7 @@
                     $("#event-list-overlay").fadeIn();
                     $("#timeline-stage").show();
                     $("#timeline-stage").find(".bg").addClass("timeline-popin");
-                    $("#pointer").delay(800).fadeIn(500);
+                    $("#pointer, #pointer-text").delay(800).fadeIn(500);
                     eventAnimate($("#timeline-stage")[0]);
                 }, 1500);
             },1000);
@@ -201,7 +201,7 @@
                     $("#event-list-overlay").fadeIn();
                     $("#timeline-oat").show();
                     $("#timeline-oat").find(".bg").addClass("timeline-popin");
-                    $("#pointer").delay(800).fadeIn(500);
+                    $("#pointer, #pointer-text").delay(800).fadeIn(500);
                     eventAnimate($("#timeline-oat")[0]);
                 }, 1500);
             },1000);
@@ -225,7 +225,7 @@
                     $("#event-list-overlay").fadeIn();
                     $("#timeline-audi").show();
                     $("#timeline-audi").find(".bg").addClass("timeline-popin");
-                    $("#pointer").delay(800).fadeIn(500);
+                    $("#pointer, #pointer-text").delay(800).fadeIn(500);
                     eventAnimate($("#timeline-audi")[0]);
                 }, 1500);
             },1000);
@@ -236,21 +236,21 @@
                     $("#event-list-overlay").fadeIn();
                     $("#timeline-audi").show();
                     $("#timeline-audi").find(".bg").addClass("timeline-popin");
-                    $("#pointer").delay(800).fadeIn(500);
+                    $("#pointer, #pointer-text").delay(800).fadeIn(500);
                     eventAnimate($("#timeline-audi")[0]);
     });
     $("#stage-i4").click(function(){
                     $("#event-list-overlay").fadeIn();
                     $("#timeline-stage").show();
                     $("#timeline-stage").find(".bg").addClass("timeline-popin");
-                    $("#pointer").delay(800).fadeIn(500);
+                    $("#pointer, #pointer-text").delay(800).fadeIn(500);
                     eventAnimate($("#timeline-stage")[0]);
     });
     $("#oat-i1").click(function(){
                     $("#event-list-overlay").fadeIn();
                     $("#timeline-oat").show();
                     $("#timeline-oat").find(".bg").addClass("timeline-popin");
-                    $("#pointer").delay(800).fadeIn(500);
+                    $("#pointer, #pointer-text").delay(800).fadeIn(500);
                     eventAnimate($("#timeline-oat")[0]);
     });
 
