@@ -1020,6 +1020,35 @@ body, #container{
     font-family: sans-serif;
 }
 
+#about-engi-back{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: none;
+    z-index: 507;
+}
+
+#about-engi{
+    width: 70%;
+    position: absolute;
+    z-index: 510;
+    height: 70%;
+    margin: 15vh 15%;
+    background: rgba(0,0,0,0.5);
+}
+
+#about-close{
+    color: white;
+    font-size: xx-large;
+    position: absolute;
+    right: -12px;
+    background: rgba(0,0,0,0.5);
+    top: -17px;
+    cursor: pointer;
+    border-radius: 40px;
+    border: 2px solid white;
+    padding: 3px;
+}
 /*************Sidebar***************/
 #sidebar-container{
     position: fixed;

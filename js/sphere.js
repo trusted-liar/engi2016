@@ -397,4 +397,20 @@ function positionTooltip(){
     }
 }
 
+$("#about").on("click",function(){
+    $("#about-engi-back").show(300);
+    $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+    $("#menu span").css({"position":"relative"});
+    window.addEventListener("keydown", myfunction);
+    function myfunction(e){
+        if(e.which === 27){
+            $("#about-engi-back").hide(300);            
+            window.removeEventListener("keydown", myfunction);
+        }
+    }
+});
+$("#about-engi-back").on("click",function(){
+    $("#about-engi-back").hide(300);
+});
+
 //});
