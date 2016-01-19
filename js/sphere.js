@@ -33,8 +33,6 @@
         }
     );
     var sphere = new THREE.Mesh( geometry, material);
-    var a = new THREE.Vector3( 0, -1, 0 );
-    //sphere.translateOnAxis(a, 15);
     scene.add(sphere);
 
     window.addEventListener('resize', function() {
@@ -59,7 +57,7 @@
         renderer.render(scene, camera);
 
     });
-    
+
     //managing animations
     var x = [0,0,0.1,-1];
     var y = [0,-3.1,-1.7,3.6];
