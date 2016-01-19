@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+}
+
+img#bg1{
+    width: 100vw;
+    height: 100vh;
+    animation: mymove1 50s linear infinite;
+    position: absolute;
+}
+
+img#bg2{
+    width: 100vw;
+    height: 100vh;
+    animation: mymove2 50s linear infinite;
+    position: absolute;
+}
+
+@keyframes mymove1 {
+ from { left: -100vw; }
+ to { left: 0vw; }
+}
+
+@keyframes mymove2 {
+ from { left: 0vw; }
+ to { left: 100vw; }
+}
+
+.event-card{
+    position: absolute;
+    width: 90vw;
+    height: 86vh;
+    margin-left: 5vw;
+    margin-top: 7vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.event-image{
+    width: 47%;
+    height: 100%;
+    background: aqua;
+}
+
+.event-details{
+    width: 53%;
+    height: 100%;
+    background: brown;
+    padding: 5rem;
+}
+
+.event-details:before{
+    content: '';
+    left: 39%;
+    width: 0;
+    position: absolute;
+    border-bottom: 500px solid brown;
+    border-right: 50px solid brown;
+    border-top: 500px solid transparent;
+    border-left: 50px solid transparent;
+    box-sizing: border-box;
+    top: -13%;
+    z-index: 23;
+}
