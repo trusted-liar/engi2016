@@ -1,11 +1,11 @@
 .my-carousel-slider{
     perspective: 1000px;
-    height: 80%;
+    height: 70%;
     width: 100%;
     position: absolute;
     overflow: hidden;
     z-index: 550;
-    top: 10%;
+    top: 15%;
 }
 
 .carousel-card{
@@ -71,7 +71,6 @@
     position: absolute;
     left: 50%;
     top: 0%;
-    background: rgba(0,0,0,0.3);
 }
 
 .card-0{

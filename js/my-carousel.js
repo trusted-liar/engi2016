@@ -170,6 +170,17 @@ var carousel = (function(){
             $(this).find('.right-click')[0].addEventListener('click',rightLarge.bind(this));
             $(this).find('.left-click')[0].addEventListener('click',leftLarge.bind(this));
         }
+        var goleft = leftLarge.bind(this);
+        var goright = rightLarge.bind(this);
+        
+        window.addEventListener("keydown",function(e){
+            if(e.which === 37){
+                goleft();
+            }
+            if(e.which === 39){
+                goright();
+            }
+        });
         
         //This snippet automatically changes the cards after the interval specified
         if((options.continuous==true)&&(options.auto==true)){

@@ -1,8 +1,5 @@
 //$(document).ready( function(){
-    
-    //sidebar    
 
-        
     //creating sphere
     
     var HEIGHT = window.innerHeight, WIDTH = window.innerWidth;
