@@ -44,26 +44,36 @@ img#bg2{
     align-items: center;
 }
 
+header{
+    position: absolute;
+    top: 7%;
+    left: 40%;
+    height: 10%;
+    background: blue;
+    min-width: 24%;
+    font-size: 3.5rem;
+    transform: translateX(-30%);
+    display: flex;
+    color: white;
+}
+
+header h1{
+    margin: auto;
+    padding: 6px;
+}
+
 .event-image{
     width: 30%;
     height: 80%;
     background: rgba(0,0,0,0.7);
 }
 
-.event-saber{
-    width: 50px;
-    height: 180vh;
-    padding: 0px;
-    position: relative;
-    top: -45vh;
-    background-color: none;
-}
-
 .event-details{
     width: 60%;
     height: 80%;
     background: rgba(253, 205, 0, 0.48);
-    padding: 2rem;
+    padding: 3.5rem;
+    padding-top: 8rem;
     color: black;
 }
 
@@ -97,4 +107,53 @@ img#bg2{
     padding: 5px;
     background-color: none;
     color: black;
+}
+
+.info-content, .rule-content, .contact-content{
+    width: 100%;
+    max-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    padding-top: 2rem;
+    max-height: 400px;
+}
+
+.rule-content::-webkit-scrollbar{
+    visibility: hidden;
+}
+
+.rule-content::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+.rule-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+.rule-content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.contact-content{
+    display: block;
+}
+
+.rule-content{
+    overflow-y: scroll;
+}
+
+.info-content>div{
+    height: 50%;
+}
+
+.info-row{
+    width: 100%;
+}
+
+.info-col{
+    padding-top: 2rem;
+    width: 50%;
 }
