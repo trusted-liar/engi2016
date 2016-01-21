@@ -21,9 +21,6 @@ body{
     height: 100vh;
     width: 100%;
     z-index: 100;
-/*    background-image: url('../assets/main/qwerty.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;*/
 }
 
 #coming-soon{
@@ -345,12 +342,13 @@ canvas{
 }
 
 .timeline .card h1{
-    font-size: 5vw;
-    margin-bottom: 0;
+    font-size: 8vh;
+    line-height: 7vh;
+    margin-bottom: 10px;
 }
 .timeline .card h2{
     margin-top: 0;
-    font-size: 6vh;
+    font-size: 5vh;
 }
 
 
@@ -575,12 +573,6 @@ body, #container{
     left: -24vh;
 }
 
-#landing-i2{
-    height: 25vh;
-    top: -15vh;
-    left: -13.5vh;
-}
-
 @keyframes popout-landing-1{
     0%{
     height: 0vh;
@@ -596,6 +588,21 @@ body, #container{
         height: 25vh;
         top: -43vh;
         left: -24vh;
+    }
+}
+
+#landing-i2{
+    height: 25vh;
+    top: -15vh;
+    left: -13.5vh;
+}
+
+@keyframes popout-landing-2{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
 
@@ -1037,7 +1044,7 @@ body, #container{
     background: rgba(0,0,0,0.5);
     z-index: 504;
     padding: 5px;
-    font-size: 2rem;
+    font-size: 2.7rem;
     border-radius: 5px;
     color: white;
     text-align: center;

@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    overflow: hidden;
+}
+
+#background{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+}
+
+img.bg1{
+    width: 100vw;
+    height: 100vh;
+    animation: mymove1 50s linear infinite;
+    position: absolute;
+}
+
+img.bg2{
+    width: 100vw;
+    height: 100vh;
+    animation: mymove2 50s linear infinite;
+    position: absolute;
+}
+
+@keyframes mymove1 {
+ from { left: -100vw; }
+ to { left: 0vw; }
+}
+
+@keyframes mymove2 {
+ from { left: 0vw; }
+ to { left: 100vw; }
+}

@@ -153,10 +153,10 @@
         setTimeout(function(){
             animateSphere(current,0);
             setTimeout(function(){
-                
                 //handling images
                 $('.overlay.landing').css("animation-duration","0.8s");
                 $('#landing-i1').css("animation-name","popout-landing-1");
+                $('#landing-i2').fadeIn(500);
                 $('.overlay.landing').fadeIn();
             },1000);
         },500);
