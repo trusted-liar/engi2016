@@ -17,8 +17,19 @@
 	</head>
 	<body>
         <script type="text/javascript">
-            var GLOBAL_OBJ_LOADED = false;
+            window.mobilecheck = function() {
+              var check = false;
+              (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check = true})(navigator.userAgent||navigator.vendor||window.opera);
+              return check;
+            }
+            var GLOBAL_OBJ_LOADED = false, IS_MOBILE = false;
             function set_obj_loaded () {
+                if(window.mobilecheck()){
+                    $('object').css('display', 'none');
+                    $('#background').css('display', 'block');
+                    $('#too-big').css('display', 'block');
+                    IS_MOBILE = true;
+                }
                 GLOBAL_OBJ_LOADED = true;
             }
         </script>
@@ -49,59 +60,60 @@
             <div class="page-container sidebar-collapsed">
                 <div class="sidebar-menu">
                 <header class="logo"> <!--<a href="javascript:void(0)" class="sidebar-icon"> <span class="fa fa-bars"></span></a>-->
-                  <img id="logo" src="assets/main/Engi_logo.png" alt="Logo"/>
+                  <img id="#home" src="assets/main/Engi_logo.png" alt="Logo"/>
                   </header>
                 <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
                 <div class="menu">
                   <ul id="menu" >
-                    <li id="#home" class="menu-venue"><a href="javascript:void(0)"><i class="fa fa-home"></i><span>Home</span></a></li>
+                    <!--<li id="#home" class="menu-venue"><a href="javascript:void(0)"><i class="fa fa-home"></i><span>Home</span></a></li>-->
+                    <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i><span>Events</span><span class="fa fa-angle-double-left" style="float: right"></span></a>
+                      <ul>
+                        <li style="width: 120px" ><a href="javascript:void(0)">Day 1<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
+                          <ul>
+                            <li><a href="coming-soon.html" target="_blank">Spandan (Solo)</a></li>
+                            <li><a href="coming-soon.html" target="_blank">A Flock of Voices</a></li>
+                            <li><a href="coming-soon.html" target="_blank">Stand Up Comedy</a></li>
+                            <li><a href="coming-soon.html" target="_blank">Shakedown</a></li>
+                            <li><a href="coming-soon.html" target="_blank">Battle of Bands</a></li>
+                            <li><a href="coming-soon.html" target="_blank">Rock Night</a></li>
+                            <li><a href="coming-soon.html" target="_blank">Cultural Midnight</a></li>
+                          </ul>
+                        </li>
+                        <li style="width: 120px"><a href="javascript:void(0)">Day 2<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
+                          <ul>
+                            <li><a href="coming-soon.html" target="_blank">Movie Screening</a></li>
+                            <li><a href="coming-soon.html" target="_blank">Battle of DJ</a></li>
+                            <li><a href="coming-soon.html" target="_blank">Engi Idol</a></li>
+                            <li><a href="coming-soon.html" target="_blank">Nukkad</a></li>
+                            <li><a href="coming-soon.html" target="_blank">Group Dance</a></li>
+                            <li><a href="coming-soon.html" target="_blank">Paridhaan</a></li>
+                            <li><a href="coming-soon.html" target="_blank">Femina Miss India</a></li>
+                            <li><a href="coming-soon.html" target="_blank">EDM Night</a></li>
+                            <li><a href="coming-soon.html" target="_blank">Cultural Midnight</a></li>
+                          </ul>
+                        </li>
+                        <li style="width: 120px" ><a href="javascript:void(0)">Day 3<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
+                          <ul>
+                            <li><a href="coming-soon.html" target="_blank">STFU</a></li>
+                            <li><a href="coming-soon.html" target="_blank">Natya</a></li>
+                            <li><a href="coming-soon.html" target="_blank">Vocalicious</a></li>
+                            <li><a href="coming-soon.html" target="_blank">Star Night</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
                     <li><a href="javascript:void(0)"><i class="fa fa-binoculars"></i><span>Venue</span><span class="fa fa-angle-left" style="float: right"></span></a>
                       <ul>
                         <li id="#oat" class="menu-venue"><a href="javascript:void(0)">OAT</a></li>
                         <li id="#audi" class="menu-venue"><a href="javascript:void(0)">Auditorium</a></li>
                         <li id="#stage" class="menu-venue"><a href="javascript:void(0)">Sports Complex</a></li>
                       </ul>
-                    </li>
-                    <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i><span>Events</span><span class="fa fa-angle-double-left" style="float: right"></span></a>
-                      <ul>
-                        <li style="width: 120px" ><a href="javascript:void(0)">Day 1<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
-                          <ul>
-                            <li><a href="javascript:void(0)">Spandan (Solo)</a></li>
-                            <li><a href="javascript:void(0)">A Flock of Voices</a></li>
-                            <li><a href="javascript:void(0)">Stand Up Comedy</a></li>
-                            <li><a href="javascript:void(0)">Shakedown</a></li>
-                            <li><a href="javascript:void(0)">Battle of Bands</a></li>
-                            <li><a href="javascript:void(0)">Rock Night</a></li>
-                            <li><a href="javascript:void(0)">Cultural Midnight</a></li>
-                          </ul>
-                        </li>
-                        <li style="width: 120px"><a href="javascript:void(0)">Day 2<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
-                          <ul>
-                            <li><a href="javascript:void(0)">Movie Screening</a></li>
-                            <li><a href="javascript:void(0)">Battle of DJ</a></li>
-                            <li><a href="javascript:void(0)">Engi Idol</a></li>
-                            <li><a href="javascript:void(0)">Nukkad</a></li>
-                            <li><a href="javascript:void(0)">Group Dance</a></li>
-                            <li><a href="javascript:void(0)">Paridhaan</a></li>
-                            <li><a href="javascript:void(0)">Femina Miss India</a></li>
-                            <li><a href="javascript:void(0)">EDM Night</a></li>
-                            <li><a href="javascript:void(0)">Cultural Midnight</a></li>
-                          </ul>
-                        </li>
-                        <li style="width: 120px" ><a href="javascript:void(0)">Day 3<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
-                          <ul>
-                            <li><a href="javascript:void(0)">STFU</a></li>
-                            <li><a href="javascript:void(0)">Natya</a></li>
-                            <li><a href="javascript:void(0)">Vocalicious</a></li>
-                            <li><a href="javascript:void(0)">Star Night</a></li>
-                          </ul>
-                        </li>
-                      </ul>
                     </li> 
                     <li id="about"><a href="javascript:void(0)"><i class="fa fa-info-circle"></i><span>About</span></a></li>
-                    <li><a href="javascript:void(0)"><i class="fa fa-camera"></i><span>Glimpses</span></a></li>                    
-                    <li><a href="javascript:void(0)"><i class="fa fa-group"></i><span>Sponsors</span></a></li>
-                    <li><a href="javascript:void(0)"><i class="fa fa-envelope"></i><span>Contact Us</span></a></li>
+                    <li><a href="coming-soon.html" target="_blank"><i class="fa fa-camera"></i><span>Glimpses</span></a></li>                    
+                    <li><a href="coming-soon.html" target="_blank"><i class="fa fa-group"></i><span>Sponsors</span></a></li>
+                    <li><a href="coming-soon.html" target="_blank"><i class="fa fa-wrench"></i><span>Website Team</span></a></li>
+                    <li><a href="coming-soon.html" target="_blank"><i class="fa fa-envelope"></i><span>Contact Us</span></a></li>
                   </ul>
                 </div>
             </div>
@@ -111,9 +123,18 @@
             <img class="bg1" src="assets/main/qwerty.jpg">
             <img class="bg2" src="assets/main/qwerty.jpg">
         </div>
+        <div id="too-big" style="display: none;">Planet DTU is too big for this device</div>
         <div id="container" style="position:absolute;z-index:500;" class="afterLoad"></div>
         <div id="about-engi-back">
-            <div id="about-engi"><i id="about-close" class="fa fa-times"></i></div>
+            <div id="about-engi"><i id="about-close" class="fa fa-times"></i>
+                <!--<h1 style="text-align: center;">ABOUT ENGIFEST</h1>-->
+                <img src="assets/main/about.png" id="about-img">
+                <h3>
+                Thrill, joy and ecstasy are words that are synonymous with ENGIFEST, the Annual Cultural Fest of Delhi Technological University (formerly Delhi College of Engineering). Engifest is one of the oldest college cultural fests of the country. It was started way back in 1974 by a bunch of enthusiastic DCEians.
+                <br>
+                In February 2016, the fest will throw open its doors and welcome more than 30,000 enthusiastic students and professionals from all walks of life. ENGIFEST is a four day extravaganza; a celebration of sorts; a dense, fun-filled embodiment of the energy and conviviality which characterizes college life; a festival oozing with fun, vibrancy and entertainment. It is a product of dreams ambition and tireless hard work, a true testimony to the indomitable spirit, liveliness and sheer energy of the youth.
+            </div>
+                </h3>
         </div>
         <div class="over-image">
             <a href="javascript:void(0)">
@@ -143,10 +164,10 @@
             <img src="assets/main/pin.png" id="pin-stage" class="pinup pin-landing-stage afterload venue">
         </div>
         <div class="tooltips afterload">
-            <div id="tooltip-audi" class="myTooltip"><span class="myVenue">Explore</span>Auditorium</div>
-            <div id="tooltip-gate" class="myTooltip"><span class="myVenue">Explore</span>Home</div>
-            <div id="tooltip-stage" class="myTooltip"><span class="myVenue">Explore</span>Sports Complex</div>
-            <div id="tooltip-oat" class="myTooltip"><span class="myVenue">Explore</span>OAT</div>
+            <div id="tooltip-audi" class="myTooltip"><span class="myVenue"></span>Auditorium</div>
+            <div id="tooltip-gate" class="myTooltip"><span class="myVenue"></span>Home</div>
+            <div id="tooltip-stage" class="myTooltip"><span class="myVenue"></span>Sports Complex</div>
+            <div id="tooltip-oat" class="myTooltip"><span class="myVenue"></span>OAT</div>
         </div>
 
         <div id="event-list-overlay" popout="true">
@@ -158,31 +179,31 @@
             <div class="timeline" id="timeline-stage" popout="true">
                 <div class="bg bg_D1" id="bg" popout="true"></div>
                 <div class="animate animate_D1" id="animate" popout="true">
-                    <a href="javascript:void(0)"><div class="card stage_event" day="1" hrs="11" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card stage_event" day="1" hrs="11" min="00">
                         <h1>Battle of Bands</h1>
                         <h2>Venue: Sports Complex</h2>
                     </div></a>
-                    <a href="javascript:void(0)"><div class="card stage_event" day="1" hrs="12" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card stage_event" day="1" hrs="12" min="00">
                         <h1>Shakedown</h1>
                         <h2>Venue: Hostel Road</h2>
                     </div></a>
-                    <a href="javascript:void(0)"><div class="card stage_event" day="1" hrs="19" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card stage_event" day="1" hrs="19" min="00">
                         <h1>Rock Night</h1>
                         <h2>Venue: Sports Complex</h2>
                     </div></a>
-                    <a href="javascript:void(0)"><div class="card stage_event" day="2" hrs="17" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card stage_event" day="2" hrs="17" min="00">
                         <h1>Paridhaan</h1>
                         <h2>Venue: Sports Complex</h2>
                     </div></a>
-                    <a href="javascript:void(0)"><div class="card stage_event" day="2" hrs="18" min="30">
+                    <a href="coming-soon.html" target="_blank"><div class="card stage_event" day="2" hrs="18" min="30">
                         <h1>Femina Miss India</h1>
                         <h2>Venue: Sports Complex</h2>
                     </div></a>
-                    <a href="javascript:void(0)"><div class="card stage_event" day="2" hrs="20" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card stage_event" day="2" hrs="20" min="00">
                         <h1>EDM Night</h1>
                         <h2>Venue: Sports Complex</h2>
                     </div></a>
-                    <a href="javascript:void(0)"><div class="card stage_event" day="3" hrs="19" min="00">
+                    <a href="jcoming-soon.html" target="_blank"><div class="card stage_event" day="3" hrs="19" min="00">
                         <h1>Star Night</h1>
                         <h2>Venue: Sports Complex</h2>
                     </div></a>
@@ -191,35 +212,35 @@
             <div class="timeline" id="timeline-oat" popout="true">
                 <div class="bg bg_D1" id="bg" popout="true"></div>
                     <div class="animate animate_D1" id="animate" popout="true">
-                    <a href="javascript:void(0)"><div class="card oat_event" day="1" hrs="10" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card oat_event" day="1" hrs="10" min="00">
                         <h1>Spandan (Solo)</h1>
                         <h2>Venue: OAT</h2>
                     </div></a>
-                    <a href="javascript:void(0)"><div class="card oat_event" day="1" hrs="12" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card oat_event" day="1" hrs="12" min="00">
                         <h1> A Flock of Voices</h1>
                         <h2>Venue: Convocation Hall</h2>
                     </div></a>
-                    <a href="javascript:void(0)"><div class="card oat_event" day="2" hrs="10" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card oat_event" day="2" hrs="10" min="00">
                         <h1>Nukkad</h1>
                         <h2>Venue: Mech C Parking</h2>
                     </div></a>
-                    <a href="javascript:void(0)"><div class="card oat_event" day="2" hrs="10" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card oat_event" day="2" hrs="10" min="00">
                         <h1>Engi Idol</h1>
                         <h2>Venue: Convocation Hall</h2>
                     </div></a>
-                    <a href="javascript:void(0)"><div class="card oat_event" day="2" hrs="12" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card oat_event" day="2" hrs="12" min="00">
                         <h1>Movie Screening</h1>
                         <h2>Venue: OAT</h2>
                     </div></a>
-                    <a href="javascript:void(0)"><div class="card oat_event" day="2" hrs="15" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card oat_event" day="2" hrs="15" min="00">
                         <h1>Battle of DJ</h1>
                         <h2>Venue: OAT</h2>
                     </div></a>                    
-                    <a href="javascript:void(0)"><div class="card oat_event" day="3" hrs="10" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card oat_event" day="3" hrs="10" min="00">
                         <h1>STFU</h1>
                         <h2>Venue: OAT</h2>
                     </div></a>
-                    <a href="javascript:void(0)"><div class="card oat_event" day="3" hrs="10" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card oat_event" day="3" hrs="10" min="00">
                         <h1>Vocalicious</h1>
                         <h2>Venue: Convocation Hall</h2>
                     </div></a>
@@ -228,23 +249,23 @@
             <div class="timeline" id="timeline-audi" popout="true">
                 <div class="bg bg_D1" id="bg" popout="true"></div>
                     <div class="animate animate_D1" id="animate" popout="true">
-                    <a href="javascript:void(0)"><div class="card audi_event" day="1" hrs="12" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card audi_event" day="1" hrs="12" min="00">
                         <h1>Stand Up Comedy</h1>
                         <h2>Venue: Auditorium</h2>
                     </div></a>
-                    <a href="javascript:void(0)"><div class="card audi_event" day="1" hrs="22" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card audi_event" day="1" hrs="22" min="00">
                         <h1>Cultural Midnight</h1>
                         <h2>Venue: Auditorium</h2>
                     </div></a>
-                    <a href="javascript:void(0)"><div class="card audi_event" day="2" hrs="10" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card audi_event" day="2" hrs="10" min="00">
                         <h1>Group Dance</h1>
                         <h2>Venue: Auditorium</h2>
                     </div></a>
-                    <a href="javascript:void(0)"><div class="card audi_event" day="2" hrs="22" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card audi_event" day="2" hrs="22" min="00">
                         <h1>Cultural Midnight</h1>
                         <h2>Venue: Opposite Auditorium</h2>
                     </div></a>
-                    <a href="javascript:void(0)"><div class="card audi_event" day="3" hrs="10" min="00">
+                    <a href="coming-soon.html" target="_blank"><div class="card audi_event" day="3" hrs="10" min="00">
                         <h1>Natya</h1>
                         <h2>Venue: Auditorium</h2>
                     </div></a>
@@ -260,12 +281,25 @@
             $("#i4").zoomTo({targetsize:1, duration:0});
             setTimeout(preloader, 500);
         }
-
-        if (GLOBAL_OBJ_LOADED) set_preloader();
-        else {
-            gate = document.getElementById('i4');
-            gate.onload = set_preloader;
-            gate.onerror = function(){console.log('Loading error! Refreshing...'); location.reload();};
+        if(IS_MOBILE){
+            $('object').css('display', 'none');
+            $('#background').css('display', 'block');
+            $('#too-big').css('display', 'block');
+        }
+        else{
+            if (GLOBAL_OBJ_LOADED) set_preloader();
+            else {
+                if(window.mobilecheck()){
+                    $('object').css('display', 'none');
+                    $('#background').css('display', 'block');
+                    $('#too-big').css('display', 'block');
+                }
+                else{
+                    gate = document.getElementById('i4');
+                    gate.onload = set_preloader;
+                    gate.onerror = function(){console.log('Loading error! Refreshing...'); location.reload();};
+                }
+            }
         }
                 
         function preloader(){
