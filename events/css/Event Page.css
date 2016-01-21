@@ -40,7 +40,7 @@ img#bg2{
     display: flex;
     background: none;
     overflow: hidden;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -62,32 +62,33 @@ img#bg2{
 .event-details{
     width: 60%;
     height: 80%;
-    background: rgba(0,0,0,0.7);
+    background: rgba(253, 205, 0, 0.48);
     padding: 2rem;
-    color: #fff;
+    color: black;
 }
 
 .nav-tabs{
-    border-bottom: 1px solid #E2FF00;
+    border-bottom: 1px solid white;
     font-size: 20px;
+    color: black;
 }
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
     background-color: rgba(0,0,0,0);
-    color: #E2FF00;
-    border-left: 1px solid #E2FF00;
-    border-right: 1px solid #E2FF00;
-    border-top: 1px solid #E2FF00;
+    color: black;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
     border-bottom: transparent;
     border-radius: 0px;
 }
 
 .nav-tabs>li>a:hover{
     background-color: rgba(0,0,0,0);
-    color: #E2FF00;
-    border-left: 1px solid #E2FF00;
-    border-right: 1px solid #E2FF00;
-    border-top: 1px solid #E2FF00;
+    color: black;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
     border-bottom: transparent;
     border-radius: 0px;
 }
@@ -95,5 +96,5 @@ img#bg2{
 .nav-tabs a{
     padding: 5px;
     background-color: none;
-    color: white;
+    color: black;
 }
