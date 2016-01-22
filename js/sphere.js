@@ -416,4 +416,25 @@ $("#about-engi-back").on("click",function(){
     $("#about-engi-back").find('h3').fadeOut(300);
 });
 
+$("#legacy, #main-logo").on("click",function(){
+    $("#legacy-back").show(300);
+    $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+    $("#menu span").css({"position":"relative"});
+    $("#legacy-back").find('h1').delay(300).fadeIn(500);
+    $("#legacy-back").find('h3').delay(500).fadeIn(500);
+    window.addEventListener("keydown", myfunction);
+    function myfunction(e){
+        if(e.which === 27){
+            $("#legacy-back").hide(300);  
+            $("#legacy-back").find('#about-img').fadeOut(300);
+            $("#legacy-back").find('h3').fadeOut(300);          
+            window.removeEventListener("keydown", myfunction);
+        }
+    }
+});
+$("#legacy-back").on("click",function(){
+    $("#legacy-back").delay(300).hide(300);
+    $("#legacy-back").find('h1').fadeOut(300);
+    $("#legacy-back").find('h3').fadeOut(300);
+});
 //});
