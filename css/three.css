@@ -1,16 +1,16 @@
-@font-face {
+/*@font-face {
 font-family: 'Space Age';
 font-style: normal;
 font-weight: normal;
 src: local('Space Age'), url('../fonts/space age.woff') format('woff');
-}
+}*/
 
 body, #container{
     -webkit-backface-visibility: hidden;
 }
 
 body{
-    font-family: 'Space Age';
+    font-family: 'Montserrat', sans-serif;;
     margin: 0;
 }
 
@@ -96,11 +96,11 @@ img.bg2{
 
 #pointer-text{
     position: absolute;
-    bottom: 10px;
+    bottom: 2px;
     color: #DADADA;
     text-shadow: #4DD6E4 0 0 10px, #4DD6E4 0px 0px 5px;
-    font-size: 2.5vw;
-    left: 44vw;
+    font-size: 3vw;
+    left: 46.5vw;
     display: none;
 }
 
@@ -156,7 +156,7 @@ canvas{
     display: none;
 }
 
-#oat-i1:hover, #stage-i4:hover, #audi-i1:hover{
+#oat-i1:hover, #stage-i4:hover, #audi-i1:hover, #landing-i2:hover{
     cursor: pointer;
     -webkit-filter: drop-shadow(3px 3px 0 white)
                   drop-shadow(-3px -3px 0 white);
@@ -345,6 +345,7 @@ canvas{
     font-size: 8vh;
     line-height: 7vh;
     margin-bottom: 10px;
+    margin-top: 70px;
 }
 .timeline .card h2{
     margin-top: 0;
@@ -592,17 +593,21 @@ body, #container{
 }
 
 #landing-i2{
-    height: 25vh;
-    top: -15vh;
-    left: -13.5vh;
+    height: 30vh;
+    top: -14vh;
+    left: -14vh;
 }
 
 @keyframes popout-landing-2{
     0%{
-        opacity: 0;
+        height: 0px;
+        top: 0px;
+        left: 0px;
     }
     100%{
-        opacity: 1;
+        height: 30vh;
+        top: -14vh;
+        left: -14vh;
     }
 }
 
@@ -1096,13 +1101,17 @@ body, #container{
 }
 
 #about-img{
+    width: 100%;
+}
 
+#about-img img{
+    width: 100%;
 }
 
 #about-engi h3{
     text-align: justify;
-    font-family: Baskerville, “Baskerville Old Face”, “Hoefler Text”, Garamond, “Times New Roman”, serif;;
-    font-size: 25px;
+    font-family: "Segoe UI";
+    font-size: 21px;
     display: none;
 }
 

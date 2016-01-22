@@ -1,0 +1,16 @@
+.row{
+	margin-top: 30px;
+}
+
+.sponsor-type{
+	font-size: 20px;
+}
+
+.sponsor-image{
+	height: 80px;
+}
+
+.sponsor-image img{
+	height: 100%;
+	width: auto;
+}

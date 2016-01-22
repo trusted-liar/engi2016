@@ -1,21 +1,21 @@
 .my-carousel-slider{
     perspective: 1000px;
-    height: 70%;
+    height: 80%;
     width: 100%;
     position: absolute;
     overflow: hidden;
     z-index: 550;
-    top: 15%;
+    top: 5%;
 }
 
 .carousel-card{
     height: 80%;
-    width: 66%;
+    width: 56%;
     position: absolute;
     left: 50%;
     top: 50%;
     box-sizing: border-box;
-    padding: 1.5%;
+    padding: 1px;
     z-index: 0;
     transition: all 1s ease;
     transform: scale(0.5) translateX(-100%) translateY(-100%);

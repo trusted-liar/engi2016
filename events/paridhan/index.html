@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Paridhan - Engifest 2016</title>
+    <link type="text/css" rel=stylesheet href="../../css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../Event%20Page.css">
+    <link rel="shortcut icon" href="../../assets/main/logoicon.png"/>
+    <script src="../../js/jquery-2.0.0.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <style>
+        .event-details{
+            background: rgb(236, 131, 47);    
+        }
+        header{
+            background: rgb(53, 66, 104);
+        }
+        .btn{
+            background: rgb(6, 13, 19);
+            border: 0px;
+            color: #fff;
+        }
+        .btn:hover{
+            color: #FFCE42;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <img src="../../assets/main/qwerty.jpg" id="bg1">
+        <img src="../../assets/main/qwerty.jpg" id="bg2">
+    </div>
+    
+    <div class="event-card">
+        <header><h1 class="ribbon">Paridhan</h1></header>
+        <img class="event-image" src="paridhan.jpg">
+        <div class="event-details">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Info</a></li>
+                <li><a data-toggle="tab" href="#menu1">Rules</a></li>
+                <li><a data-toggle="tab" href="#menu2">Contact</a></li>
+                <button class="btn pull-right" href="http://goo.gl/forms/uZChjS6iGf">Register</button>
+            </ul>
+
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <div class="info-content">
+                        <div class="info-row">If you think you have it in you to set fire to the stage with thousands of eyes on  each perfectly choreographed step you take on the ramp, this is where you belong
+                        </div>
+                        <div class="info-col">
+                            <b>Date: </b>13 Feb<br>
+                            <b>Time: </b>5:00 pm<br>
+                            <b>Venue: </b>Sports Complex<br>
+                        </div>
+                        <div class="info-col"></div>
+                    </div>
+                </div>
+                <div id="menu1" class="tab-pane fade">
+                    <div class="rule-content">1. Only one entry per college is allowed.<br>
+                        2. It’s a team event, a team can have 12-15 members(including participants, choreographer, co-ordinator).<br>
+                        3. The event has two rounds - Western and Theme.<br>
+                        4. Time limit for each round will be 10 minutes including set up and performance.<br>
+                        5. Negative marks if time limit is exceeded.<br>
+                        6. Theme selection is open to the team.<br>
+                        7. Green room will be provided.<br>
+                        8. Teams shall carry their tracks with them.<br>
+                        9. Teams will be judged based on costumes, theme, walking stance and attitude.<br>
+                        10. Decision of the judges will be final and no discussion shall be held over it.<br>
+                        11. Creating nuisance ,consumption of alcohol smoking etc will lead to the debarment of the team.
+                    </div>
+                </div>
+                <div id="menu2" class="tab-pane fade">
+                    <div class="contact-content">
+                        <b>Shubham Tyagi </b> +91-8882653317 <br>
+                        <b>Nalin Choudhary </b> +91-8588001179 <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('button').click(function(){
+            href = $(this).attr('href');
+            window.location = href;
+        });
+    </script>
+</body>
+</html>

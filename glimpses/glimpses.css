@@ -39,3 +39,7 @@ img.bg2{
  from { left: 0vw; }
  to { left: 100vw; }
 }
+
+.carousel-card img{
+    width: 100%;
+    height: 100%;

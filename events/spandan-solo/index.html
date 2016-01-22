@@ -2,17 +2,26 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Spandan (Solo)</title>
+    <title>Spandan (Solo) - Engifest 2016</title>
     <link type="text/css" rel=stylesheet href="../../css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="../Event%20Page.css">
+    <link rel="shortcut icon" href="../../assets/main/logoicon.png"/>
     <script src="../../js/jquery-2.0.0.min.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
     <style>
         .event-details{
-            background: #958A88;    
+            background: #979795;    
         }
         header{
             background: #323623;
+        }
+        .btn{
+            background: rgb(6, 13, 19);
+            border: 0px;
+            color: #fff;
+        }
+        .btn:hover{
+            color: #FFCE42;
         }
     </style>
 </head>
@@ -31,6 +40,7 @@
                 <li class="active"><a data-toggle="tab" href="#home">Info</a></li>
                 <li><a data-toggle="tab" href="#menu1">Rules</a></li>
                 <li><a data-toggle="tab" href="#menu2">Contact</a></li>
+                <button class="btn pull-right" href="http://goo.gl/forms/6tOIyzr3ZC">Register</button>
             </ul>
 
             <div class="tab-content">
@@ -70,5 +80,11 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        $('button').click(function(){
+            href = $(this).attr('href');
+            window.location = href;
+        });
+    </script>
 </body>
 </html>
