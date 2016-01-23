@@ -398,13 +398,13 @@ $("#about, #landing-i2").on("click",function(){
     $("#about-engi-back").show(300);
     $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
     $("#menu span").css({"position":"relative"});
-    $("#about-engi-back").find('#about-img').delay(300).fadeIn(500);
+    $("#about-engi-back").find('h1').delay(300).fadeIn(500);
     $("#about-engi-back").find('h3').delay(500).fadeIn(500);
     window.addEventListener("keydown", myfunction);
     function myfunction(e){
         if(e.which === 27){
             $("#about-engi-back").hide(300);  
-            $("#about-engi-back").find('#about-img').fadeOut(300);
+            $("#about-engi-back").find('h1').fadeOut(300);
         $("#about-engi-back").find('h3').fadeOut(300);          
             window.removeEventListener("keydown", myfunction);
         }

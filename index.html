@@ -34,6 +34,12 @@
                 GLOBAL_OBJ_LOADED = true;
             }
         </script>
+        <audio class="audioloop" controls preload="none" id="a1" style="display: none;" playing = "false"> 
+           <source src="assets/DYWC_Loop.mp3" type="audio/mpeg">
+        </audio>
+        <audio class="audioloop" controls preload="none" id="a2" style="display: none;" playing = "false"> 
+           <source src="assets/DYWC_Loop.mp3" type="audio/mpeg">
+        </audio>
         <div class="main-logo afterLoad">
             <img src="assets/main/Engi_logo.png" id="main-logo">
         </div>
@@ -101,7 +107,7 @@
                         </li>
                         <li  ><a href="javascript:void(0)">Pro Nights<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
                           <ul>
-                            <li><a href="events/rock-night/" target="_blank">Rock Night</a></li>
+                            <li><a href="coming-soon/" target="_blank">Rock Night</a></li>
                             <li><a href="events/edm-night/" target="_blank">EDM Night</a></li>
                             <li><a href="events/livewire/" target="_blank">Livewire</a></li>
                           </ul>
@@ -109,11 +115,11 @@
                         <li  ><a href="javascript:void(0)">Miscellaneous<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
                           <ul>
                             <li><a href="events/shakedown/" target="_blank">Shakedown</a></li>
-                            <li><a href="coming-soon/" target="_blank">Reflections</a></li>
+                            <li><a href="events/reflections/" target="_blank">Reflections</a></li>
                             <li><a href="coming-soon/" target="_blank">Mr and Miss Engifest</a></li>
                           </ul>
                         </li>
-                        <li  ><a href="coming-soon/" target="_blank">Informal Events</a>
+                        <li  ><a href="events/informal/" target="_blank">Informal Events</a>
                         </li>
                       </ul>
                     </li>
@@ -155,8 +161,8 @@
         <div id="container" style="position:absolute;z-index:500;" class="afterLoad"></div>
         <div id="about-engi-back">
             <div id="about-engi"><i id="about-close" class="fa fa-times"></i>
-                <!--<h1 style="text-align: center;">ABOUT ENGIFEST</h1>-->
-                <center><img src="assets/main/about.png" id="about-img"></center>
+                <h1 style="text-align: center;">About Engifest</h1>
+                <!--<center><img src="assets/main/about.png" id="about-img"></center>-->
                 <h3>
                 Thrill, joy and ecstasy are words that are synonymous with ENGIFEST, the Annual Cultural Fest of Delhi Technological University (formerly Delhi College of Engineering). Engifest is one of the oldest college cultural fests of the country. It was started way back in 1974 by a bunch of enthusiastic DCEians.
                 <br>
@@ -244,7 +250,7 @@
                         <h1>Rock Night</h1>
                         <h2>Venue: Sports Complex</h2>
                     </div></a>
-                    <a href="coming-soon/" target="_blank"><div class="card stage_event" day="3" hrs="19" min="00">
+                    <a href="events/livewire/" target="_blank"><div class="card stage_event" day="3" hrs="19" min="00">
                         <h1>Livewire (Star Night)</h1>
                         <h2>Venue: Sports Complex</h2>
                     </div></a>
@@ -306,6 +312,23 @@
         <script src="js/Infinite%20Universe.js"></script>
         <script src="js/timeline.js"></script>
         <script>
+        function changeTrack(){
+            if($("#a1").attr('playing') == 'true'){
+                $("#a2").trigger('play');
+                $("#a2").attr('playing', 'true');
+                $("#a1").attr('playing', 'false');
+            }
+            else{
+                $("#a1").trigger('play');
+                $("#a1").attr('playing', 'true');
+                $("#a2").attr('playing', 'false');
+            }
+        }
+        $(".audioloop").bind("load",function(){
+            $("#a1").trigger('play');
+            $("#a1").attr('playing', 'true');
+            setInterval(changeTrack, 77500);
+        });
         function set_preloader(){
             $("#i4").zoomTo({targetsize:1, duration:0});
             setTimeout(preloader, 500);
@@ -365,7 +388,8 @@
           setTimeout(function(){
             $('.afterLoad2').fadeIn(400);
             setTimeout(function(){positionTooltip();},1000);
-          }, 1000);          
+          }, 1000); 
+          $(".audioloop").trigger('load');         
         }
         
         hover = true;
