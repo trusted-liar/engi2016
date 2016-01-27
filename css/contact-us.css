@@ -1,0 +1,24 @@
+.row{
+	margin-top: 50px;
+}
+
+.name{
+	font-size: 25px;
+}
+
+.designation{
+	font-size: 20px;
+}
+
+.contact{
+	font-size: 20px;
+}
+
+.contact-image{
+	height: 150px;
+}
+
+.contact-image img{
+	height: 100%;
+	width: auto;
+}
