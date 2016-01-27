@@ -15,6 +15,14 @@
         header{
             background: rgb(82, 13, 0);
         }
+        .btn{
+            background: rgb(6, 13, 19);
+            border: 0px;
+            color: #fff;
+        }
+        .btn:hover{
+            color: #FFCE42;
+        }
     </style>
 </head>
 
@@ -32,6 +40,7 @@
                 <li class="active"><a data-toggle="tab" href="#home">Info</a></li>
                 <li><a data-toggle="tab" href="#menu1">Rules</a></li>
                 <li><a data-toggle="tab" href="#menu2">Contact</a></li>
+                <button class="btn pull-right" href="http://goo.gl/forms/K3rwtKAeGJ">Register</button>
             </ul>
 
             <div class="tab-content">
@@ -70,5 +79,11 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        $('button').click(function(){
+            href = $(this).attr('href');
+            window.location = href;
+        });
+    </script>
 </body>
 </html>

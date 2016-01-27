@@ -437,4 +437,27 @@ $("#legacy-back").on("click",function(){
     $("#legacy-back").find('h1').fadeOut(300);
     $("#legacy-back").find('h3').fadeOut(300);
 });
+
+$("#website-team").on("click",function(){
+    $("#team-back").show(300);
+    $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+    $("#menu span").css({"position":"relative"});
+    $("#team-back").find('h1').delay(300).fadeIn(500);
+    $("#team-back").find('.team-mate').delay(500).fadeIn(500);
+    window.addEventListener("keydown", myfunction);
+    function myfunction(e){
+        if(e.which === 27){
+            $("#team-back").hide(300);  
+            $("#team-back").find('#about-img').fadeOut(300);
+            $("#team-back").find('.team-mate').fadeOut(300);          
+            window.removeEventListener("keydown", myfunction);
+        }
+    }
+});
+$("#team-back").on("click",function(){
+    $("#team-back").delay(300).hide(300);
+    $("#team-back").find('h1').fadeOut(300);
+    $("#team-back").find('.team-mate').fadeOut(300);
+});
+
 //});

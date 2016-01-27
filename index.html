@@ -34,14 +34,21 @@
                 GLOBAL_OBJ_LOADED = true;
             }
         </script>
-        <audio class="audioloop" controls preload="none" id="a1" style="display: none;" playing = "false"> 
-           <source src="assets/DYWC_Loop.mp3" type="audio/mpeg">
+        <!--<audio class="audioloop" controls preload="none" id="a1" style="display: none;" playing = "false"> 
+           <source src="assets/theme_3.mp3" type="audio/mpeg">
         </audio>
         <audio class="audioloop" controls preload="none" id="a2" style="display: none;" playing = "false"> 
-           <source src="assets/DYWC_Loop.mp3" type="audio/mpeg">
-        </audio>
+           <source src="assets/theme_3.mp3" type="audio/mpeg">
+        </audio>-->
+        <div class="title-sponsor-logo afterLoad">
+            <img src="assets/sponsors/pepsi.png">
+            <div id="sponsor-text">presents</div>
+        </div>
         <div class="main-logo afterLoad">
             <img src="assets/main/Engi_logo.png" id="main-logo">
+        </div>
+        <div class="dates afterLoad">
+            13th - 15th Feb 2016
         </div>
         <div class="clock-container afterLoad">
             <div id="clockdiv">
@@ -102,7 +109,7 @@
                         <li  ><a href="javascript:void(0)">Fashion<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
                           <ul>
                             <li><a href="events/paridhan/" target="_blank">Paridhan</a></li>
-                            <li><a href="events/femina-miss-india/" target="_blank">Femina Miss India</a></li>
+                            <li><a href="events/campus-princess/" target="_blank">Campus Princess</a></li>
                           </ul>
                         </li>
                         <li  ><a href="javascript:void(0)">Pro Nights<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
@@ -115,7 +122,7 @@
                         <li  ><a href="javascript:void(0)">Miscellaneous<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
                           <ul>
                             <li><a href="events/shakedown/" target="_blank">Shakedown</a></li>
-                            <li><a href="events/reflections/" target="_blank">Reflections</a></li>
+                            <li><a href="events/kaleidoscope/" target="_blank">Kaleidoscope</a></li>
                             <li><a href="coming-soon/" target="_blank">Mr and Miss Engifest</a></li>
                           </ul>
                         </li>
@@ -145,9 +152,10 @@
                         <li><a href="https://www.instagram.com/engifest__dtu/" target="_blank"><i class="fa fa-instagram"></i>Instagram</a></li>
                       </ul>
                     </li>
-                    <li><a href="coming-soon/" target="_blank"><i class="fa fa-wrench"></i><span>Website Team</span></a></li>
+                    <li id="website-team_"><a href="coming-soon/" target="_blank"><i class="fa fa-wrench"></i><span>Website Team</span></a></li>
                     <li><a href="coming-soon/" target="_blank"><i class="fa fa-envelope"></i><span>Contact Us</span></a></li>
                     <li><a href="http://goo.gl/forms/fAkH8y3j8p" target="_blank"><i class="fa fa-home"></i><span>Accomodation</span></a></li>
+                    <li id="disclaimer"><span>Disclaimer: Website works best in all the latest version of browsers.</span></li>
                   </ul>
                 </div>
             </div>
@@ -181,6 +189,36 @@
                 Therefore, it gives us immense pleasure to express that Delhi Technological University has completed 75 glorious years of sheer excellence, and contributed to colossal human resource development and innovation in this period.
             </div>
                 </h3>
+        </div>
+
+        <div id="team-back">
+            <div id="team-engi"><i id="about-close-3" class="fa fa-times"></i>
+                <h1 style="text-align: center;">Website Team</h1>
+                <div class="col-xs-12">
+                    <div class="col-xs-2"></div>
+                    <div class="col-xs-2 team-mate">
+                        <div class="indi-name" id="spidey-name">Siddharth</div>
+                        <img class="indi-image" src="assets/team/spidey.png" id="spidey-image" href="https://www.facebook.com/sidspidey">
+                        <div class="indi-work" id="spidey-work">Graphic Designer</div>
+                    </div>
+                    <div class="col-xs-2 team-mate">
+                        <div class="indi-name">Anshuman</div>
+                        <img class="indi-image" src="assets/team/spidey.png" href="https://www.facebook.com/anshuman.pattanayak">
+                        <div class="indi-work" id="spidey-work">Web Developer</div>
+                    </div>
+                    <div class="col-xs-2 team-mate">
+                        <div class="indi-name" id="spidey-name">Akshat</div>
+                        <img class="indi-image" src="assets/team/spidey.png" href="https://www.facebook.com/Trusted.DevilsAdvocate">
+                        <div class="indi-work" id="spidey-work">Web Developer</div>
+                    </div>
+                    <div class="col-xs-2 team-mate">
+                        <div class="indi-name" id="spidey-name">Ayush</div>
+                        <img class="indi-image" src="assets/team/spidey.png" href="https://www.facebook.com/ayush.singh.1044">
+                        <div class="indi-work" id="spidey-work">Graphic Designer</div>
+                    </div>
+                    <div class="col-xs-2"></div>
+                </div>
+            </div>
         </div>
         
         <div class="over-image">
@@ -230,8 +268,8 @@
                         <h1>Paridhan</h1>
                         <h2>Venue: Sports Complex</h2>
                     </div></a>
-                    <a href="events/femina-miss-india/" target="_blank"><div class="card stage_event" day="1" hrs="19" min="00">
-                        <h1>Femina Miss India</h1>
+                    <a href="events/campus-princess/" target="_blank"><div class="card stage_event" day="1" hrs="19" min="00">
+                        <h1>Campus Princess</h1>
                         <h2>Venue: Sports Complex</h2>
                     </div></a>
                     <a href="events/edm-night/" target="_blank"><div class="card stage_event" day="1" hrs="20" min="00">
@@ -271,8 +309,8 @@
                         <h1>Nukkad</h1>
                         <h2>Venue: Mech C Parking</h2>
                     </div></a>
-                    <a href="events/reflections/" target="_blank"><div class="card oat_event" day="2" hrs="10" min="00">
-                        <h1>Reflections</h1>
+                    <a href="events/kaleidoscope/" target="_blank"><div class="card oat_event" day="2" hrs="10" min="00">
+                        <h1>Kaleidoscope</h1>
                         <h2>Venue: Edusat Hall</h2>
                     </div></a>
                     <a href="coming-soon/" target="_blank"><div class="card oat_event" day="3" hrs="10" min="00">
@@ -292,7 +330,7 @@
             <div class="timeline" id="timeline-audi" popout="true">
                 <div class="bg bg_D1" id="bg" popout="true"></div>
                     <div class="animate animate_D1" id="animate" popout="true">
-                    <a href="events/anushthan/" target="_blank"><div class="card audi_event" day="2" hrs="10" min="00">
+                    <a href="events/anushthan/" target="_blank"><div class="card audi_event" day="2" hrs="11" min="00">
                         <h1>Anushthan (Group)</h1>
                         <h2>Venue: Auditorium</h2>
                     </div></a>
@@ -327,7 +365,7 @@
         $(".audioloop").bind("load",function(){
             $("#a1").trigger('play');
             $("#a1").attr('playing', 'true');
-            setInterval(changeTrack, 77500);
+            setInterval(changeTrack, 32850);
         });
         function set_preloader(){
             $("#i4").zoomTo({targetsize:1, duration:0});
@@ -376,7 +414,8 @@
                         "assets/main/pin.png",
                         "assets/main/Engi_logo.png",
                         "assets/main/EFLogo.png",
-                        "assets/main/qwerty.jpg"];
+                        "assets/main/qwerty.jpg",
+                        "assets/sponsors/pepsi.png"];
           preloadImages(imageSrcs, showPlanet);
         }
         
@@ -389,7 +428,9 @@
             $('.afterLoad2').fadeIn(400);
             setTimeout(function(){positionTooltip();},1000);
           }, 1000); 
-          $(".audioloop").trigger('load');         
+          setTimeout(function(){
+            //$(".audioloop").trigger('load'); 
+          }, 1500);        
         }
         
         hover = true;
@@ -427,6 +468,21 @@
           }
             hover = !hover;         
             toggle = !toggle;
+        });
+
+        $('.indi-image').hover(function(){
+            $(this).parent().find('.indi-name').css('opacity', '1');
+            $(this).parent().find('.indi-work').css('opacity', '1');
+        },
+        function(){
+            $(this).parent().find('.indi-name').css('opacity', '0');
+            $(this).parent().find('.indi-work').css('opacity', '0');
+        });
+
+        $('.indi-image').click(function(){
+            href = $(this).attr('href');
+            win = window.open(href, '_blank');
+            win.focus();
         });
 
 </script>
