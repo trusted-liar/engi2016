@@ -14,3 +14,19 @@
 	height: 100%;
 	width: auto;
 }
+
+#background{
+	background-image: url('../assets/main/logo_bg.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+}
+
+#foreground{
+	z-index: 15;
+	background-color: rgba(0,0,0,0.5);
+	color: #fff;
+}
