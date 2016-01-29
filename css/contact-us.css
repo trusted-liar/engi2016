@@ -3,19 +3,19 @@
 }
 
 .name{
-	font-size: 25px;
+	font-size: 20px;
 }
 
 .designation{
-	font-size: 20px;
+	font-size: 15px;
 }
 
 .contact{
-	font-size: 20px;
+	font-size: 15px;
 }
 
 .contact-image{
-	height: 150px;
+	height: 100px;
 }
 
 .contact-image img{
@@ -24,5 +24,5 @@
 }
 
 .contact-div{
-	
+	margin: 0px;
 }
