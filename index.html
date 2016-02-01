@@ -27,19 +27,19 @@
             function set_obj_loaded () {
                 if(window.mobilecheck()){
                     $('object').css('display', 'none');
-                    $('#background').css('display', 'block');
-                    $('#too-big').css('display', 'block');
+                    //$('#background').css('display', 'block');
+                    $('#mobile-first').css('display', 'block');
                     IS_MOBILE = true;
                 }
                 GLOBAL_OBJ_LOADED = true;
             }
         </script>
-        <!--<audio class="audioloop" controls preload="none" id="a1" style="display: none;" playing = "false"> 
-           <source src="assets/theme_3.mp3" type="audio/mpeg">
+        <audio class="audioloop" controls preload="none" id="a1" style="display: none;" playing = "false"> 
+           <source src="assets/DYWC_Loop.mp3" type="audio/mpeg">
         </audio>
         <audio class="audioloop" controls preload="none" id="a2" style="display: none;" playing = "false"> 
-           <source src="assets/theme_3.mp3" type="audio/mpeg">
-        </audio>-->
+           <source src="assets/DYWC_Loop.mp3" type="audio/mpeg">
+        </audio>
         <div class="title-sponsor-logo afterLoad">
             <img src="assets/sponsors/pepsi.png">
             <div id="sponsor-text">presents</div>
@@ -82,12 +82,14 @@
                     <!--<li id="#home" class="menu-venue"><a href="javascript:void(0)"><i class="fa fa-home"></i><span>Home</span></a></li>-->
                     <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i><span>Events</span><span class="fa fa-angle-double-left" style="float: right"></span></a>
                       <ul>
-                        <li><a href="javascript:void(0)">Dance<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
+                        <li  ><a href="javascript:void(0)">Miscellaneous<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
                           <ul>
-                            <li><a href="events/spandan-solo/" target="_blank">Spandan (Solo)</a></li>
-                            <li><a href="events/spandan-group/" target="_blank">Spandan (Group)</a></li>
-                            <li><a href="events/anushthaan/" target="_blank">Anushthaan</a></li>
-                            <li><a href="coming-soon/" target="_blank">Switch The Funk Up</a></li>
+                            <li><a href="events/shakedown/" target="_blank">Shakedown</a></li>
+                            <li><a href="events/kaleidoscope/" target="_blank">Kaleidoscope</a></li>
+                            <li><a href="events/arte-fotographia/" target="_blank">Arte Fotographia</a></li>
+                            <li><a href="events/mr-miss-engi/" target="_blank">Mr and Miss Engifest</a></li>
+                            <li><a href="events/kumar-vishwas-live/" target="_blank">Kumar Vishwas Live</a></li>
+                            <li><a href="events/the-engi-quiz/" target="_blank">The Engi Quiz</a></li>
                           </ul>
                         </li>
                         <li ><a href="javascript:void(0)">Music<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
@@ -99,6 +101,29 @@
                             <li><a href="events/balladeers/" target="_blank">Balladeers</a></li>
                             <li><a href="events/three's-a-show/" target="_blank">Three's a Show</a></li>
                             </ul>
+                        </li>
+                        <li><a href="javascript:void(0)">Dance<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
+                          <ul>
+                            <li><a href="events/spandan-solo/" target="_blank">Spandan (Solo)</a></li>
+                            <li><a href="events/spandan-group/" target="_blank">Spandan (Group)</a></li>
+                            <li><a href="events/anushthaan/" target="_blank">Anushthaan</a></li>
+                            <li><a href="events/stfu/" target="_blank">Switch The Funk Up</a></li>
+                          </ul>
+                        </li>
+                         <li  ><a href="javascript:void(0)">Literary<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
+                          <ul>
+                            <li><a href="events/parliamentary-debate/" target="_blank">Parliamentary Debate</a></li>
+                            <li><a href="events/jam/" target="_blank">Just A Minute</a></li>
+                            <li><a href="events/creative-writing/" target="_blank">Creative Writing</a></li>
+                            <li><a href="events/mixed-bag/" target="_blank">Mixed Bag</a></li>
+                          </ul>
+                        </li>
+                        <li  ><a href="javascript:void(0)">Pro Nights<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
+                          <ul>
+                            <li><a href="events/rock-night/" target="_blank">Rock Night</a></li>
+                            <li><a href="events/edm-night/" target="_blank">EDM Night</a></li>
+                            <li><a href="events/livewire/" target="_blank">Livewire</a></li>
+                          </ul>
                         </li>
                         <li  ><a href="javascript:void(0)">Drama<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
                           <ul>
@@ -112,32 +137,7 @@
                             <li><a href="events/campus-princess/" target="_blank">Campus Princess</a></li>
                           </ul>
                         </li>
-                        <li  ><a href="javascript:void(0)">Pro Nights<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
-                          <ul>
-                            <li><a href="events/rock-night/" target="_blank">Rock Night</a></li>
-                            <li><a href="events/edm-night/" target="_blank">EDM Night</a></li>
-                            <li><a href="events/livewire/" target="_blank">Livewire</a></li>
-                          </ul>
-                        </li>
-                        <li  ><a href="javascript:void(0)">Literary<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
-                          <ul>
-                            <li><a href="events/parliamentary-debate/" target="_blank">Parliamentary Debate</a></li>
-                            <li><a href="events/jam/" target="_blank">Just A Minute</a></li>
-                            <li><a href="events/creative-writing/" target="_blank">Creative Writing</a></li>
-                            <li><a href="events/mixed-bag/" target="_blank">Mixed Bag</a></li>
-                          </ul>
-                        </li>
-                        <li  ><a href="javascript:void(0)">Miscellaneous<i class="fa fa-angle-left" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
-                          <ul>
-                            <li><a href="events/shakedown/" target="_blank">Shakedown</a></li>
-                            <li><a href="events/kaleidoscope/" target="_blank">Kaleidoscope</a></li>
-                            <li><a href="events/arte-fotographia/" target="_blank">Arte Fotographia</a></li>
-                            <li><a href="events/mr-miss-engi/" target="_blank">Mr and Miss Engifest</a></li>
-                            <li><a href="coming-soon/" target="_blank">Kumar Vishwas Live</a></li>
-                          </ul>
-                        </li>
-                        <li  ><a href="events/informal/" target="_blank">Informal Events</a>
-                        </li>
+                        <li  ><a href="events/informal/" target="_blank">Informal Events</a></li>
                       </ul>
                     </li>
                     <li><a href="javascript:void(0)"><i class="fa fa-binoculars"></i><span>Venue</span><span class="fa fa-angle-left" style="float: right"></span></a>
@@ -162,9 +162,9 @@
                         <li><a href="https://www.instagram.com/engifest__dtu/" target="_blank"><i class="fa fa-instagram"></i>Instagram</a></li>
                       </ul>
                     </li>
-                    <li id="engifest-team"><a href="coming-soon/" target="_blank"><i class="fa fa-wrench"></i><span>Engifest Team</span></a></li>
+                    <li id="engifest-team"><a href="engifest-team/" target="_blank"><i class="fa fa-wrench"></i><span>Engifest Team</span></a></li>
                     <li><a href="contact-us/" target="_blank"><i class="fa fa-envelope"></i><span>Contact Us</span></a></li>
-                    <li><a href="https://docs.google.com/forms/d/1aY1GFJlSG5607JmIk4htqQXz2ynFF5uAqoUdsBnn3lU/viewform?c=0&w=1&usp=mail_form_link" target="_blank"><i class="fa fa-pencil"></i><span>Register</span></a></li>
+                    <li><a href="register/" target="_blank"><i class="fa fa-pencil"></i><span>Register</span></a></li>
                     <li><a href="http://goo.gl/forms/fAkH8y3j8p" target="_blank"><i class="fa fa-home"></i><span>Accomodation</span></a></li>
                     <li id="disclaimer" style="border-bottom: 0px;"><span style="font-size: 14px;"><marquee>Disclaimer: Website works best in all the latest version of browsers.</marquee></span></li>
                   </ul>
@@ -176,7 +176,14 @@
             <img class="bg1" src="assets/main/qwerty.jpg">
             <img class="bg2" src="assets/main/qwerty.jpg">
         </div>
-        <div id="too-big" style="display: none;">Planet DTU is too big for this device</div>
+        <div class="row" id="mobile-first" style="display:none">
+            <div id="mobile-background"></div>
+            <div class="col-xs-12" id="visit-planet">
+                <a href="planet-dtu/">Visit Planet DTU</a>
+            </div>
+            <div class="col-xs-12" id="get-passes"><a href="register/">Get Passes</a></div>
+            <div class="col-xs-12" id="get-app"><a href="coming-soon/">Get Engifest 2016 Mobile App</a></div>
+        </div>
         <div id="container" style="position:absolute;z-index:500;" class="afterLoad"></div>
         <div id="about-engi-back">
             <div id="about-engi"><i id="about-close" class="fa fa-times"></i>
@@ -348,7 +355,7 @@
                         <h1>Kaleidoscope</h1>
                         <h2>Venue: Edusat Hall</h2>
                     </div></a>
-                    <a href="coming-soon/" target="_blank"><div class="card oat_event" day="3" hrs="10" min="00">
+                    <a href="events/stfu/" target="_blank"><div class="card oat_event" day="3" hrs="10" min="00">
                         <h1>Switch The Funk Up</h1>
                         <h2>Venue: OAT</h2>
                     </div></a>
@@ -364,7 +371,7 @@
                         <h1>Mr and Miss Engifest</h1>
                         <h2>Venue: Mini OAT</h2>
                     </div></a>
-                    <a href="coming-soon/" target="_blank"><div class="card oat_event" day="3" hrs="12" min="00">
+                    <a href="events/kumar-vishwas-live/" target="_blank"><div class="card oat_event" day="3" hrs="17" min="00">
                         <h1>Kumar Vishwas Live</h1>
                         <h2>Venue: OAT</h2>
                     </div></a>
@@ -412,7 +419,7 @@
         $(".audioloop").bind("load",function(){
             $("#a1").trigger('play');
             $("#a1").attr('playing', 'true');
-            setInterval(changeTrack, 32850);
+            setInterval(changeTrack, 76050);
         });
         function set_preloader(){
             $("#i4").zoomTo({targetsize:1, duration:0});

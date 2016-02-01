@@ -1,0 +1,54 @@
+body{
+	padding: 0px;
+	margin: 0px;
+}
+.row{
+	margin: 0;
+}
+
+#background{
+	background-image: url('../assets/main/logo_bg_overlay.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+}
+
+/*#overlay{
+	z-index: 13;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background-color: rgba(0,0,0,0.85);
+	height: 100%;
+	width: 100%;
+}*/
+
+
+#foreground{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 15;
+	color: #fff;
+}
+
+.inst{
+    border-radius: 5px;
+    border: 2px white solid;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.instructions{
+	margin-top: 7vh;
+}
+
+.temp{
+	opacity: 0;
+}

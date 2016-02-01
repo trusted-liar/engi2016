@@ -10,7 +10,7 @@ body, #container{
 }
 
 body{
-    font-family: 'Montserrat', sans-serif;;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
 
@@ -25,7 +25,7 @@ body{
 
 #coming-soon{
     position: absolute;
-    top: 40vh;
+    top: 30vh;
     z-index: 600;
     text-align: center;
     width: 100%;
@@ -44,11 +44,11 @@ body{
 
 #too-big{
     position: absolute;
-    top: 25vh;
+    top: 20vh;
     z-index: 600;
     text-align: center;
     width: 100%;
-    font-size: 45px;
+    font-size: 40px;
     background-color: rgba(0,0,0,0.5);
     border-top: 15px solid #DADADA;
     border-bottom: 15px solid #DADADA;
@@ -59,6 +59,61 @@ body{
     text-shadow: #4DD6E4 0 0 10px, #4DD6E4 0px 0px 5px;
     transition: all 1s ease-out;
     overflow: hidden;
+}
+
+#mobile-first{
+    margin: 0;
+    padding: 25px 10px;
+    font-size: 30px;
+    color: #DADADA;
+    text-shadow: #4DD6E4 0 0 10px, #4DD6E4 0px 0px 5px;
+}
+
+#mobile-first a{
+    color: #DADADA;
+}
+
+#mobile-background{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background: url('../assets/main/qwerty.jpg');
+    z-index: 550;
+}
+
+#visit-planet{
+    /*position: absolute;
+    top: 25vh;*/
+    z-index: 600;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+    /*background-color: rgba(0,0,0,0.5);
+    border-top: 15px solid #DADADA;
+    border-bottom: 15px solid #DADADA;
+    -moz-box-shadow:    inset 0px 30px 25px -25px #4DD6E4, inset 0px -30px 25px -25px #4DD6E4, 0px -10px 25px 0px #4DD6E4, 0px 10px 25px 0px #4DD6E4;
+    -webkit-box-shadow: inset 0px 30px 25px -25px #4DD6E4, inset 0px -30px 25px -25px #4DD6E4, 0px -10px 25px 0px #4DD6E4, 0px 10px 25px 0px #4DD6E4;
+    box-shadow:         inset 0px 30px 25px -25px #4DD6E4, inset 0px -30px 25px -25px #4DD6E4, 0px -10px 25px 0px #4DD6E4, 0px 10px 25px 0px #4DD6E4;*/
+    transition: all 1s ease-out;
+    overflow: hidden;
+}
+
+#get-passes{
+    /*position: absolute;
+    top: 50vh;*/
+    z-index: 600;
+    text-align: center;
+    margin-top: 30px;
+    /*background-color: rgba(0,0,0,0.5);*/
+}
+
+#get-app{
+    z-index: 600;
+    text-align: center;
+    margin-top: 30px;
 }
 
 img.bg1{
