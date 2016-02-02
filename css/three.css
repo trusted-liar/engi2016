@@ -191,6 +191,25 @@ img.bg2{
     height: 80%;
 }
 
+.powered-logo{
+    position: absolute;
+    top: 22vh;
+    left: 10vw;
+    z-index: 505;
+    width: 10vw;
+    height: 10vh;
+    font-size: 2vh;
+    color: #DADADA;
+    text-shadow: #4DD6E4 0 0 10px, #4DD6E4 0px 0px 5px;
+    text-align: center;
+}
+
+.powered-logo img{
+    margin-top: 5px;
+    width: auto;
+    height: 30px;
+}
+
 .dates{
     position: absolute;
     bottom: 5vh;
